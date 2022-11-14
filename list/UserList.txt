@@ -1,0 +1,33 @@
+v2ex.com###Wrapper > div.content > div.box:last-child
+getpocket.com###global-nav\.upgrade-link
+getpocket.com###__next > header.h1eyfec4:first-child > div.global-nav-container:first-child > nav.n1oau81 > div.nav-actions:nth-child(2) > button.b5bt6fr.bi8kkur.t1221eea.pzhe358:nth-child(5) > span.igxbmuu.icon > svg
+getpocket.com###__next > header.h1eyfec4:first-child > div.global-nav-container:first-child > nav.n1oau81 > div.nav-actions:nth-child(2) > button.b5bt6fr.bi8kkur.t1221eea.pzhe358:last-child > span.igxbmuu.icon > svg
+fs.blog###main > div.full.text-center.section-home-hero:first-child > div.section-home-hero-ctas > div.full.section-home-newsletter-signup-holder:last-child > div.section-newsletter-signup.size-small:last-child
+reddit.com###t3_oxshhx
+reddit.com###container > div.App > div.AppMainPage:first-child > nav.TopNav:nth-child(2) > ul.TopNav__list:first-child > li.TopNav__promoButton:nth-child(2) > a.TopButton.TopNav__topButton.m-visible
+reddit.com###container > div.App > div.AppMainPage:first-child > div.NavFrame:nth-child(3) > div.XPromoPill:first-child > div.XPromoPill__container
+google.com###gws-output-pages-elements-homepage_additional_languages__als
+google.com###stUuGf > div > div.FAVrq.VDgVie.it9gVe.gdwOPe.mB14jb.eofmDb:last-child > div.uysxde.KKUuQd
+theatlantic.com###paywall
+nytimes.com###acm-wrapper
+merriam-webster.com##div.outer-container:nth-child(2) > div.main-container > div.border-box.mobile-fixed-ad.show-mobile:nth-child(7)
+nytimes.com###story > div.MAG_web_anon-regi_url-learning-dock.shown.expanded.expanded-dock.css-3fbowa.efw9frv0:last-child
+theweek.com###main > div.polaris__content.polaris__simple-grid.-body-copy.-standard-article:nth-child(2) > div.polaris__simple-grid--main:nth-child(3) > div.polaris__ad.polaris__amp-ad.-full-width.hide-desktop:nth-child(7)
+theweek.com###main > div.polaris__content.polaris__simple-grid.-body-copy.-standard-article:nth-child(2) > div.polaris__simple-grid--main:nth-child(6) > div.polaris__ad.polaris__amp-ad.-full-width.hide-desktop:nth-child(2)
+dictionary.cambridge.org##div.cc.fon:nth-child(5) > div.pr.cc_pgwn:first-child > div.x.lpl-10.lpr-10.lpt-10.lpb-25.lmax.lp-m_l-20.lp-m_r-20:first-child > div.hfr-m.ltab.lp-m_l-15:last-child > div.tz0.topslot-container:first-child
+bbc.com###main-wrapper > div.bbc-1ff36h2.eoodvxp0:nth-child(2) > div.e1j2237y4.bbc-1wf62vy.e57qer20:last-child > div.e1j2237y3.bbc-irdbz7.e57qer20:first-child > main:first-child > div.bbc-h3s0b6.e18siw4o1:nth-child(8) > section.bbc-6urqbv.e18siw4o4
+nytimes.com###masthead-bar-one
+mobile.twitter.com###react-root > div.css-1dbjc4n.r-13awgt0.r-12vffkv > div.css-1dbjc4n.r-13awgt0.r-12vffkv > div.css-1dbjc4n.r-13qz1uu.r-417010:last-child > main.css-1dbjc4n.r-16y2uox.r-1wbh5a2:last-child > div.css-1dbjc4n.r-150rngu.r-16y2uox.r-1wbh5a2 > div.css-1dbjc4n.r-aqfbo4.r-16y2uox > div.css-1dbjc4n.r-1oszu61.r-1niwhzg.r-18u37iz.r-16y2uox.r-1jgb5lz.r-2llsf.r-13qz1uu > div.css-1dbjc4n.r-14lw9ot.r-42olwf.r-1ljd8xs.r-13l2t4g.r-1phboty.r-1jgb5lz.r-13qz1uu.r-184en5c > div.css-1dbjc4n > div.css-1dbjc4n.r-1jgb5lz.r-1yodd5u.r-13qz1uu > div.css-1dbjc4n > div.css-1dbjc4n > div.css-1dbjc4n.r-1adg3ll.r-bnwqim > div.css-1dbjc4n > div.css-1dbjc4n:last-child > section.css-1dbjc4n > div.css-1dbjc4n:last-child > div > div:nth-child(8) > div.css-1dbjc4n.r-1adg3ll.r-1ny4l3l > div.css-18t94o4.css-1dbjc4n.r-1ny4l3l.r-1j3t67a.r-kmv1fd.r-o7ynqc.r-6416eg
+mobile.twitter.com###react-root > div.css-1dbjc4n.r-13awgt0.r-12vffkv > div.css-1dbjc4n.r-13awgt0.r-12vffkv > div.css-1dbjc4n.r-13qz1uu.r-417010:last-child > header.css-1dbjc4n.r-lrvibr.r-1g40b8q:nth-child(3) > div.css-1dbjc4n.r-1d2f490.r-1xcajam.r-zchlnj.r-1gn8etr.r-1siec45.r-o7ynqc.r-axxi2z.r-136ojw6:last-child > div.css-1dbjc4n.r-1jgb5lz.r-13qz1uu:first-child > div.css-1dbjc4n.r-136ojw6 > div.css-1dbjc4n.r-1iud8zs.r-136ojw6 > div.css-1dbjc4n > div.css-1dbjc4n.r-1e5uvyk.r-6026j.r-1iud8zs > div.css-1dbjc4n.r-1awozwy.r-18u37iz.r-1iud8zs.r-1777fci.r-1jgb5lz.r-1j3t67a.r-13qz1uu > div.css-1dbjc4n.r-obd0qt.r-1pz39u2.r-1777fci.r-1vsu8ta.r-2j7rtt:last-child > div.css-1dbjc4n.r-1awozwy.r-18u37iz.r-1iud8zs > div.css-18t94o4.css-1dbjc4n.r-1niwhzg.r-1ets6dv.r-sdzlij.r-1phboty.r-rs99b7.r-1vsu8ta.r-18qmn74.r-1ny4l3l.r-1j3t67a.r-o7ynqc.r-6416eg.r-lrvibr
+news.google.com###ZCHFDb
+reddit.com###container > div.App > div.AppMainPage:first-child > div.NavFrame:nth-child(3) > div:first-child > div.XPromoPopup.m-active
+vocabulary.com###pageContent > div.wordPage.vocab.blurbed.clearfloat.content-wrapper > div.centeredContent:last-child > section.promo.test-prep:nth-child(2)
+vocabulary.com##div.body-wrapper:first-child > footer.page-footer:nth-child(5)
+vocabulary.com##div.body-wrapper:first-child > footer.page-footer:nth-child(4)
+kanhkmoov.com###modal-watch > div.modal-dialog.modal-dialog-centered
+173.82.88.93###page-title
+reuters.com###fusion-app > div.RegularArticleLayout__container___1SMZNP > div.RegularArticleLayout__content-container___10ugl-:nth-child(2) > div.RegularArticleLayout__body___3h6ogY > div.RegularArticleLayout__main___3Vspvp:first-child > article:first-child > div.Article__container___7jklW_ > div:last-child > div.ArticleBody__container___D-h4BJ > div.ArticleBody__content___2gQno2.paywall-article:last-child > div.RegistrationPrompt__container___1zFX4Y.RegistrationPrompt__inline___1dXxON.ArticleBody__mobile-only___2w_rXL:nth-child(5)
+powerthesaurus.org###content-list > div.v5_b:last-child
+newyorker.com###app-root > div.BaseWrap-sc-TURhJ.BasePageWrapper-bQpzig.eTiIvU.gDijtm.page.page-theme-inverted.ArticlePageBase-gwHSNv.eubavC.page--article > div.PersistentBottomWrapper-bziBCA.hdtrtw.persistent-bottom:nth-child(7) > aside.PaywallBarWrapper-fKeowe.jxdgow.paywall-bar > div.ConsumerMarketingUnitThemedWrapper-kkMeXf.hBFNZw.paywall-bar__consumer-marketing-unit.consumer-marketing-unit.consumer-marketing-unit--paywall-bar-call-to-action > div.journey-unit:last-child > div.paywall-bar-failsafe.paywall-bar--expanded.journey-template--paywall-bar > div.paywall-bar__wrapper.paywall-bar--half.paywall-bar__collapsed:last-child
+dictionary.com###dcomMobileSERPDisplayTopAd-300x250
+dictionary.com###base-pw > main.css-1c3tf54.e1fub8bm0 > section.css-ra5g8t.e8xvxkb0:nth-child(2) > section.css-8p8pis.e1hj943x0 > aside.css-e4adpz.eljh6ml0:nth-child(6)

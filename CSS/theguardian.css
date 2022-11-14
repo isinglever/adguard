@@ -1,0 +1,9 @@
+div.ad-slot {display: none !important;}
+
+div[id^="dfp-ad-"] {display: none !important;}
+
+div[id^="dfp-ad-"] {display: none !important;}
+
+
+.top-banner-ad-container {display: none !important;}
+.adSense {display: none !important;}
