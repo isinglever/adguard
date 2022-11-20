@@ -16,9 +16,9 @@ if ($response.statusCode != 200) {
       return "Multacom Corp"
     } else if (para == "Oracle Corporation") {
         return "Oracle Corp"
-    } else if (para = "Amazon Technologies Inc."){
+    } else if (para == "Amazon Technologies Inc."){
         return "Amazon Inc"
-    } else if (para = "IT7 Networks Inc") {
+    } else if (para == "IT7 Networks Inc") {
         return "IT7 Networks"
     } else {
         return para
