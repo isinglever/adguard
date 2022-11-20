@@ -25,7 +25,7 @@ if ($response.statusCode != 200) {
     } else if (para == "Oracle Corporation") {
         return "Oracle Corp"
     } else if (para = "Amazon Technologies Inc."){
-        return "Amazon Inc."
+        return "Amazon Inc"
     }
     else
     {
@@ -62,7 +62,7 @@ if ($response.statusCode != 200) {
   
   var body = $response.body;
   var obj = JSON.parse(body);
-  var title =flags.get(obj['countryCode']) + ' • '+ City_ValidCheck(obj['city']);//+Area_check(obj['country']);
+  var title =City_ValidCheck(obj['city']);//+Area_check(obj['country']); flags.get(obj['countryCode']) + ' • '+ 
   // var title = usToAmerica(obj['country']) + ' • ' + City_ValidCheck(obj['city']);
   var subtitle = ISP_ValidCheck(obj['isp']) + ' • ' + obj['query'];
   var ip = obj['query'];
