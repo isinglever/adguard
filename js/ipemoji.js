@@ -18,9 +18,11 @@ if ($response.statusCode != 200) {
         return "Oracle Corp"
     } else if (para == "Amazon Technologies Inc."){
         return "Amazon Inc"
-    } else if (para == "IT7 Networks Inc") {
-        return "IT7 Networks"
-    } else {
+    } 
+    // else if (para == "IT7 Networks Inc") {
+    //     return "IT7 Networks"
+    // } 
+    else {
         return para
     }
   }
