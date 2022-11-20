@@ -20,18 +20,19 @@ if ($response.statusCode != 200) {
   }
   
   function ISP_ValidCheck(para) {
-    if(para == "Multacom Corporation") {
-    return "Multacom Corp"
-    } else if (para == "Oracle Corporation") {
-        return "Oracle Corp"
-    } else if (para = "Amazon Technologies Inc."){
-        return "Amazon Inc"
-    }
-    else
-    {
-    return para
-  //emojis[getRandomInt(emojis.length)]
-    }
+  //   if(para == "Multacom Corporation") {
+  //   return "Multacom Corp"
+  //   } else if (para == "Oracle Corporation") {
+  //       return "Oracle Corp"
+  //   } else if (para = "Amazon Technologies Inc."){
+  //       return "Amazon Inc"
+  //   }
+  //   else
+  //   {
+  //   return para
+  // //emojis[getRandomInt(emojis.length)]
+  //   }
+      return para
   }
   
   function Area_check(para) {
