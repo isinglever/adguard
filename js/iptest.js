@@ -62,7 +62,7 @@ if ($response.statusCode != 200) {
   
   var body = $response.body;
   var obj = JSON.parse(body);
-  var title =City_ValidCheck(obj['city']);//+Area_check(obj['country']); flags.get(obj['countryCode']) + ' • '+ 
+  var title =flags.get(obj['countryCode']) + City_ValidCheck(obj['city']);//+Area_check(obj['country']); flags.get(obj['countryCode']) + ' • '+ 
   // var title = usToAmerica(obj['country']) + ' • ' + City_ValidCheck(obj['city']);
   var subtitle = ISP_ValidCheck(obj['isp']) + ' • ' + obj['query'];
   var ip = obj['query'];
