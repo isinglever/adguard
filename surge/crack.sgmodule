@@ -1,0 +1,7 @@
+#!name= Surge Crack
+#!desc = Crack for some Apps
+#!system=ios
+[Rule]
+URL-REGEX,https:\/\/api\.calm\.com\/device,REJECT
+[Script]
+calm = type=http-response,pattern=^https:\/\/api\.calm\.com\/me$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/calm.js
