@@ -1,0 +1,14 @@
+#!name= Surge Crack
+#!desc = Crack for some Apps
+#!system=ios
+[Rule]
+URL-REGEX,https:\/\/api\.calm\.com\/device,REJECT
+[Script]
+calm = type=http-response,pattern=^https:\/\/api\.calm\.com\/me$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/calm.js
+
+adguard = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.org\/api\/2\.0\/ios_validate_receipt.+, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/adguard.js
+
+elevate = type=http-response,pattern=^https:\/\/accounts\.elevateapp\.net\/api\/users\?user%5Bauthentication_token*, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/elevate.js
+elevate1 = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/a9[a-zA-Z0-9_-]*$), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/revenuecat.js
+
+tweetbot = type=http-response,pattern=^https:\/\/push\.tapbots\.com\/tweetbot\/5\/verify_subscription, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/tweetbot.js
