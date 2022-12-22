@@ -16,4 +16,4 @@ tweetbot = type=http-response,pattern=^https:\/\/push\.tapbots\.com\/tweetbot\/5
 draft = type=http-response,pattern=^https:\/\/backend\.getdrafts\.com\/api\/v1\/verification\/verify_receipt, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Drafts.js
 
 [MITM]
-hostname = %APPEND% api.calm.com, mobile-api.adguard.org, accounts.elevateapp.net, api.revenuecat.com, push.tapbots.com, 
+hostname = %APPEND% api.calm.com, mobile-api.adguard.org, accounts.elevateapp.net, api.revenuecat.com, push.tapbots.com, backend.getdrafts.com
