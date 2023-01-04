@@ -13,7 +13,7 @@ if ($response.statusCode != 200) {
   }
   function ISP_ValidCheck(para) {
     if(para == "Multacom Corporation") {
-      return "Multacom Corp"
+      return "Multacom"
     } else if (para == "Oracle Corporation") {
         return "Oracle Corp"
     } else if (para == "Amazon Technologies Inc."){
