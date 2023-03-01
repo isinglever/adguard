@@ -1,7 +1,7 @@
 # block chinese entertainment websites
-DOMAIN-SUFFIX,hostloc.com,REJECT
-DOMAIN-SUFFIX,v2ex.com,REJECT
-DOMAIN-SUFFIX,sspai.com,REJECT
-DOMAIN-SUFFIX,h528.com,REJECT
-DOMAIN-SUFFIX,t66y.com,REJECT
-DOMAIN-SUFFIX,weibo.cn,REJECT
+DOMAIN-SUFFIX,hostloc.com
+DOMAIN-SUFFIX,v2ex.com
+DOMAIN-SUFFIX,sspai.com
+DOMAIN-SUFFIX,h528.com
+DOMAIN-SUFFIX,t66y.com
+DOMAIN-SUFFIX,weibo.cn
