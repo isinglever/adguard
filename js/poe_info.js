@@ -1,4 +1,4 @@
-# Poe Enhancement
+// Poe Enhancement
 
 let obj = JSON.parse($response.body);
 obj.data.viewer.enableSuggestedReplies = false;
