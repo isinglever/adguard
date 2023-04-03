@@ -1,5 +1,6 @@
 let obj = JSON.parse($response.body);
 
+obj.result = "SUCCESS";
 obj.data = {
     "status" : "FREE_TRIAL",
     "paymentScheduled" : true,
