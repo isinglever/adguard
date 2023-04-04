@@ -1,5 +1,5 @@
 let obj = JSON.parse($response.body);
 
-obj.data.hasProtectItemGift = true;
+delete obj.extra.timeSaleProduct;
 
 $done({body: JSON.stringify(obj)});
