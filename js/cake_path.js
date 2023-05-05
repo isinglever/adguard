@@ -1,13 +1,8 @@
-let obj = JSON.parse($response.body);
 
-delete obj.extra.timeSaleProduct;
+// $request.scheme, $request.method, $request.url, $request.path, $request.headers
 
-for (i in obj.data) {
-    for (j in obj.data[i].steps) {
-        if (obj.data[i].steps[j].type == "AD") {
-            delete  obj.data[i].steps[j];
-        }
-    }
-}
+var modifiedPath = $request.path;
+modifiedPath = modifiedPath.replace("&appVersion=5.4.0", "");
 
-$done({body: JSON.stringify(obj)});
+
+$done({path: modifiedPath});
