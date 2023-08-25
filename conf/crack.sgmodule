@@ -2,18 +2,25 @@
 #!desc = Crack for some Apps
 #!system=ios
 [Rule]
-URL-REGEX,https:\/\/api\.calm\.com\/device,REJECT
+URL-REGEX,^https:\/\/api\.calm\.com\/device,REJECT-TINYGIF
+URL-REGEX,^https://api\.pocketcasts\.com\/files,REJECT-TINYGIF
+URL-REGEX,^https:\/\/pool\.elsanow\.io\/feeds\/api\/feeds.+,REJECT-TINYGIF
+
+[Map Local]
+^https:\/\/api\.pocketcasts\.com\/subscription\/status$ data="Pocket"
+
+
+
 [Script]
 calm = type=http-response,pattern=^https:\/\/api\.calm\.com\/me$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/calm.js
-
 adguard = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.org\/api\/2\.0\/ios_validate_receipt.+, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/adguard.js
-
-elevate = type=http-response,pattern=^https:\/\/accounts\.elevateapp\.net\/api\/users\?user%5Bauthentication_token*, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/elevate.js
-elevate1 = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/a9[a-zA-Z0-9_-]*$), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/revenuecat.js
-
-tweetbot = type=http-response,pattern=^https:\/\/push\.tapbots\.com\/tweetbot\/5\/verify_subscription, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/tweetbot.js
-
+elevate_account = type=http-response,pattern=^https:\/\/accounts\.elevateapp\.net\/api\/users\?user%5Bauthentication_token*, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/elevate.js
+elevate_sub = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/a9[a-zA-Z0-9_-]*$), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/revenuecat.js
 draft = type=http-response,pattern=^https:\/\/backend\.getdrafts\.com\/api\/v1\/verification\/verify_receipt, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Drafts.js
 
+elsa_purchase = type=http-response, pattern=^https:\/\/pool\.elsanow\.io\/user\/api\/v2\/purchase$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/elsa.js, timeout=60, script-update-interval=0
+else_download = type=http-request, pattern=^https:\/\/pool\.elsanow\.io\/content\/api\/v1\/programs\/download.+, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-header.js, timeout=60, argument="(%5Cr%5Cn)x-session-token%3A.%2B(%5Cr%5Cn)->%241x-session-token%3A%20F3S0w0bysBQFdbjtxpFurrFv2ItBBcBkVQxUddQW%2B9vjt2JXM751ksqq5GAWpkl%2Bkk9nhig9BGh9JhYHQaokmendY6zLZDscHiRkZD2HrdJclKVCLordAARJhYIrf5C%2B5OSK6ax2TA45CKi8S09FEtYXN4noXO7gt42NT6WPIv6DKhdIwVxQuIAMLU5abmpMTDlyWeI4ulBWcOQbuZWWZg%3D%3D%242"
+else_module = type=http-request, pattern=^https:\/\/pool\.elsanow\.io\/content\/api\/v1\/modules\/download$, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-header.js, timeout=60, argument="(%5Cr%5Cn)x-session-token%3A.%2B(%5Cr%5Cn)->%241x-session-token%3A%20F3S0w0bysBQFdbjtxpFurrFv2ItBBcBkVQxUddQW%2B9vjt2JXM751ksqq5GAWpkl%2Bkk9nhig9BGh9JhYHQaokmendY6zLZDscHiRkZD2HrdJclKVCLordAARJhYIrf5C%2B5OSK6ax2TA45CKi8S09FEtYXN4noXO7gt42NT6WPIv6DKhdIwVxQuIAMLU5abmpMTDlyWeI4ulBWcOQbuZWWZg%3D%3D%242"
+
 [MITM]
-hostname = %APPEND% api.calm.com, mobile-api.adguard.org, accounts.elevateapp.net, api.revenuecat.com, push.tapbots.com, backend.getdrafts.com
+hostname = %APPEND% api.calm.com, mobile-api.adguard.org, accounts.elevateapp.net, api.revenuecat.com, backend.getdrafts.com, api.pocketcasts.com, pool.elsanow.io
