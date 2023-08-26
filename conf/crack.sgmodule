@@ -22,9 +22,6 @@ draft = type=http-response,pattern=^https:\/\/backend\.getdrafts\.com\/api\/v1\/
 
 #else
 elsa_purchase = type=http-response, pattern=^https:\/\/pool\.elsanow\.io\/user\/api\/v2\/purchase$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/elsa.js, timeout=60, script-update-interval=0
-else_download = type=http-request, pattern=^https:\/\/pool\.elsanow\.io\/content\/api\/v1\/programs\/download.+, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-header.js, timeout=60, argument="(%5Cr%5Cn)x-session-token%3A.%2B(%5Cr%5Cn)->%241x-session-token%3A%20F3S0w0bysBQFdbjtxpFurrFv2ItBBcBkVQxUddQW%2B9vjt2JXM751ksqq5GAWpkl%2Bkk9nhig9BGh9JhYHQaokmendY6zLZDscHiRkZD2HrdJclKVCLordAARJhYIrf5C%2B5OSK6ax2TA45CKi8S09FEtYXN4noXO7gt42NT6WPIv6DKhdIwVxQuIAMLU5abmpMTDlyWeI4ulBWcOQbuZWWZg%3D%3D%242"
-else_module = type=http-request, pattern=^https:\/\/pool\.elsanow\.io\/content\/api\/v1\/modules\/download$, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-header.js, timeout=60, argument="(%5Cr%5Cn)x-session-token%3A.%2B(%5Cr%5Cn)->%241x-session-token%3A%20F3S0w0bysBQFdbjtxpFurrFv2ItBBcBkVQxUddQW%2B9vjt2JXM751ksqq5GAWpkl%2Bkk9nhig9BGh9JhYHQaokmendY6zLZDscHiRkZD2HrdJclKVCLordAARJhYIrf5C%2B5OSK6ax2TA45CKi8S09FEtYXN4noXO7gt42NT6WPIv6DKhdIwVxQuIAMLU5abmpMTDlyWeI4ulBWcOQbuZWWZg%3D%3D%242"
-
 #cake
 cake_start = type=http-response, pattern=^https:\/\/api\.mycake\.me\/app\/start$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/cake_start.js, timeout=60, script-update-interval=0
 cake_sub_1 = type=http-response, pattern=^https:\/\/api.mycake.me\/v2\/main\/subscription\/channel.+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/cake_sub.js, timeout=60, script-update-interval=0
