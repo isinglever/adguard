@@ -1,6 +1,6 @@
 let obj = JSON.parse($response.body);
 obj["subscriber"]["subscriptions"]= {
-      "revenuecat.pro.yearly": {
+      "com.elevateapp.elevate.lifetime_subscription": {
         "is_sandbox": false,
         "period_type": "active",
         "billing_issues_detected_at": null,
@@ -14,7 +14,7 @@ obj["subscriber"]["subscriptions"]= {
 obj["subscriber"]["entitlements"]= {
       "pro": {
         "expires_date": "2099-12-01T03:51:32Z",
-        "product_identifier": "revenuecat.pro.yearly",
+        "product_identifier": "com.elevateapp.elevate.lifetime_subscription",
         "purchase_date": "2019-10-31T02:51:32Z"
       }
     };
