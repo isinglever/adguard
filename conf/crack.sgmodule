@@ -14,13 +14,13 @@ URL-REGEX,^https:\/\/pool\.elsanow\.io\/feeds\/api\/feeds.+,REJECT-TINYGIF
 #^https:\/\/pool\.elsanow\.io\/content\/api\/v1\/modules\/download$ header-replace x-session-token F3S0w0bysBQFdbjtxpFurrFv2ItBBcBkVQxUddQW+9vjt2JXM751ksqq5GAWpkl+kk9nhig9BGh9JhYHQaokmendY6zLZDscHiRkZD2HrdJclKVCLordAARJhYIrf5C+5OSK6ax2TA45CKi8S09FEtYXN4noXO7gt42NT6WPIv6DKhdIwVxQuIAMLU5abmpMTDlyWeI4ulBWcOQbuZWWZg==
 #^https:\/\/pool\.elsanow\.io\/content\/api\/v1\/programs\/download.+ header-replace x-session-token F3S0w0bysBQFdbjtxpFurrFv2ItBBcBkVQxUddQW+9vjt2JXM751ksqq5GAWpkl+kk9nhig9BGh9JhYHQaokmendY6zLZDscHiRkZD2HrdJclKVCLordAARJhYIrf5C+5OSK6ax2TA45CKi8S09FEtYXN4noXO7gt42NT6WPIv6DKhdIwVxQuIAMLU5abmpMTDlyWeI4ulBWcOQbuZWWZg==
 # revenuecat
-^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ header-replace X-RevenueCat-ETag 
+^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ header-del X-RevenueCat-ETag
 
 [Script]
 calm = type=http-response,pattern=^https:\/\/api\.calm\.com\/me$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/calm.js
 adguard = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.org\/api\/2\.0\/ios_validate_receipt.+, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/adguard.js
 elevate_account = type=http-response,pattern=^https:\/\/accounts\.elevateapp\.net\/api\/users\?user%5Bauthentication_token*, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/elevate.js
-#elevate_sub = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/revenuecat.js
+elevate_sub = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/revenuecat.js
 draft = type=http-response,pattern=^https:\/\/backend\.getdrafts\.com\/api\/v1\/verification\/verify_receipt, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Drafts.js
 
 #else
