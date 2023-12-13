@@ -24,7 +24,7 @@ elevate_sub = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(r
 draft = type=http-response,pattern=^https:\/\/backend\.getdrafts\.com\/api\/v1\/verification\/verify_receipt, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Drafts.js
 
 #chatGPT
-chatGPT = type=http-response,pattern=^https:\/\/ios\.chat\.openai\.com\/backend-api\/models, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/chatgpt.js
+#chatGPT = type=http-response,pattern=^https:\/\/ios\.chat\.openai\.com\/backend-api\/models, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/chatgpt.js
 #else
 elsa_purchase = type=http-response, pattern=^https:\/\/pool\.elsanow\.io\/user\/api\/v2\/purchase$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/elsa.js, timeout=60, script-update-interval=0
 #cake
