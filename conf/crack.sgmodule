@@ -8,7 +8,7 @@ URL-REGEX,^https:\/\/pool\.elsanow\.io\/feeds\/api\/feeds.+,REJECT-TINYGIF
 
 [Map Local]
 ^https:\/\/api\.pocketcasts\.com\/subscription\/status$ data="Pocket"
-^https:\/\/pool\.elsanow\.io\/content\/api\/v1\/modules\/download$ data="Elsa.json"
+#^https:\/\/pool\.elsanow\.io\/content\/api\/v1\/modules\/download$ data="Elsa.json"
 #^https:\/\/pool\.elsanow\.io\/entitlement\/api\/v1\/user\/entitlements.+ data="Elsa_entitle.json"
 #^https:\/\/pool\.elsanow\.io\/entitlement\/api\/v1\/user\/entitlement/elsa.+ data="Elsa_ai.json"
 
