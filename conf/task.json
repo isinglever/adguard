@@ -1,28 +1,28 @@
 {"name":"Github_Task",
   "task":[
     {
-      "config":"46 10 * * SUN https://raw.githubusercontent.com/isinglever/Adguard/main/JS/1Point3AcresCheckin.js, tag=SUN Checkin, img-url=https://raw.githubusercontent.com/isinglever/Adguard/main/Icon/1Point3Acres.png, enabled=true"
+      "config":"46 10 * * SUN https://raw.githubusercontent.com/isinglever/adguard/main/JS/1Point3AcresCheckin.js, tag=SUN Checkin, img-url=https://raw.githubusercontent.com/isinglever/adguard/main/Icon/1Point3Acres.png, enabled=true"
     },
     {
-      "config":"35 8 * * * https://raw.githubusercontent.com/isinglever/Adguard/main/JS/1Point3AcresQuestion.js, tag=1Point3Acres Question, img-url=https://raw.githubusercontent.com/isinglever/Adguard/main/Icon/1Point3Acres.png, enabled=true"
+      "config":"35 8 * * * https://raw.githubusercontent.com/isinglever/adguard/main/JS/1Point3AcresQuestion.js, tag=1Point3Acres Question, img-url=https://raw.githubusercontent.com/isinglever/adguard/main/Icon/1Point3Acres.png, enabled=true"
     },
     {
-      "config":"23 8 * * MON https://raw.githubusercontent.com/isinglever/Adguard/main/JS/1Point3AcresCheck.js, tag=MON Checkin, enabled=true"
+      "config":"23 8 * * MON https://raw.githubusercontent.com/isinglever/adguard/main/JS/1Point3AcresCheck.js, tag=MON Checkin, enabled=true"
     },
     {
-      "config":"58 8 * * TUE https://raw.githubusercontent.com/isinglever/Adguard/main/JS/1Point3AcresCheckin.js, tag=TUE Checkin, enabled=true"
+      "config":"58 8 * * TUE https://raw.githubusercontent.com/isinglever/adguard/main/JS/1Point3AcresCheckin.js, tag=TUE Checkin, enabled=true"
     },
     {
-      "config":"59 8 * * WED https://raw.githubusercontent.com/isinglever/Adguard/main/JS/1Point3AcresCheckin.js, tag=WED Checkin, enabled=true"
+      "config":"59 8 * * WED https://raw.githubusercontent.com/isinglever/adguard/main/JS/1Point3AcresCheckin.js, tag=WED Checkin, enabled=true"
     },
     {
-      "config":"15 8 * * THU https://raw.githubusercontent.com/isinglever/Adguard/main/JS/1Point3AcresCheckin.js, tag=THU Checkin, enabled=true"
+      "config":"15 8 * * THU https://raw.githubusercontent.com/isinglever/adguard/main/JS/1Point3AcresCheckin.js, tag=THU Checkin, enabled=true"
     },
     {
-      "config":"31 9 * * FRI https://raw.githubusercontent.com/isinglever/Adguard/main/JS/1Point3AcresCheckin.js, tag=FRI Checkin, enabled=true"
+      "config":"31 9 * * FRI https://raw.githubusercontent.com/isinglever/adguard/main/JS/1Point3AcresCheckin.js, tag=FRI Checkin, enabled=true"
     },
     {
-      "config":"21 11 * * SAT https://raw.githubusercontent.com/isinglever/Adguard/main/JS/1Point3AcresCheckin.js, tag=SAT Checkin, enabled=true"
+      "config":"21 11 * * SAT https://raw.githubusercontent.com/isinglever/adguard/main/JS/1Point3AcresCheckin.js, tag=SAT Checkin, enabled=true"
     }
   ],
   "description":"Script Gallery"

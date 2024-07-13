@@ -15,7 +15,7 @@ const data = {
           "today_checkin" : true,
           "nick_name" : "Dionysos",
           "gender" : "0",
-          "avatar_url" : "https://raw.githubusercontent.com/isinglever/Adguard/main/Icon/rb.jpg",
+          "avatar_url" : "https://raw.githubusercontent.com/isinglever/adguard/main/Icon/rb.jpg",
           "failed" : false,
           "user_id" : "54ca99b6-4149-11ed-bb33-00505686aece"
         }
