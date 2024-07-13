@@ -8,14 +8,9 @@ URL-REGEX,^https:\/\/pool\.elsanow\.io\/feeds\/api\/feeds.+,REJECT-TINYGIF
 
 [Map Local]
 ^https:\/\/api\.pocketcasts\.com\/subscription\/status$ data="Pocket"
-#^https:\/\/pool\.elsanow\.io\/content\/api\/v1\/modules\/download$ data="Elsa.json"
-#^https:\/\/pool\.elsanow\.io\/entitlement\/api\/v1\/user\/entitlements.+ data="Elsa_entitle.json"
-#^https:\/\/pool\.elsanow\.io\/entitlement\/api\/v1\/user\/entitlement/elsa.+ data="Elsa_ai.json"
 
 [Header Rewrite]
 ^https:\/\/pool\.elsanow\.io\/entitlement\/api\/v1\/user\/entitlements.+ header-replace x-session-token F3S0w0bysBQFdbjtxpFurrFv2ItBBcBkVQxUddQW+9vjt2JXM751ksqq5GAWpkl+kk9nhig9BGh9JhYHQaokmendY6zLZDscHiRkZD2HrdJclKVCLordAARJhYIrf5C+5OSK6ax2TA45CKi8S09FEtYXN4noXO7gt42NT6WPIv6DKhdIwVxQuIAMLU5abmpMTDlyWeI4ulBWcOQbuZWWZg==
-#^https:\/\/pool\.elsanow\.io\/content\/api\/v1\/modules\/download$ header-replace x-session-token F3S0w0bysBQFdbjtxpFurrFv2ItBBcBkVQxUddQW+9vjt2JXM751ksqq5GAWpkl+kk9nhig9BGh9JhYHQaokmendY6zLZDscHiRkZD2HrdJclKVCLordAARJhYIrf5C+5OSK6ax2TA45CKi8S09FEtYXN4noXO7gt42NT6WPIv6DKhdIwVxQuIAMLU5abmpMTDlyWeI4ulBWcOQbuZWWZg==
-#^https:\/\/pool\.elsanow\.io\/content\/api\/v1\/programs\/download.+ header-replace x-session-token F3S0w0bysBQFdbjtxpFurrFv2ItBBcBkVQxUddQW+9vjt2JXM751ksqq5GAWpkl+kk9nhig9BGh9JhYHQaokmendY6zLZDscHiRkZD2HrdJclKVCLordAARJhYIrf5C+5OSK6ax2TA45CKi8S09FEtYXN4noXO7gt42NT6WPIv6DKhdIwVxQuIAMLU5abmpMTDlyWeI4ulBWcOQbuZWWZg==
 # revenuecat
 ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ header-del X-RevenueCat-ETag
 
@@ -29,7 +24,7 @@ draft = type=http-response,pattern=^https:\/\/backend\.getdrafts\.com\/api\/v1\/
 #chatGPT
 #chatGPT = type=http-response,pattern=^https:\/\/ios\.chat\.openai\.com\/backend-api\/models, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/chatgpt.js
 #else
-elsa_purchase = type=http-response, pattern=^https:\/\/pool\.elsanow\.io\/user\/api\/v2\/purchase$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/elsa.js, timeout=60, script-update-interval=0
+#elsa_purchase = type=http-response, pattern=^https:\/\/pool\.elsanow\.io\/user\/api\/v2\/purchase$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/elsa.js, timeout=60, script-update-interval=0
 #cake
 cake_start = type=http-response, pattern=^https:\/\/api\.mycake\.me\/app\/start$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/cake_start.js, timeout=60, script-update-interval=0
 cake_sub_1 = type=http-response, pattern=^https:\/\/api.mycake.me\/v2\/main\/subscription\/channel.+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/Adguard/main/js/cake_sub.js, timeout=60, script-update-interval=0
