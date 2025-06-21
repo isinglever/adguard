@@ -6,4 +6,4 @@
 hostname = %APPEND% dida365.com
 
 [Script]
-Ticktick = type=http-response,pattern=^https:\/\/dida365\.com\/api\/v2\/user\/status$,requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/isinglever/adguard/refs/heads/main/js/ticktick.js
+Ticktick = type=http-response,pattern=^https:\/\/dida365\.com\/api\/v2\/user\/status$,requires-body=1,max-size=0,debug=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/refs/heads/main/js/ticktick.js
