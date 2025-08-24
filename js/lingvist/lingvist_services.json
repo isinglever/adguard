@@ -1,0 +1,58 @@
+{
+  "services": [
+    {
+      "duration": "P1Y",
+      "service": "unlimited",
+      "is_infinite": true,
+      "active_since_ts": "2025-08-23T10:11:29.159292Z",
+      "active_until_ts": "2029-09-06T10:11:28.159292Z",
+      "payment_provider": "apple-in-app",
+      "product_name": "unlimited-12-months",
+      "title": "Lingvist Unlimited. 1-year subscription",
+      "subscription": {
+        "is_recurring": true,
+        "uuid": "c4c10d76-9384-456f-978c-f6559ce3c88a",
+        "group_name": "unlimited",
+        "period": "P1Y",
+        "status": "permanent-full",
+        "next_billing_ts": "2029-09-06T10:10:41Z",
+        "expiration_ts": "2029-09-06T10:10:41Z",
+        "free_trial_duration": "P10Y",
+        "is_on_free_trial": false,
+        "is_on_one_time_discount": false,
+        "one_time_discount_percentage": null,
+        "one_time_discount_duration": null,
+        "is_on_permanent_discount": false,
+        "permanent_discount_percentage": null,
+        "price": {
+          "amount": "79.990000",
+          "currency": "USD",
+          "schedule": [
+            {
+              "duration": "P10Y",
+              "amount": 0,
+              "discount_percentage": 100,
+              "periods": 1,
+              "name": "permanent-full",
+              "starting_from_ts": null
+            },
+            {
+              "duration": "P1Y",
+              "amount": "79.990000",
+              "discount_percentage": 0,
+              "periods": -1,
+              "name": "permanent-full",
+              "starting_from_ts": "2025-09-06T10:10:41Z"
+            }
+          ]
+        }
+      },
+      "unlimited_bundle": {
+
+      },
+      "is_active": true
+    }
+  ],
+  "has_historical_services": false,
+  "latest_historical_service_paid": false
+}

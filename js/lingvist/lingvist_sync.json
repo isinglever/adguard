@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "server_ts": "2025-08-23T10:26:50.167882Z",
+    "clean_state": true,
+    "bookmark": "{\"schema\": \"urn:lingvist:schemas:api:user_bookmark:1.0\", \"updated\": \"2025-08-23T10:26:50+00:00\", \"parameters_modified\": \"2025-08-23T10:26:12+00:00\"}"
+  },
+  "user": {
+    "uuid": "",
+    "registered_ts": "2025-08-23T08:03:28Z"
+  },
+  "profile": {
+    "email": "",
+    "name": "",
+    "marketing_opt_in": false,
+    "ee_id_code": null
+  },
+  "authentication": {
+    "token": "",
+    "providers": [
+      "apple"
+    ],
+    "email_verified": false
+  },
+  "terms_and_conditions": {
+    "tos_needs_update": false,
+    "current_tos_version": "2019-05-07",
+    "pp_needs_update": false,
+    "current_pp_version": "2018-05-25",
+    "changes_url": "https://lingvist.com/terms/2019-05-07/changes"
+  },
+  "features": [
+
+  ],
+  "subscription": {
+    "status": "intro-trial",
+    "expiration_ts": "2029-09-06T10:11:28+00:00",
+    "trial_duration": "P10Y",
+    "on_hold": false,
+    "trial_available": true
+  },
+  "parameters": [
+    {
+      "key": "global.current_course_uuid",
+      "type": "string",
+      "value": "862abc32-c1ec-4ae1-9a40-a346102539cd"
+    },
+    {
+      "key": "global.guess.show_sentence_translations",
+      "type": "boolean",
+      "value": "true"
+    },
+    {
+      "key": "global.seen_subscription_status",
+      "type": "string",
+      "value": "Lifetime"
+    },
+    {
+      "key": "global.subscriptions.notification_ts",
+      "type": "datetime",
+      "value": "2029-09-06T10:11:28Z"
+    },
+    {
+      "key": "global.subscriptions.notified_ts",
+      "type": "datetime",
+      "value": "2025-08-23T10:26:11Z"
+    }
+  ]
+}
