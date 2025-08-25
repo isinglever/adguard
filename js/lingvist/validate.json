@@ -1,0 +1,51 @@
+{
+    "data": {
+        "type": "adapty_purchase_app_store_original_transaction_id_validation_result",
+        "id": "08409e7d-b306-4c3b-9f92-ebde78efe9e7",
+        "attributes": {
+            "app_id": "03994e38-227c-43e4-852b-d052aa840e9f",
+            "profile_id": "08409e7d-b306-4c3b-9f92-ebde78efe9e7",
+            "customer_user_id": null,
+            "is_test_user": false,
+            "total_revenue_usd": 0.0,
+            "segment_hash": "d366903dcb867816",
+            "timestamp": 1756047793623,
+            "paid_access_levels": null,
+            "subscriptions": null,
+            "non_subscriptions": null,
+            "custom_attributes": {},
+            "promotional_offer_eligibility": false,
+            "introductory_offer_eligibility": true,
+            "apple_validation_result": {
+                "environment": "Production",
+                "hasMore": false,
+                "revision": "1756045638000_90002679468474_7",
+                "bundleId": "ee.keel24.Lingvist",
+                "appAppleId": 969093402,
+                "transactions": [
+                    {
+                        "type": "Auto-Renewable Subscription",
+                        "productId": "com.lingvist.unlimited_12_months.v11.full_1md_ft",
+                        "transactionId": "90002679468474",
+                        "originalTransactionId": "90002679468474",
+                        "purchaseDate": "2025-08-23T10:10:41Z",
+                        "originalPurchaseDate": "2025-08-23T10:10:42Z",
+                        "expiresDate": "2025-09-06T10:10:41Z",
+                        "price": 0,
+                        "currency": "USD",
+                        "storefront": "USA",
+                        "inAppOwnershipType": "PURCHASED",
+                        "offerType": 1,
+                        "offerDiscountType": "FREE_TRIAL",
+                        "offerIdentifier": null,
+                        "isUpgraded": false,
+                        "revocationDate": null,
+                        "revocationReason": null,
+                        "appAccountToken": null,
+                        "subscriptionGroupIdentifier": "20718149"
+                    }
+                ]
+            }
+        }
+    }
+}

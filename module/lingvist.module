@@ -2,8 +2,9 @@
 #!desc=Enjoy Language Learning
 
 [MITM]
-hostname = %APPEND% payment-api.lingvist.com, api.lingvist.com
+hostname = %APPEND% payment-api.lingvist.com, api.lingvist.com, api.adapty.io
 
 [Script]
 sync = type=http-response,pattern=^https?:\/\/api\.lingvist\.com\/\d+(?:\.\d+)?\/user\/sync(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/lingvist/lingvist_sync.js
 services = type=http-response,pattern=^https?:\/\/payment-api\.lingvist\.com\/\d+(?:\.\d+)?\/user\/services(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/lingvist/lingvist_services.js
+validate = type=http-response,pattern=^https?:\/\/api\.adapty\.io\/api\/v\d+\/sdk\/purchase\/app-store\/original-transaction-id\/validate\/?(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/lingvist/lingvist_validate.js
