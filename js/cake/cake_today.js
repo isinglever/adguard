@@ -1,32 +1,41 @@
 try {
-  let obj = JSON.parse($response?.body || '{}');
+  if (!$response || !$response.body) {
+    $done({});
+    return;
+  }
 
-  const normalizeRestrictedNow = (value) => {
+  var obj = JSON.parse($response.body || '{}');
+
+  function normalizeRestrictedNow(value) {
     if (!value || typeof value !== 'object') {
       return;
     }
 
     if (Array.isArray(value)) {
-      value.forEach(normalizeRestrictedNow);
+      for (var i = 0; i < value.length; i += 1) {
+        normalizeRestrictedNow(value[i]);
+      }
       return;
     }
 
-    // Force any nested restrictedNow flag to false
     if (Object.prototype.hasOwnProperty.call(value, 'restrictedNow')) {
       value.restrictedNow = false;
     }
 
-    Object.values(value).forEach(normalizeRestrictedNow);
-  };
+    var keys = Object.keys(value);
+    for (var j = 0; j < keys.length; j += 1) {
+      normalizeRestrictedNow(value[keys[j]]);
+    }
+  }
 
-  const pruneMembershipBanner = (value) => {
+  function pruneMembershipBanner(value) {
     if (!value || typeof value !== 'object') {
       return;
     }
 
     if (Array.isArray(value)) {
-      for (let i = value.length - 1; i >= 0; i -= 1) {
-        const item = value[i];
+      for (var i = value.length - 1; i >= 0; i -= 1) {
+        var item = value[i];
         if (item && typeof item === 'object' && item.type === 'membershipTimeSaleHomeBanner') {
           value.splice(i, 1);
         } else {
@@ -36,14 +45,21 @@ try {
       return;
     }
 
-    Object.values(value).forEach(pruneMembershipBanner);
-  };
+    var keys = Object.keys(value);
+    for (var k = 0; k < keys.length; k += 1) {
+      pruneMembershipBanner(value[keys[k]]);
+    }
+  }
 
   normalizeRestrictedNow(obj);
   pruneMembershipBanner(obj);
 
   $done({ body: JSON.stringify(obj) });
 } catch (e) {
-  console.log(`cake services script error: ${e}`);
-  $done($response?.body ? { body: $response.body } : {});
+  console.log('cake services script error: ' + e);
+  if ($response && $response.body) {
+    $done({ body: $response.body });
+  } else {
+    $done({});
+  }
 }
