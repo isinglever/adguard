@@ -1,0 +1,1386 @@
+{
+    "result": "SUCCESS",
+    "data": [
+        {
+            "type": "category",
+            "data": [
+                "Movies",
+                "Listening for beginners",
+                "Travel",
+                "Popular ",
+                "American drama series",
+                "TV shows ",
+                "Celebrities ",
+                "Animation",
+                "Greetings",
+                "Pop songs",
+                "Emotions",
+                "Lectures in English ",
+                "Everyday Expressions",
+                "British English",
+                "Kids ",
+                "Daily vlogs",
+                "Physical state",
+                "Food ",
+                "Business ",
+                "People "
+            ]
+        },
+        {
+            "type": "membershipTimeSaleHomeBanner",
+            "data": {
+                "remainSeconds": 493287,
+                "productId": "me.mycake.plus.subscription.1year_timesale",
+                "id": 768,
+                "type": "NORMAL"
+            }
+        },
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 10482,
+                                "image": "https://i.ytimg.com/vi/8vw_br9kI7Y/hqdefault.jpg",
+                                "preview": "",
+                                "sentence": "That's the way things are",
+                                "sentenceEng": "That's the way it is.",
+                                "sentenceEngMl": "That's the way it <u>is</u>.",
+                                "mtags3": "step=1&sort=0&position=0X0&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 10588,
+                                "image": "https://i.ytimg.com/vi/tQsoXGTksSo/hqdefault.jpg",
+                                "sentence": "That's how you do it",
+                                "sentenceEng": "That's the way to go.",
+                                "sentenceEngMl": "That's the way to <u>go</u>.",
+                                "mtags3": "step=1&sort=0&position=0X1&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 10592,
+                                "image": "https://i.ytimg.com/vi/YNc0s399TOQ/hqdefault.jpg",
+                                "sentence": "That's the way to earn it",
+                                "sentenceEng": "That's the way to get it.",
+                                "sentenceEngMl": "That's the way to <u>get</u> it.",
+                                "mtags3": "step=1&sort=0&position=0X2&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 6790,
+                                "image": "https://i.ytimg.com/vi/a7TcAeciAcQ/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/8a81b3530765939856ce8e71695041131363f7dd81cdb59e947bb928e96bb2fb.mp4",
+                                "sentence": "Well, you must accept things the way they are",
+                                "sentenceEng": "That's the way the cookie crumbles.",
+                                "sentenceEngMl": "That's the way the <u>cookie</u> crumbles.",
+                                "mtags3": "step=1&sort=0&position=0X3&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 10591,
+                                "image": "https://i.ytimg.com/vi/51pjwj9fiGo/hqdefault.jpg",
+                                "preview": "",
+                                "sentence": "That's how things are done",
+                                "sentenceEng": "That's the way we do things.",
+                                "sentenceEngMl": "That's the way we <u>do</u> things.",
+                                "mtags3": "step=1&sort=0&position=0X4&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 4814,
+                        "playlistTitle": "Sentence patterns : That's the way...",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": false,
+                        "reqId": "8019ee19-b38c-43b3-8d18-2791d8cd10d1"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "snack",
+            "data": {
+                "items": [
+                    {
+                        "snackId": 1757,
+                        "creatorId": 89,
+                        "groupIdentifier": "1757",
+                        "snackPoolId": 0,
+                        "lastNew": false,
+                        "thumbnail": "https://static-mycake.pstatic.net/image/img_2205271325/1669095624882",
+                        "content": "[Sentence Pattern] I almost ~.",
+                        "followed": false,
+                        "liked": false,
+                        "likeCount": 2272,
+                        "viewCount": 40960,
+                        "progress": 0,
+                        "cards": [
+                            {
+                                "cardId": 64191,
+                                "type": "SNACK",
+                                "typeId": 64191,
+                                "title": "I almost passed out.",
+                                "message": "I nearly passed out.",
+                                "translationEnabled": false,
+                                "saved": false,
+                                "seqInSnackLang": 7
+                            },
+                            {
+                                "cardId": 64193,
+                                "type": "SNACK",
+                                "typeId": 64193,
+                                "title": "I almost missed the bus.",
+                                "message": "I nearly missed the bus.",
+                                "translationEnabled": false,
+                                "saved": false,
+                                "seqInSnackLang": 9
+                            }
+                        ],
+                        "hashtags": [
+                            {
+                                "link": ""
+                            }
+                        ],
+                        "uploader": {
+                            "id": 89,
+                            "image": "https://static-mycake.pstatic.net/image/img_2205271325/1657044185643",
+                            "name": "Yana",
+                            "certifiedCreator": true
+                        },
+                        "video": {
+                            "uri": "https://snack-video.cakeapp.me/snack_v_2209292325/snack_en_1757_1669095069712.m3u8?Policy=ewogICJTdGF0ZW1lbnQiOiBbCiAgICB7CiAgICAgICJSZXNvdXJjZSI6ICJodHRwczovL3NuYWNrLXZpZGVvLmNha2VhcHAubWUqIiwKICAgICAgIkNvbmRpdGlvbiI6IHsKICAgICAgICAiRGF0ZUxlc3NUaGFuIjogewogICAgICAgICAgIkFXUzpFcG9jaFRpbWUiOiAxNzU5ODMxMTE0CiAgICAgICAgfQogICAgICB9CiAgICB9CiAgXQp9&Signature=nqNJzKONrPxyVs0h7Zp5u-OYmhkU7yPNrHZta1WVs31KUNEruNgkYnByfJyM4NVNIcmOl8L0GRiLTX4yOfDRIC7CJ~Jz7UMrCmCdwtj6ukaEKZrqDmnPWOYhgwsGKIMvTYYCeBAXKs9IQTOe9l3jUFNjyDaoNlWwgsMbi1ljEpzN85IIGhfITCwTWXUOUjSMH9HXhHEMTAFaqbiP6nOFChb3qwJckWzkmwTBCkoIf5NrrY4xX7cmITLrOvoEByswcmS7BJhPWgu8EoND8aZZq9oCnVwyZoP6HZVKGllgkcDouLZ0RGiWDGvApvNJ~qOtnhYfUkZxvJ6QC7wCj9OfVQ__&Key-Pair-Id=K2R20N893Q573B",
+                            "midCompletionTime": 4.41,
+                            "completionTime": 22.07
+                        },
+                        "releaseDatetime": "2022-12-06 00:00:00",
+                        "userTodayImprovedSnackId": 1070520345,
+                        "hasCurriculumList": true,
+                        "restrictedNow": false
+                    },
+                    {
+                        "snackId": 1100,
+                        "creatorId": 5,
+                        "groupIdentifier": "1100",
+                        "snackPoolId": 0,
+                        "lastNew": false,
+                        "thumbnail": "https://static-mycake.pstatic.net/image/img_2205271325/1658473417104",
+                        "content": "\"Test the waters\" What does it mean?",
+                        "followed": false,
+                        "liked": false,
+                        "likeCount": 6635,
+                        "viewCount": 100230,
+                        "progress": 0,
+                        "cards": [
+                            {
+                                "cardId": 36982,
+                                "type": "SNACK",
+                                "typeId": 36982,
+                                "title": "Why don't you test the waters?",
+                                "message": "Why don't you find out before you do it?",
+                                "translationEnabled": false,
+                                "saved": false,
+                                "seqInSnackLang": 1
+                            },
+                            {
+                                "cardId": 36984,
+                                "type": "SNACK",
+                                "typeId": 36984,
+                                "title": "You'll be in hot water.",
+                                "message": "You'll get in trouble.",
+                                "translationEnabled": false,
+                                "saved": false,
+                                "seqInSnackLang": 3
+                            }
+                        ],
+                        "hashtags": [
+                            {
+                                "link": ""
+                            }
+                        ],
+                        "uploader": {
+                            "id": 5,
+                            "image": "https://static-mycake.pstatic.net/image/img_2012141652/1653462588309",
+                            "name": "Alex Relearns English",
+                            "certifiedCreator": true
+                        },
+                        "video": {
+                            "uri": "https://snack-video.cakeapp.me/snack_v_2206232024/snack_1100_1658473359063.m3u8?Policy=ewogICJTdGF0ZW1lbnQiOiBbCiAgICB7CiAgICAgICJSZXNvdXJjZSI6ICJodHRwczovL3NuYWNrLXZpZGVvLmNha2VhcHAubWUqIiwKICAgICAgIkNvbmRpdGlvbiI6IHsKICAgICAgICAiRGF0ZUxlc3NUaGFuIjogewogICAgICAgICAgIkFXUzpFcG9jaFRpbWUiOiAxNzU5ODMxMTE0CiAgICAgICAgfQogICAgICB9CiAgICB9CiAgXQp9&Signature=nqNJzKONrPxyVs0h7Zp5u-OYmhkU7yPNrHZta1WVs31KUNEruNgkYnByfJyM4NVNIcmOl8L0GRiLTX4yOfDRIC7CJ~Jz7UMrCmCdwtj6ukaEKZrqDmnPWOYhgwsGKIMvTYYCeBAXKs9IQTOe9l3jUFNjyDaoNlWwgsMbi1ljEpzN85IIGhfITCwTWXUOUjSMH9HXhHEMTAFaqbiP6nOFChb3qwJckWzkmwTBCkoIf5NrrY4xX7cmITLrOvoEByswcmS7BJhPWgu8EoND8aZZq9oCnVwyZoP6HZVKGllgkcDouLZ0RGiWDGvApvNJ~qOtnhYfUkZxvJ6QC7wCj9OfVQ__&Key-Pair-Id=K2R20N893Q573B",
+                            "midCompletionTime": 5.93,
+                            "completionTime": 29.67
+                        },
+                        "releaseDatetime": "2022-08-10 00:00:00",
+                        "userTodayImprovedSnackId": 1070520348,
+                        "hasCurriculumList": false,
+                        "restrictedNow": false
+                    },
+                    {
+                        "snackId": 2448,
+                        "creatorId": 146,
+                        "groupIdentifier": "2448",
+                        "snackPoolId": 0,
+                        "lastNew": false,
+                        "thumbnail": "https://static-mycake.pstatic.net/image/img_2205271325/1690185076787",
+                        "content": "Fill in the blank : by ___",
+                        "followed": false,
+                        "liked": false,
+                        "likeCount": 745,
+                        "viewCount": 15987,
+                        "progress": 0,
+                        "cards": [
+                            {
+                                "cardId": 90089,
+                                "type": "SNACK",
+                                "typeId": 90089,
+                                "title": "I know the whole song by heart.",
+                                "message": "I memorized the whole song.",
+                                "translationEnabled": false,
+                                "saved": false,
+                                "seqInSnackLang": 2
+                            },
+                            {
+                                "cardId": 90091,
+                                "type": "SNACK",
+                                "typeId": 90091,
+                                "title": "It took me by surprise.",
+                                "message": "It made me really surprised.",
+                                "translationEnabled": false,
+                                "saved": false,
+                                "seqInSnackLang": 4
+                            }
+                        ],
+                        "hashtags": [
+                            {
+                                "link": ""
+                            }
+                        ],
+                        "uploader": {
+                            "id": 146,
+                            "image": "https://static-mycake.pstatic.net/image/img_2205271325/1688375432226",
+                            "name": "Leigh Holland",
+                            "certifiedCreator": true
+                        },
+                        "video": {
+                            "uri": "https://snack-video.cakeapp.me/snack_v_2209292325/snack_en_2448_1695361189906.m3u8?Policy=ewogICJTdGF0ZW1lbnQiOiBbCiAgICB7CiAgICAgICJSZXNvdXJjZSI6ICJodHRwczovL3NuYWNrLXZpZGVvLmNha2VhcHAubWUqIiwKICAgICAgIkNvbmRpdGlvbiI6IHsKICAgICAgICAiRGF0ZUxlc3NUaGFuIjogewogICAgICAgICAgIkFXUzpFcG9jaFRpbWUiOiAxNzU5ODMxMTE0CiAgICAgICAgfQogICAgICB9CiAgICB9CiAgXQp9&Signature=nqNJzKONrPxyVs0h7Zp5u-OYmhkU7yPNrHZta1WVs31KUNEruNgkYnByfJyM4NVNIcmOl8L0GRiLTX4yOfDRIC7CJ~Jz7UMrCmCdwtj6ukaEKZrqDmnPWOYhgwsGKIMvTYYCeBAXKs9IQTOe9l3jUFNjyDaoNlWwgsMbi1ljEpzN85IIGhfITCwTWXUOUjSMH9HXhHEMTAFaqbiP6nOFChb3qwJckWzkmwTBCkoIf5NrrY4xX7cmITLrOvoEByswcmS7BJhPWgu8EoND8aZZq9oCnVwyZoP6HZVKGllgkcDouLZ0RGiWDGvApvNJ~qOtnhYfUkZxvJ6QC7wCj9OfVQ__&Key-Pair-Id=K2R20N893Q573B",
+                            "midCompletionTime": 5.48,
+                            "completionTime": 27.4
+                        },
+                        "releaseDatetime": "2023-10-08 00:00:00",
+                        "userTodayImprovedSnackId": 1070520352,
+                        "hasCurriculumList": false,
+                        "restrictedNow": false
+                    },
+                    {
+                        "snackId": 1763,
+                        "creatorId": 114,
+                        "groupIdentifier": "1763",
+                        "snackPoolId": 0,
+                        "lastNew": false,
+                        "thumbnail": "https://static-mycake.pstatic.net/image/img_2205271325/1669098786122",
+                        "content": "7 ways say \"I don't know\" ",
+                        "followed": false,
+                        "liked": false,
+                        "likeCount": 6066,
+                        "viewCount": 74791,
+                        "progress": 0,
+                        "cards": [
+                            {
+                                "cardId": 64230,
+                                "type": "SNACK",
+                                "typeId": 64230,
+                                "title": "I have no idea.",
+                                "message": "I have no clue.",
+                                "translationEnabled": false,
+                                "saved": false,
+                                "seqInSnackLang": 1
+                            },
+                            {
+                                "cardId": 64233,
+                                "type": "SNACK",
+                                "typeId": 64233,
+                                "title": "It's a mystery to me.",
+                                "message": "It's a puzzle to me.",
+                                "translationEnabled": false,
+                                "saved": false,
+                                "seqInSnackLang": 4
+                            }
+                        ],
+                        "hashtags": [
+                            {
+                                "link": ""
+                            }
+                        ],
+                        "uploader": {
+                            "id": 114,
+                            "image": "https://static-mycake.pstatic.net/image/img_2205271325/1667205445518",
+                            "name": "Christina Donnelly",
+                            "certifiedCreator": true
+                        },
+                        "video": {
+                            "uri": "https://snack-video.cakeapp.me/snack_v_2209292325/snack_en_1763_1669098758501.m3u8?Policy=ewogICJTdGF0ZW1lbnQiOiBbCiAgICB7CiAgICAgICJSZXNvdXJjZSI6ICJodHRwczovL3NuYWNrLXZpZGVvLmNha2VhcHAubWUqIiwKICAgICAgIkNvbmRpdGlvbiI6IHsKICAgICAgICAiRGF0ZUxlc3NUaGFuIjogewogICAgICAgICAgIkFXUzpFcG9jaFRpbWUiOiAxNzU5ODMxMTE0CiAgICAgICAgfQogICAgICB9CiAgICB9CiAgXQp9&Signature=nqNJzKONrPxyVs0h7Zp5u-OYmhkU7yPNrHZta1WVs31KUNEruNgkYnByfJyM4NVNIcmOl8L0GRiLTX4yOfDRIC7CJ~Jz7UMrCmCdwtj6ukaEKZrqDmnPWOYhgwsGKIMvTYYCeBAXKs9IQTOe9l3jUFNjyDaoNlWwgsMbi1ljEpzN85IIGhfITCwTWXUOUjSMH9HXhHEMTAFaqbiP6nOFChb3qwJckWzkmwTBCkoIf5NrrY4xX7cmITLrOvoEByswcmS7BJhPWgu8EoND8aZZq9oCnVwyZoP6HZVKGllgkcDouLZ0RGiWDGvApvNJ~qOtnhYfUkZxvJ6QC7wCj9OfVQ__&Key-Pair-Id=K2R20N893Q573B",
+                            "midCompletionTime": 1.62,
+                            "completionTime": 8.12
+                        },
+                        "releaseDatetime": "2022-12-09 00:00:00",
+                        "userTodayImprovedSnackId": 1070520349,
+                        "hasCurriculumList": false,
+                        "restrictedNow": false
+                    },
+                    {
+                        "snackId": 761,
+                        "creatorId": 66,
+                        "groupIdentifier": "761",
+                        "snackPoolId": 0,
+                        "lastNew": false,
+                        "thumbnail": "https://static-mycake.pstatic.net/image/img_2205271325/1654849844396",
+                        "content": "Action Verbs : Paper",
+                        "followed": false,
+                        "liked": false,
+                        "likeCount": 7982,
+                        "viewCount": 91181,
+                        "progress": 0,
+                        "cards": [
+                            {
+                                "cardId": 26921,
+                                "type": "WORD",
+                                "typeId": 8862,
+                                "wordType": "VERB",
+                                "title": "rip",
+                                "message": "to tear something or to become torn, often suddenly or violently",
+                                "translationEnabled": false,
+                                "word": "rip",
+                                "saved": false,
+                                "seqInSnackLang": 4
+                            },
+                            {
+                                "cardId": 26923,
+                                "type": "WORD",
+                                "typeId": 8863,
+                                "wordType": "VERB",
+                                "title": "crumple",
+                                "message": "to press or crush something into folds",
+                                "translationEnabled": false,
+                                "word": "crumple",
+                                "saved": false,
+                                "seqInSnackLang": 6
+                            }
+                        ],
+                        "hashtags": [
+                            {
+                                "link": ""
+                            }
+                        ],
+                        "uploader": {
+                            "id": 66,
+                            "image": "https://static-mycake.pstatic.net/image/img_2012141652/1653604678886",
+                            "name": "Joe Nowell",
+                            "certifiedCreator": true
+                        },
+                        "video": {
+                            "uri": "https://snack-video.cakeapp.me/snack_v_2205102025/snack_761_1654849348756.m3u8?Policy=ewogICJTdGF0ZW1lbnQiOiBbCiAgICB7CiAgICAgICJSZXNvdXJjZSI6ICJodHRwczovL3NuYWNrLXZpZGVvLmNha2VhcHAubWUqIiwKICAgICAgIkNvbmRpdGlvbiI6IHsKICAgICAgICAiRGF0ZUxlc3NUaGFuIjogewogICAgICAgICAgIkFXUzpFcG9jaFRpbWUiOiAxNzU5ODMxMTE0CiAgICAgICAgfQogICAgICB9CiAgICB9CiAgXQp9&Signature=nqNJzKONrPxyVs0h7Zp5u-OYmhkU7yPNrHZta1WVs31KUNEruNgkYnByfJyM4NVNIcmOl8L0GRiLTX4yOfDRIC7CJ~Jz7UMrCmCdwtj6ukaEKZrqDmnPWOYhgwsGKIMvTYYCeBAXKs9IQTOe9l3jUFNjyDaoNlWwgsMbi1ljEpzN85IIGhfITCwTWXUOUjSMH9HXhHEMTAFaqbiP6nOFChb3qwJckWzkmwTBCkoIf5NrrY4xX7cmITLrOvoEByswcmS7BJhPWgu8EoND8aZZq9oCnVwyZoP6HZVKGllgkcDouLZ0RGiWDGvApvNJ~qOtnhYfUkZxvJ6QC7wCj9OfVQ__&Key-Pair-Id=K2R20N893Q573B",
+                            "midCompletionTime": 5.4,
+                            "completionTime": 26.99
+                        },
+                        "releaseDatetime": "2022-06-24 00:00:00",
+                        "userTodayImprovedSnackId": 1070520346,
+                        "hasCurriculumList": false,
+                        "restrictedNow": false
+                    },
+                    {
+                        "snackId": 2428,
+                        "creatorId": 147,
+                        "groupIdentifier": "2428",
+                        "snackPoolId": 0,
+                        "lastNew": false,
+                        "thumbnail": "https://static-mycake.pstatic.net/image/img_2205271325/1689150021063",
+                        "content": "Guess 10 kitchen words!",
+                        "followed": false,
+                        "liked": false,
+                        "likeCount": 2316,
+                        "viewCount": 31339,
+                        "progress": 0,
+                        "cards": [
+                            {
+                                "cardId": 89748,
+                                "type": "WORD",
+                                "typeId": 10729,
+                                "wordType": "NOUN",
+                                "title": "microwave",
+                                "message": "a type of oven that cooks or heats food very quickly using electromagnetic waves rather than heat",
+                                "translationEnabled": false,
+                                "word": "microwave",
+                                "saved": false,
+                                "seqInSnackLang": 3
+                            },
+                            {
+                                "cardId": 89752,
+                                "type": "WORD",
+                                "typeId": 12181,
+                                "wordType": "NOUN",
+                                "title": "mixing bowl",
+                                "message": "a large bowl for mixing food in",
+                                "translationEnabled": false,
+                                "word": "mixing bowl",
+                                "saved": false,
+                                "seqInSnackLang": 7
+                            }
+                        ],
+                        "hashtags": [
+                            {
+                                "link": ""
+                            }
+                        ],
+                        "uploader": {
+                            "id": 147,
+                            "image": "https://static-mycake.pstatic.net/image/img_2205271325/1688454032340",
+                            "name": "Karl",
+                            "certifiedCreator": true
+                        },
+                        "video": {
+                            "uri": "https://snack-video.cakeapp.me/snack_v_2209292325/snack_en_2428_1689139801429.m3u8?Policy=ewogICJTdGF0ZW1lbnQiOiBbCiAgICB7CiAgICAgICJSZXNvdXJjZSI6ICJodHRwczovL3NuYWNrLXZpZGVvLmNha2VhcHAubWUqIiwKICAgICAgIkNvbmRpdGlvbiI6IHsKICAgICAgICAiRGF0ZUxlc3NUaGFuIjogewogICAgICAgICAgIkFXUzpFcG9jaFRpbWUiOiAxNzU5ODMxMTE0CiAgICAgICAgfQogICAgICB9CiAgICB9CiAgXQp9&Signature=nqNJzKONrPxyVs0h7Zp5u-OYmhkU7yPNrHZta1WVs31KUNEruNgkYnByfJyM4NVNIcmOl8L0GRiLTX4yOfDRIC7CJ~Jz7UMrCmCdwtj6ukaEKZrqDmnPWOYhgwsGKIMvTYYCeBAXKs9IQTOe9l3jUFNjyDaoNlWwgsMbi1ljEpzN85IIGhfITCwTWXUOUjSMH9HXhHEMTAFaqbiP6nOFChb3qwJckWzkmwTBCkoIf5NrrY4xX7cmITLrOvoEByswcmS7BJhPWgu8EoND8aZZq9oCnVwyZoP6HZVKGllgkcDouLZ0RGiWDGvApvNJ~qOtnhYfUkZxvJ6QC7wCj9OfVQ__&Key-Pair-Id=K2R20N893Q573B",
+                            "midCompletionTime": 4.22,
+                            "completionTime": 21.11
+                        },
+                        "releaseDatetime": "2023-08-03 00:00:00",
+                        "userTodayImprovedSnackId": 1070520351,
+                        "hasCurriculumList": false,
+                        "restrictedNow": false
+                    },
+                    {
+                        "snackId": 85,
+                        "creatorId": 28,
+                        "groupIdentifier": "85",
+                        "snackPoolId": 0,
+                        "lastNew": false,
+                        "thumbnail": "https://static-mycake.pstatic.net/image/img_2012141652/1652318880010",
+                        "content": "One day you'll thank me!",
+                        "followed": false,
+                        "liked": false,
+                        "likeCount": 3696,
+                        "viewCount": 89924,
+                        "progress": 0,
+                        "cards": [
+                            {
+                                "cardId": 1807,
+                                "type": "SNACK",
+                                "typeId": 1807,
+                                "title": "It's going to spoil your health.",
+                                "message": "It's going to be harmful for your health.",
+                                "translationEnabled": false,
+                                "saved": false,
+                                "seqInSnackLang": 5
+                            },
+                            {
+                                "cardId": 1809,
+                                "type": "SNACK",
+                                "typeId": 1809,
+                                "title": "Just let me sleep in, please!",
+                                "message": "Just let me sleep some more, please!",
+                                "translationEnabled": false,
+                                "saved": false,
+                                "seqInSnackLang": 7
+                            }
+                        ],
+                        "hashtags": [
+                            {
+                                "link": ""
+                            }
+                        ],
+                        "uploader": {
+                            "id": 28,
+                            "image": "https://static-mycake.pstatic.net/image/img_2012141652/1653463908983",
+                            "name": "kesung1",
+                            "certifiedCreator": true
+                        },
+                        "video": {
+                            "uri": "https://snack-video.cakeapp.me/snack_v_2022032219/snack_85_1649120899123.m3u8?Policy=ewogICJTdGF0ZW1lbnQiOiBbCiAgICB7CiAgICAgICJSZXNvdXJjZSI6ICJodHRwczovL3NuYWNrLXZpZGVvLmNha2VhcHAubWUqIiwKICAgICAgIkNvbmRpdGlvbiI6IHsKICAgICAgICAiRGF0ZUxlc3NUaGFuIjogewogICAgICAgICAgIkFXUzpFcG9jaFRpbWUiOiAxNzU5ODMxMTE0CiAgICAgICAgfQogICAgICB9CiAgICB9CiAgXQp9&Signature=nqNJzKONrPxyVs0h7Zp5u-OYmhkU7yPNrHZta1WVs31KUNEruNgkYnByfJyM4NVNIcmOl8L0GRiLTX4yOfDRIC7CJ~Jz7UMrCmCdwtj6ukaEKZrqDmnPWOYhgwsGKIMvTYYCeBAXKs9IQTOe9l3jUFNjyDaoNlWwgsMbi1ljEpzN85IIGhfITCwTWXUOUjSMH9HXhHEMTAFaqbiP6nOFChb3qwJckWzkmwTBCkoIf5NrrY4xX7cmITLrOvoEByswcmS7BJhPWgu8EoND8aZZq9oCnVwyZoP6HZVKGllgkcDouLZ0RGiWDGvApvNJ~qOtnhYfUkZxvJ6QC7wCj9OfVQ__&Key-Pair-Id=K2R20N893Q573B",
+                            "midCompletionTime": 5.88,
+                            "completionTime": 29.42
+                        },
+                        "releaseDatetime": "2022-04-06 00:00:00",
+                        "userTodayImprovedSnackId": 1070520347,
+                        "hasCurriculumList": false,
+                        "restrictedNow": false
+                    },
+                    {
+                        "snackId": 156,
+                        "creatorId": 32,
+                        "groupIdentifier": "156",
+                        "snackPoolId": 0,
+                        "lastNew": false,
+                        "thumbnail": "https://static-mycake.pstatic.net/image/img_2205271325/1653984965773",
+                        "content": "How to answer to \"Thank you!\"",
+                        "followed": false,
+                        "liked": false,
+                        "likeCount": 4258,
+                        "viewCount": 61710,
+                        "progress": 0,
+                        "cards": [
+                            {
+                                "cardId": 10138,
+                                "type": "SNACK",
+                                "typeId": 10138,
+                                "title": "No need to thank me.",
+                                "message": "You don't have to thank me.",
+                                "translationEnabled": false,
+                                "saved": false,
+                                "seqInSnackLang": 0
+                            },
+                            {
+                                "cardId": 10139,
+                                "type": "SNACK",
+                                "typeId": 10139,
+                                "title": "It was really nothing.",
+                                "message": "It was no big deal.",
+                                "translationEnabled": false,
+                                "saved": false,
+                                "seqInSnackLang": 1
+                            }
+                        ],
+                        "hashtags": [
+                            {
+                                "link": ""
+                            }
+                        ],
+                        "uploader": {
+                            "id": 32,
+                            "image": "https://static-mycake.pstatic.net/image/img_2012141652/1653463990540",
+                            "name": "Cake English Quiz",
+                            "certifiedCreator": true
+                        },
+                        "video": {
+                            "uri": "https://snack-video.cakeapp.me/snack_v_2022032219/snack_156_1649833106009.m3u8?Policy=ewogICJTdGF0ZW1lbnQiOiBbCiAgICB7CiAgICAgICJSZXNvdXJjZSI6ICJodHRwczovL3NuYWNrLXZpZGVvLmNha2VhcHAubWUqIiwKICAgICAgIkNvbmRpdGlvbiI6IHsKICAgICAgICAiRGF0ZUxlc3NUaGFuIjogewogICAgICAgICAgIkFXUzpFcG9jaFRpbWUiOiAxNzU5ODMxMTE0CiAgICAgICAgfQogICAgICB9CiAgICB9CiAgXQp9&Signature=nqNJzKONrPxyVs0h7Zp5u-OYmhkU7yPNrHZta1WVs31KUNEruNgkYnByfJyM4NVNIcmOl8L0GRiLTX4yOfDRIC7CJ~Jz7UMrCmCdwtj6ukaEKZrqDmnPWOYhgwsGKIMvTYYCeBAXKs9IQTOe9l3jUFNjyDaoNlWwgsMbi1ljEpzN85IIGhfITCwTWXUOUjSMH9HXhHEMTAFaqbiP6nOFChb3qwJckWzkmwTBCkoIf5NrrY4xX7cmITLrOvoEByswcmS7BJhPWgu8EoND8aZZq9oCnVwyZoP6HZVKGllgkcDouLZ0RGiWDGvApvNJ~qOtnhYfUkZxvJ6QC7wCj9OfVQ__&Key-Pair-Id=K2R20N893Q573B",
+                            "midCompletionTime": 3.89,
+                            "completionTime": 19.43
+                        },
+                        "releaseDatetime": "2022-05-11 00:00:00",
+                        "userTodayImprovedSnackId": 1070520344,
+                        "hasCurriculumList": false,
+                        "restrictedNow": false
+                    },
+                    {
+                        "snackId": 1806,
+                        "creatorId": 124,
+                        "groupIdentifier": "1806",
+                        "snackPoolId": 0,
+                        "lastNew": false,
+                        "thumbnail": "https://static-mycake.pstatic.net/image/img_2205271325/1669952652073",
+                        "content": "What is the plural form of 'mouse'?",
+                        "followed": false,
+                        "liked": false,
+                        "likeCount": 4699,
+                        "viewCount": 61612,
+                        "progress": 0,
+                        "cards": [
+                            {
+                                "cardId": 65702,
+                                "type": "WORD",
+                                "typeId": 5336,
+                                "wordType": "NOUN",
+                                "title": "mouse",
+                                "message": "a small animal that is covered in fur and has a long thin tail. Mice live in fields, in people\u2019s houses or where food is stored",
+                                "translationEnabled": false,
+                                "word": "mouse",
+                                "saved": false,
+                                "seqInSnackLang": 1
+                            },
+                            {
+                                "cardId": 65703,
+                                "type": "WORD",
+                                "typeId": 1604,
+                                "wordType": "NOUN",
+                                "title": "man",
+                                "message": "an adult male human",
+                                "translationEnabled": false,
+                                "word": "man",
+                                "saved": false,
+                                "seqInSnackLang": 2
+                            }
+                        ],
+                        "hashtags": [
+                            {
+                                "link": ""
+                            }
+                        ],
+                        "uploader": {
+                            "id": 124,
+                            "image": "https://static-mycake.pstatic.net/image/img_2205271325/1669888823000",
+                            "name": "Must-Know English Grammar",
+                            "certifiedCreator": true
+                        },
+                        "video": {
+                            "uri": "https://snack-video.cakeapp.me/snack_v_2209292325/snack_en_1806_1669952506943.m3u8?Policy=ewogICJTdGF0ZW1lbnQiOiBbCiAgICB7CiAgICAgICJSZXNvdXJjZSI6ICJodHRwczovL3NuYWNrLXZpZGVvLmNha2VhcHAubWUqIiwKICAgICAgIkNvbmRpdGlvbiI6IHsKICAgICAgICAiRGF0ZUxlc3NUaGFuIjogewogICAgICAgICAgIkFXUzpFcG9jaFRpbWUiOiAxNzU5ODMxMTE0CiAgICAgICAgfQogICAgICB9CiAgICB9CiAgXQp9&Signature=nqNJzKONrPxyVs0h7Zp5u-OYmhkU7yPNrHZta1WVs31KUNEruNgkYnByfJyM4NVNIcmOl8L0GRiLTX4yOfDRIC7CJ~Jz7UMrCmCdwtj6ukaEKZrqDmnPWOYhgwsGKIMvTYYCeBAXKs9IQTOe9l3jUFNjyDaoNlWwgsMbi1ljEpzN85IIGhfITCwTWXUOUjSMH9HXhHEMTAFaqbiP6nOFChb3qwJckWzkmwTBCkoIf5NrrY4xX7cmITLrOvoEByswcmS7BJhPWgu8EoND8aZZq9oCnVwyZoP6HZVKGllgkcDouLZ0RGiWDGvApvNJ~qOtnhYfUkZxvJ6QC7wCj9OfVQ__&Key-Pair-Id=K2R20N893Q573B",
+                            "midCompletionTime": 4.75,
+                            "completionTime": 23.74
+                        },
+                        "releaseDatetime": "2022-12-25 00:00:00",
+                        "userTodayImprovedSnackId": 1070520350,
+                        "hasCurriculumList": false,
+                        "restrictedNow": false
+                    },
+                    {
+                        "snackId": 29,
+                        "creatorId": 6,
+                        "groupIdentifier": "29",
+                        "snackPoolId": 0,
+                        "lastNew": false,
+                        "thumbnail": "https://static-mycake.pstatic.net/image/img_2012141652/1648659418619",
+                        "content": "Restaurant Expressions : What's good here?",
+                        "followed": false,
+                        "liked": true,
+                        "likeCount": 19841,
+                        "viewCount": 405084,
+                        "progress": 100,
+                        "cards": [
+                            {
+                                "cardId": 111,
+                                "type": "SNACK",
+                                "typeId": 111,
+                                "title": "What's good here?",
+                                "message": "What is something that's popular here?",
+                                "translationEnabled": false,
+                                "saved": false,
+                                "seqInSnackLang": 1
+                            }
+                        ],
+                        "hashtags": [
+                            {
+                                "link": ""
+                            }
+                        ],
+                        "uploader": {
+                            "id": 6,
+                            "image": "https://static-mycake.pstatic.net/image/img_2012141652/1653462598087",
+                            "name": "15 Second English",
+                            "certifiedCreator": true
+                        },
+                        "video": {
+                            "uri": "https://snack-video.cakeapp.me/snack_v_2022032219/snack_29_1648203386309.m3u8?Policy=ewogICJTdGF0ZW1lbnQiOiBbCiAgICB7CiAgICAgICJSZXNvdXJjZSI6ICJodHRwczovL3NuYWNrLXZpZGVvLmNha2VhcHAubWUqIiwKICAgICAgIkNvbmRpdGlvbiI6IHsKICAgICAgICAiRGF0ZUxlc3NUaGFuIjogewogICAgICAgICAgIkFXUzpFcG9jaFRpbWUiOiAxNzU5ODMxMTE0CiAgICAgICAgfQogICAgICB9CiAgICB9CiAgXQp9&Signature=nqNJzKONrPxyVs0h7Zp5u-OYmhkU7yPNrHZta1WVs31KUNEruNgkYnByfJyM4NVNIcmOl8L0GRiLTX4yOfDRIC7CJ~Jz7UMrCmCdwtj6ukaEKZrqDmnPWOYhgwsGKIMvTYYCeBAXKs9IQTOe9l3jUFNjyDaoNlWwgsMbi1ljEpzN85IIGhfITCwTWXUOUjSMH9HXhHEMTAFaqbiP6nOFChb3qwJckWzkmwTBCkoIf5NrrY4xX7cmITLrOvoEByswcmS7BJhPWgu8EoND8aZZq9oCnVwyZoP6HZVKGllgkcDouLZ0RGiWDGvApvNJ~qOtnhYfUkZxvJ6QC7wCj9OfVQ__&Key-Pair-Id=K2R20N893Q573B",
+                            "midCompletionTime": 1.53,
+                            "completionTime": 7.63
+                        },
+                        "releaseDatetime": "2022-04-19 00:00:00",
+                        "userTodayImprovedSnackId": 1070520343,
+                        "hasCurriculumList": false,
+                        "restrictedNow": false
+                    }
+                ]
+            }
+        },
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 26890,
+                                "image": "https://i.ytimg.com/vi/N5iORTUo3fQ/hqdefault.jpg",
+                                "preview": "",
+                                "sentence": "I have to wash the dishes right away.",
+                                "sentenceEng": "I have to do the dishes right away.",
+                                "sentenceEngMl": "I have to <u>do</u> the dishes right away.",
+                                "mtags3": "step=1&sort=0&position=0X0&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": true,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 26915,
+                                "image": "https://i.ytimg.com/vi/7l1_r8a6wBY/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview2/f0975e44995f7096740ad60208c25f85e89200db7b2324a6bdcec39209a25a04.mp4",
+                                "sentence": "Could you help me with something?",
+                                "sentenceEng": "Could you do me a favor?",
+                                "sentenceEngMl": "Could you do me a <u>favor</u>?",
+                                "mtags3": "step=1&sort=0&position=0X2&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 26916,
+                                "image": "https://i.ytimg.com/vi/9l_K8MMQgK4/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/.mp4",
+                                "sentence": "Something or anything?",
+                                "sentenceEng": "What if I do something wrong?",
+                                "sentenceEngMl": "What if I do <u>something</u> wrong?",
+                                "mtags3": "step=1&sort=0&position=0X3&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 26917,
+                                "image": "https://img.youtube.com/vi/YD1rlE5tp_0/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/0e38d8fb9990f105745fb1f7ed7e43cae8e366a2a1aa17cf85253453ac9c29e9.mp4",
+                                "sentence": "Let's calculate.",
+                                "sentenceEng": "Let's do the math.",
+                                "sentenceEngMl": "Let's <u>do</u> the math.",
+                                "mtags3": "step=1&sort=0&position=0X4&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 26919,
+                                "image": "https://i.ytimg.com/vi/icnu7CeAzzo/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/.mp4",
+                                "sentence": "It's so nice doing business with you.",
+                                "sentenceEng": "Pleasure doing business with you.",
+                                "sentenceEngMl": "P<u>leasure</u> doing business with you.",
+                                "mtags3": "step=1&sort=0&position=0X5&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 8075,
+                        "playlistTitle": "Must-Know Collocations 2 : Do",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": false,
+                        "reqId": "8019ee19-b38c-43b3-8d18-2791d8cd10d1"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "todayConversation",
+            "data": {
+                "todayConversation": {
+                    "id": 20479,
+                    "acquired": false,
+                    "allAcquired": false,
+                    "title": "10\uc6d4 6\uc77c \ud68c\ud654",
+                    "conversationTitle": "Let's describe the ideal student.",
+                    "month": 10,
+                    "day": 6,
+                    "image": "",
+                    "totalCount": 0
+                }
+            }
+        },
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 18300,
+                                "image": "https://img.youtube.com/vi/ch_ZR5Cwffs/hqdefault.jpg",
+                                "preview": "",
+                                "sentence": "I screwed up",
+                                "sentenceEng": "I blew it.",
+                                "sentenceEngMl": "I <u>blew</u> it.",
+                                "mtags3": "step=1&sort=0&position=0X0&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 18319,
+                                "image": "https://img.youtube.com/vi/bKKhiQfTDjY/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/e22b9eb5fb9fdcbdf091f4aa8a3018a75323bc09e46ead99f3cc65659b12cea7.mp4",
+                                "sentence": "You ruined it",
+                                "sentenceEng": "You blew it!",
+                                "sentenceEngMl": "You <u>blew</u> it!",
+                                "mtags3": "step=1&sort=0&position=0X1&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 18322,
+                                "image": "https://i.ytimg.com/vi/MviUCte9Xhs/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/2b6c83bff23b7ff3ef1e3840a80825ef86664cf15e7f5a74230d25facfeac18f.mp4",
+                                "sentence": "I failed",
+                                "sentenceEng": "I bombed.",
+                                "sentenceEngMl": "I <u>bombed</u>.",
+                                "mtags3": "step=1&sort=0&position=0X2&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 15312,
+                                "image": "https://i.ytimg.com/vi/4GYTRmF-JE4/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/a72ba46a08186db6656bf48c606b9e7b1313bc168abfb6860686bf9e20eef79a.mp4",
+                                "sentence": "That was your chance and you missed it",
+                                "sentenceEng": "That was your chance and you blew it.",
+                                "sentenceEngMl": "That was your chance and you <u>blew</u> it.",
+                                "mtags3": "step=1&sort=0&position=0X3&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 9128,
+                                "image": "https://i.ytimg.com/vi/BGHGZjDguqw/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/f8f024058ac7984c833c89984c9501d795086c68d7517eecc1826e1f55304934.mp4",
+                                "sentence": "I messed up",
+                                "sentenceEng": "I screwed up.",
+                                "sentenceEngMl": "I s<u>crewed</u> up.",
+                                "mtags3": "step=1&sort=0&position=0X4&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 6417,
+                        "playlistTitle": "Casual English : I ____ it",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": false,
+                        "reqId": "8019ee19-b38c-43b3-8d18-2791d8cd10d1"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "speakList",
+            "data": []
+        },
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 6156,
+                                "image": "https://i.ytimg.com/vi/-4bGPF-8Syo/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/aadd621b89aec19a3fc8d640e6dd25e0e0d6d484c083679f2453462c07f248d9.mp4",
+                                "sentence": "Are you heading down?",
+                                "sentenceEng": "Are you guys going down?",
+                                "sentenceEngMl": "Are you guys <u>going</u> down?",
+                                "mtags3": "step=1&sort=0&position=0X0&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 6154,
+                                "image": "https://i.ytimg.com/vi/aiEuzkJDwUg/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/6b81682943e7b4e742112bf90b96aed473f7c0e038cb72ac5d3f562590c6e451.mp4",
+                                "sentence": "the highest floor, please",
+                                "sentenceEng": "Top floor, please.",
+                                "sentenceEngMl": "<u>Top</u> floor, please.",
+                                "mtags3": "step=1&sort=0&position=0X1&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 6178,
+                                "image": "https://img.youtube.com/vi/hOTzCn_Gz90/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview2/dfdf12ac6e4610cc8ded9ee2c34920645eba88c2bc70a5389b02a6dc0ba9160b.mp4",
+                                "sentence": "Get on the next one.",
+                                "sentenceEng": "Take the next one.",
+                                "sentenceEngMl": "<u>Take</u> the next one.",
+                                "mtags3": "step=1&sort=0&position=0X2&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 6158,
+                                "image": "https://i.ytimg.com/vi/nipHsxjBVaE/hqdefault.jpg",
+                                "sentence": "We walked up the stairs and took and elevator down.",
+                                "sentenceEng": "We took the stairs up, elevator down.",
+                                "sentenceEngMl": "We <u>took</u> the stairs up, elevator down.",
+                                "mtags3": "step=1&sort=0&position=0X3&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 6155,
+                                "image": "https://i.ytimg.com/vi/a01TN3pHC_s/hqdefault.jpg",
+                                "sentence": "Headed up?",
+                                "sentenceEng": "Going up?",
+                                "sentenceEngMl": "<u>Going</u> up?",
+                                "mtags3": "step=1&sort=0&position=0X4&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 3823,
+                        "playlistTitle": "Expressions related to elevators 2",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": false,
+                        "reqId": "8019ee19-b38c-43b3-8d18-2791d8cd10d1"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 4639,
+                                "image": "https://img.youtube.com/vi/8FqsVi1rpdI/hqdefault.jpg",
+                                "sentence": "this will take a long time",
+                                "sentenceEng": "That's going to take up a lot of time.",
+                                "sentenceEngMl": "That's going to <u>take</u> up a lot of time.",
+                                "mtags3": "step=1&sort=0&position=0X0&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 4653,
+                                "image": "https://i.ytimg.com/vi/P5mPESPYQtc/hqdefault.jpg",
+                                "sentence": "\"a very long time\"",
+                                "sentenceEng": "It takes forever.",
+                                "sentenceEngMl": "It takes <u>forever</u>.",
+                                "mtags3": "step=1&sort=0&position=0X1&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 4650,
+                                "image": "https://i.ytimg.com/vi/DZW2VuqNP4c/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/.mp4",
+                                "sentence": "we will have to wait",
+                                "sentenceEng": "It takes a long time.",
+                                "sentenceEngMl": "It <u>takes</u> a long time.",
+                                "mtags3": "step=1&sort=0&position=0X2&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 4646,
+                                "image": "https://i.ytimg.com/vi/11sILPCV1y0/hqdefault.jpg",
+                                "sentence": "it will take up some time",
+                                "sentenceEng": "It will be a bit more time consuming.",
+                                "sentenceEngMl": "It will be a bit more time <u>consuming</u>.",
+                                "mtags3": "step=1&sort=0&position=0X3&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 3633,
+                        "playlistTitle": "It takes forever",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": false,
+                        "reqId": "8019ee19-b38c-43b3-8d18-2791d8cd10d1"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 28165,
+                                "image": "https://i.ytimg.com/vi/cfqTtJNVvdQ/hqdefault.jpg",
+                                "preview": "",
+                                "sentence": "I succeeded!",
+                                "sentenceEng": "It worked!",
+                                "sentenceEngMl": "It <u>worked</u>!",
+                                "mtags3": "step=1&sort=0&position=0X0&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": true,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 27271,
+                                "image": "https://i.ytimg.com/vi/NKeiRNgdR1s/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview2/959b297c9fd30a8e74be31869216bb5d861f7e91de010b374021a503a019f7cf.mp4",
+                                "sentence": "It had a desirable effect!",
+                                "sentenceEng": "It worked!",
+                                "sentenceEngMl": "It w<u>orked</u>!",
+                                "mtags3": "step=1&sort=0&position=0X2&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": true,
+                                "membershipOnly": false,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 12734,
+                                "image": "https://static-mycake.pstatic.net/image/img_2205271325/1663817702516",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/02253b59a76fec12e1c7659fe64cb7eddde223f016038174fc1e13ab348580e1.mp4",
+                                "sentence": "Is it effective?",
+                                "sentenceEng": "Is it working?",
+                                "sentenceEngMl": "Is <u>it</u> working?",
+                                "mtags3": "step=1&sort=0&position=0X3&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 6262,
+                                "image": "https://i.ytimg.com/vi/9EptxQH1YWo/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/c92be9d709fa1495110f6301bacd330a05313a7f2c33f07e7e0431a174836b09.mp4",
+                                "sentence": "there's something wrong with the Wi-Fi",
+                                "sentenceEng": "The Wi-Fi isn't working.",
+                                "sentenceEngMl": "The Wi-Fi isn't <u>working</u>.",
+                                "mtags3": "step=1&sort=0&position=0X5&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 8141,
+                        "playlistTitle": "Become a Native Speaker : It worked!",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": false,
+                        "reqId": "8019ee19-b38c-43b3-8d18-2791d8cd10d1"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 287,
+                                "image": "https://i.ytimg.com/vi/71JyVAF7zXg/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/386f7fa2183a1c4a2140ce0b581e804944cf9a6e378e4bd63e27a424ff8b4a3d.mp4",
+                                "sentence": "which one? bill/have/take",
+                                "sentenceEng": "Do you have your receipt?",
+                                "sentenceEngMl": "Do you <u>have</u> your receipt?",
+                                "mtags3": "step=1&sort=0&position=0X0&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 3270,
+                                "image": "https://i.ytimg.com/vi/X6g81LPBoBw/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/1f4af4ed01717f6c339ec2b42b1817652e251a0ab295871ba8faecc951b2ec55.mp4",
+                                "sentence": "What are the rules for returning an item?",
+                                "sentenceEng": "What is your return policy?",
+                                "sentenceEngMl": "What is your <u>return</u> policy?",
+                                "mtags3": "step=1&sort=0&position=0X1&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 283,
+                                "image": "https://img.youtube.com/vi/xMsF5XSAQxA/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/4e3cc8d3373cc0a93b69b7142a730f14fad6ed5740d82fa95cc31241fd028020.mp4",
+                                "sentence": "Next person in line, please",
+                                "sentenceEng": "Can I help the next customer?",
+                                "sentenceEngMl": "Can I help the next <u>customer</u>?",
+                                "mtags3": "step=1&sort=0&position=0X2&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 285,
+                                "image": "https://img.youtube.com/vi/oHhATQDcQ2k/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/f05bdf874f1f9843bc7352d515a7d0e731cedcfff026b826b56480b574371108.mp4",
+                                "sentence": "a piece of paper that you get after you buy something",
+                                "sentenceEng": "Do you want the receipt in your bag?",
+                                "sentenceEngMl": "Do you want the <u>receipt</u> in your bag?",
+                                "mtags3": "step=1&sort=0&position=0X3&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 286,
+                                "image": "https://img.youtube.com/vi/OH1OAXkK8M0/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/32e475764208ffbd49a85fdec4b4d4764bc9db25d8aee60162c64fb7ed791016.mp4",
+                                "sentence": "Would you like to taste something?",
+                                "sentenceEng": "Would you like to try anything?",
+                                "sentenceEngMl": "Would you like to <u>try</u> anything?",
+                                "mtags3": "step=1&sort=0&position=0X4&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 284,
+                                "image": "https://static-mycake.pstatic.net/image/image1/1557986002551",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/33d71df032de87b82ddcbc54615b06f027d814f87fb3ac08fdc176d459192f2f.mp4",
+                                "sentence": "Can I assist you with anything?",
+                                "sentenceEng": "Can I help you with something?",
+                                "sentenceEngMl": "Can I <u>help</u> you with something?",
+                                "mtags3": "step=1&sort=0&position=0X5&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 4589,
+                        "playlistTitle": "At the counter",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": false,
+                        "reqId": "8019ee19-b38c-43b3-8d18-2791d8cd10d1"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 34589,
+                                "image": "https://img.youtube.com/vi/_dVtkqbIoKI/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview2/127342a6abeda90da0663b9d154bdf978b08b4b93d68000cb6d25991d8aa7919.mp4",
+                                "sentence": "I'm so disappointed",
+                                "sentenceEng": "I'm just so upset.",
+                                "sentenceEngMl": "I'm just so <u>upset</u>.",
+                                "mtags3": "step=1&sort=0&position=0X1&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 28911,
+                                "image": "https://i.ytimg.com/vi/S-d4SDR3_TM/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview2/215a9650a06691852b46d1a0ee01a8d3aed0bf6125d6150b18060f2efd3d5031.mp4",
+                                "sentence": "I'm angry at you.",
+                                "sentenceEng": "I'm mad at you.",
+                                "sentenceEngMl": "I'm <u>mad</u> at you.",
+                                "mtags3": "step=1&sort=0&position=0X2&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 28906,
+                                "image": "https://img.youtube.com/vi/njxJ8fZ-oFc/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview2/7c75cf9c9de1124eeb2e665ba33133ad81bf8a8927d40cff67fa95ca850fc1b1.mp4",
+                                "sentence": "I'm mad.",
+                                "sentenceEng": "I'm pissed off.",
+                                "sentenceEngMl": "I'm <u>pissed</u> off.",
+                                "mtags3": "step=1&sort=0&position=0X3&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 21765,
+                                "image": "https://static-mycake.pstatic.net/image/img_2205271325/1668265497966",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/901cfc3bb9d06d9ab43c4b6ae873cdabbc0758ed691940b9091f7a8b8694f756.mp4",
+                                "sentence": "She was very angry.",
+                                "sentenceEng": "She was furious.",
+                                "sentenceEngMl": "She was <u>furious</u>.",
+                                "mtags3": "step=1&sort=0&position=0X4&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 15872,
+                                "image": "https://img.youtube.com/vi/pJ2MR3KD8NU/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/1b321887a07cc49533b5ae16d7911228796d8c3e073950f0dce9768d72048809.mp4",
+                                "sentence": "I'm so angry at you.",
+                                "sentenceEng": "I'm just so cross with you.",
+                                "sentenceEngMl": "I'm just so <u>cross</u> with you.",
+                                "mtags3": "step=1&sort=0&position=0X11&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 18074,
+                                "image": "https://img.youtube.com/vi/BaSYBlExo_I/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/3958d0c3dbf993e3644ecb45d8c8512412001a120f0c90df28e7155a7a1bc9e2.mp4",
+                                "sentence": "You are being so irritating.",
+                                "sentenceEng": "You are being so annoying.",
+                                "sentenceEngMl": "You are being so <u>annoying</u>.",
+                                "mtags3": "step=1&sort=0&position=0X12&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 9688,
+                                "image": "https://i.ytimg.com/vi/qpuMrlwDfu0/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/a0e50a7f7e1fe129e737313912dca4c70f95aee4e1748cf7ee47161e2281a6f8.mp4",
+                                "sentence": "I am upset.",
+                                "sentenceEng": "I feel angry.",
+                                "sentenceEngMl": "I feel <u>angry</u>.",
+                                "mtags3": "step=1&sort=0&position=0X13&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 2818,
+                                "image": "https://i.ytimg.com/vi/IYCl7_bDbZs/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/74ddbaacd025d5eb4584a3ddd0660c067a0715aeaf3a55e778b0230fa3b1d093.mp4",
+                                "sentence": "I thought you could do better.",
+                                "sentenceEng": "I'm very disappointed in you.",
+                                "sentenceEngMl": "I'm very disappointed <u>in</u> you.",
+                                "mtags3": "step=1&sort=0&position=0X14&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 31511,
+                                "image": "https://static-mycake.pstatic.net/image/img_2205271325/1668941596566",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview2/63eba876d281692833bca932d9af6c7801fb4c85b2b588ab030b4f621362a075.mp4",
+                                "sentence": "Which one: held or had?",
+                                "sentenceEng": "I've had enough.",
+                                "sentenceEngMl": "I've <u>had</u> enough.",
+                                "mtags3": "step=1&sort=0&position=0X15&reqId=8019ee19-b38c-43b3-8d18-2791d8cd10d1",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 8414,
+                        "playlistTitle": "English for Beginners: Feeling Angry",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": false,
+                        "reqId": "8019ee19-b38c-43b3-8d18-2791d8cd10d1"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "quizTabLanding",
+            "data": {
+                "isCompleted": false
+            }
+        }
+    ],
+    "extra": {
+        "keywords": [
+            {
+                "id": 14,
+                "keyword": "Travel\u2708\ufe0f"
+            },
+            {
+                "id": 16,
+                "keyword": "Animation\ud83d\ude0e"
+            },
+            {
+                "id": 17,
+                "keyword": "Movies & TV Shows\ud83c\udf7f"
+            },
+            {
+                "id": 20,
+                "keyword": "Beginner\ud83c\udf31"
+            },
+            {
+                "id": 21,
+                "keyword": "Lectures\ud83d\udcda"
+            }
+        ]
+    }
+}

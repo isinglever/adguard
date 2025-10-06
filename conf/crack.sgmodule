@@ -24,11 +24,11 @@ draft = type=http-response,pattern=^https:\/\/backend\.getdrafts\.com\/api\/v1\/
 #else
 #elsa_purchase = type=http-response, pattern=^https:\/\/pool\.elsanow\.io\/user\/api\/v2\/purchase$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/elsa.js, timeout=60, script-update-interval=0
 #cake
-cake_start = type=http-response, pattern=^https:\/\/api\.mycake\.me\/app\/start$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake_start.js, timeout=60, script-update-interval=0
-cake_sub_1 = type=http-response, pattern=^https:\/\/api.mycake.me\/v2\/main\/subscription\/channel.+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake_sub.js, timeout=60, script-update-interval=0
-cake_sub_2 = type=http-response, pattern=^https:\/\/api\.cakeapp\.me\/gw\/subscription.+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake_sub.js, timeout=60, script-update-interval=0
-cake_sum_1 = type=http-response, pattern=^https:\/\/api\.mycake\.me\/main\/learning\/summary.+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake_sum.js, timeout=60, script-update-interval=0
-cake_sum_2 = type=http-response, pattern=^https:\/\/api\.mycake\.me\/user\/learning\/log\/v2$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake_sum.js, timeout=60, script-update-interval=0
+cake_start = type=http-response, pattern=^https:\/\/api\.mycake\.me\/app\/start$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_start.js, timeout=60, script-update-interval=0
+cake_sub_1 = type=http-response, pattern=^https:\/\/api.mycake.me\/v2\/main\/subscription\/channel.+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_sub.js, timeout=60, script-update-interval=0
+cake_sub_2 = type=http-response, pattern=^https:\/\/api\.cakeapp\.me\/gw\/subscription.+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_sub.js, timeout=60, script-update-interval=0
+cake_sum_1 = type=http-response, pattern=^https:\/\/api\.mycake\.me\/main\/learning\/summary.+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_sum.js, timeout=60, script-update-interval=0
+cake_sum_2 = type=http-response, pattern=^https:\/\/api\.mycake\.me\/user\/learning\/log\/v2$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_sum.js, timeout=60, script-update-interval=0
 #cake_path_6 = type=http-request, pattern=^https:\/\/api\.cakeapp\.me\/gw\/path\/main.+, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake_path.js, timeout=60, script-update-interval=0
 [MITM]
 hostname = %APPEND% api.calm.com, mobile-api.adguard.org, accounts.elevateapp.net, api.revenuecat.com, backend.getdrafts.com, api.pocketcasts.com, pool.elsanow.io,api.mycake.me,api.cakeapp.me
