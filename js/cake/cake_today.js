@@ -6,14 +6,14 @@ try {
 
   var obj = JSON.parse($response.body || '{}');
 
-  function normalizeRestrictedNow(value) {
+  function normalizeAccessFlags(value) {
     if (!value || typeof value !== 'object') {
       return;
     }
 
     if (Array.isArray(value)) {
       for (var i = 0; i < value.length; i += 1) {
-        normalizeRestrictedNow(value[i]);
+        normalizeAccessFlags(value[i]);
       }
       return;
     }
@@ -22,9 +22,17 @@ try {
       value.restrictedNow = false;
     }
 
+    if (Object.prototype.hasOwnProperty.call(value, 'membershipOnly')) {
+      value.membershipOnly = false;
+    }
+
+    if (Object.prototype.hasOwnProperty.call(value, 'restrictedAfterFreeTrial')) {
+      value.restrictedAfterFreeTrial = false;
+    }
+
     var keys = Object.keys(value);
     for (var j = 0; j < keys.length; j += 1) {
-      normalizeRestrictedNow(value[keys[j]]);
+      normalizeAccessFlags(value[keys[j]]);
     }
   }
 
@@ -51,7 +59,7 @@ try {
     }
   }
 
-  normalizeRestrictedNow(obj);
+  normalizeAccessFlags(obj);
   pruneMembershipBanner(obj);
 
   $done({ body: JSON.stringify(obj) });
