@@ -1,6 +1,5 @@
 #!name= Surge Crack
 #!desc = Crack for some Apps
-#!system=ios
 [Rule]
 URL-REGEX,^https:\/\/api\.calm\.com\/device,REJECT-TINYGIF
 URL-REGEX,^https://api\.pocketcasts\.com\/files,REJECT-TINYGIF
