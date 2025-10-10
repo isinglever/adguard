@@ -3,6 +3,23 @@ try {
   if (typeof $response !== 'undefined' && $response && $response.body) {
     var obj = JSON.parse($response.body || '{}');
 
+    function isAdNode(node) {
+      if (!node || typeof node !== 'object') {
+        return false;
+      }
+
+      var type = node.type;
+      if (typeof type === 'string' && type.toUpperCase() === 'AD') {
+        return true;
+      }
+
+      if (typeof node.stepTitle === 'string' && node.stepTitle.trim().toUpperCase() === 'AD') {
+        return true;
+      }
+
+      return false;
+    }
+
     function pruneAds(value) {
       if (!value || typeof value !== 'object') {
         return;
@@ -11,7 +28,7 @@ try {
       if (Array.isArray(value)) {
         for (var i = value.length - 1; i >= 0; i -= 1) {
           var item = value[i];
-          if (item && typeof item === 'object' && item.type === 'AD') {
+          if (isAdNode(item)) {
             value.splice(i, 1);
           } else {
             pruneAds(item);
