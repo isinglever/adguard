@@ -1,5 +1,5 @@
 #!name=Calm Crack
-#!desc=Enjoy!
+#!desc=Enjouy!
 
 [RULE]
 URL-REGEX,^https:\/\/api\.calm\.com\/device,REJECT-TINYGIF
