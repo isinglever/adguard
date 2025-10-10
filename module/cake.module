@@ -3,7 +3,7 @@
 
 [RULE]
 # block banners in this app
-URL-REGEX, ^https:\/\/api\.mycake\.me\/banner\/\d+\/show$, REJECT-TINYGIF
+URL-REGEX, ^https:\/\/api\.mycake\.me\/banner.*, REJECT-TINYGIF
 
 [MITM]
 hostname = %APPEND% api.mycake.me, api.cakeapp.me
