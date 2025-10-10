@@ -1,6 +1,10 @@
 #!name=Cake Crack
 #!desc=Enjoy!
 
+[RULE]
+# block banners in this app
+URL-REGEX, ^https:\/\/api\.mycake\.me\/banner\/\d+\/show$, REJECT-TINYGIF
+
 [MITM]
 hostname = %APPEND% api.mycake.me, api.cakeapp.me
 

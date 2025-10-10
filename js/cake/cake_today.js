@@ -26,6 +26,10 @@ try {
       value.membershipOnly = false;
     }
 
+    if (Object.prototype.hasOwnProperty.call(value, 'freeCoreQuiz')) {
+      value.freeCoreQuiz = true;
+    }
+
     if (Object.prototype.hasOwnProperty.call(value, 'restrictedAfterFreeTrial')) {
       value.restrictedAfterFreeTrial = false;
     }

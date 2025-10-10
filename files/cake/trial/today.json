@@ -1,0 +1,649 @@
+{
+    "result": "SUCCESS",
+    "data": [
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 16527,
+                                "image": "https://img.youtube.com/vi/f6DpwhirdDw/hqdefault.jpg",
+                                "preview": "",
+                                "sentence": "It will be fine",
+                                "sentenceEng": "It will be alright.",
+                                "sentenceEngMl": "It will be \u003cu\u003ealright\u003c/u\u003e.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X0\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 1170,
+                                "image": "https://i.ytimg.com/vi/LiV7Xs2cvqg/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/4ff49f6301db05aeada3697c7621ade43f48ad20c8b14fc65b31169baf9a7ee0.mp4",
+                                "sentence": "don\u0027t be anxious",
+                                "sentenceEng": "Don\u0027t worry.",
+                                "sentenceEngMl": "Don\u0027t \u003cu\u003eworry\u003c/u\u003e.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X2\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 16331,
+                                "image": "https://i.ytimg.com/vi/3qXSrDXiweE/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/71d929050c1cea43c6ffcd8bd902dab3bbc3ca2e7c0378970fc7403dd5831e64.mp4",
+                                "sentence": "It\u0027s going to be all right",
+                                "sentenceEng": "Trust me, it will be okay.",
+                                "sentenceEngMl": "\u003cu\u003eTrust\u003c/u\u003e me, it will be okay.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X3\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 16335,
+                                "image": "https://img.youtube.com/vi/hqYHb41OlSE/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/01b19b359d5788d13aaa29b2beeb9126c78fdde3c7a42059fa4299845439540b.mp4",
+                                "sentence": "Everything will be fine",
+                                "sentenceEng": "All will be well.",
+                                "sentenceEngMl": "\u003cu\u003eAll\u003c/u\u003e will be well.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X4\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 6014,
+                        "playlistTitle": "Paul\u0027s English Comedy : It will be a_____",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": true,
+                        "reqId": "e77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 15223,
+                                "image": "https://i.ytimg.com/vi/d9azAimIcWY/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/a3286ce611e46d04b4ca9826646380e9922ab0210b4a4922c4a25e77ba5dc4d0.mp4",
+                                "sentence": "How is it going?",
+                                "sentenceEng": "How are you?",
+                                "sentenceEngMl": "How are \u003cu\u003eyou\u003c/u\u003e?",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X0\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": true,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 15235,
+                                "image": "https://i.ytimg.com/vi/kl1xKC9LEAo/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/332f6d163d0f8510a1061ed732070fcdcecb3e3f65159398cd9910a2a53931fd.mp4",
+                                "sentence": "Tell me some news about you",
+                                "sentenceEng": "What\u0027s new?",
+                                "sentenceEngMl": "What\u0027s \u003cu\u003enew\u003c/u\u003e?",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X1\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 923,
+                                "image": "https://i.ytimg.com/vi/Z5FoX3ju2J0/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/2322455a7c1de6c806e44a2f69eb459cc35cbadb87d2da2b147e2869b92a0a71.mp4",
+                                "sentence": "How are you?",
+                                "sentenceEng": "What\u0027s up?",
+                                "sentenceEngMl": "What\u0027s \u003cu\u003eup\u003c/u\u003e?",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X2\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 126,
+                                "image": "https://i.ytimg.com/vi/51tc6o12uqA/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/9044cf42f1f291aae7d8ce8f895abaa2b3a530550b7d9bce7836fd567abb9e2d.mp4",
+                                "sentence": "What have you been doing?",
+                                "sentenceEng": "What have you been up to?",
+                                "sentenceEngMl": "What have you been up \u003cu\u003eto\u003c/u\u003e?",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X3\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 5794,
+                        "playlistTitle": "5 Common Ways to Say \"Hello\"",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": true,
+                        "reqId": "e77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 1413,
+                                "image": "https://img.youtube.com/vi/vrhgkmAzWvo/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/2289355576a61fc1f98b20d34ee48e45897130b9df8891342206829446351abe.mp4",
+                                "sentence": "We\u0027re not a good match",
+                                "sentenceEng": "We\u0027re not right for each other.",
+                                "sentenceEngMl": "We\u0027re not \u003cu\u003eright\u003c/u\u003e for each other.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X0\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 1401,
+                                "image": "https://static-mycake.pstatic.net/image/image1/1554783968061",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/9fcf20f13f86328a5e12e3ad28fedafccf7506e2fca8ecfe5c1e29a9e1c15876.mp4",
+                                "sentence": "We have to talk",
+                                "sentenceEng": "We need to talk.",
+                                "sentenceEngMl": "We \u003cu\u003eneed\u003c/u\u003e to talk.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X1\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 1402,
+                                "image": "https://i.ytimg.com/vi/sFpqtaNTTV0/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/1b80d31e81d9486a8455a359657158bd3eb379601ac8381bdb93322f82164e2c.mp4",
+                                "sentence": "which one: played, saw, felt, seen?",
+                                "sentenceEng": "I think it would be best if we saw other people.",
+                                "sentenceEngMl": "I think it would be best if we \u003cu\u003esaw\u003c/u\u003e other people.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X2\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 1407,
+                                "image": "https://static-mycake.pstatic.net/image/image1/1554957437136",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/b0b9b90e7df56f0920ea797a67557de648f84a61d24d38a211ff04c061b26ef6.mp4",
+                                "sentence": "This is not going well",
+                                "sentenceEng": "I don\u0027t think it\u0027s working out.",
+                                "sentenceEngMl": "I don\u0027t think it\u0027s \u003cu\u003eworking\u003c/u\u003e out.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X3\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 1399,
+                                "image": "https://i.ytimg.com/vi/5tg5En3tEKo/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/c57a1d5e740b760529f027b9fa57d995b9695fe05194e137cd895112d4477a7a.mp4",
+                                "sentence": "We should be separated",
+                                "sentenceEng": "I think we should break up.",
+                                "sentenceEngMl": "I think we should \u003cu\u003ebreak\u003c/u\u003e up.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X4\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 3269,
+                        "playlistTitle": "End of relationships",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": true,
+                        "reqId": "e77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 31137,
+                                "image": "https://static-mycake.pstatic.net/image/img_2205271325/1668945002493",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview2/e794bea168f55f7648d22fd69fa14a4ce396e2ddd4298163016c7633dc7f64ae.mp4",
+                                "sentence": "Someone who is old-fashioned",
+                                "sentenceEng": "He is such a square.",
+                                "sentenceEngMl": "He is such a s\u003cu\u003equare\u003c/u\u003e.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X0\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 31115,
+                                "image": "https://i.ytimg.com/vi/Q-MrjBxdUjo/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview2/a657f0c7643114c79e1f115ccf6f098ff9748ebd6077f756685f9d251b9f0126.mp4",
+                                "sentence": "When you are small-minded",
+                                "sentenceEng": "You\u0027re being petty.",
+                                "sentenceEngMl": "You\u0027re being p\u003cu\u003eetty\u003c/u\u003e.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X1\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 31157,
+                                "image": "https://i.ytimg.com/vi/HTESSZ4VxoE/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview2/bbe6fe81f5b8b016fb41dc1224837107462915cad313c938fd4879217e5e1c3b.mp4",
+                                "sentence": "When you can\u0027t control your anger",
+                                "sentenceEng": "She has a bad temper.",
+                                "sentenceEngMl": "She has a bad \u003cu\u003etemper\u003c/u\u003e.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X2\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 31138,
+                                "image": "https://img.youtube.com/vi/xI6dl7zHrqM/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview2/c84a97a73d9ec7bc01f513105719b7b9817c522de9a557716153165be0237ece.mp4",
+                                "sentence": "A person of low quality",
+                                "sentenceEng": "You are wack.",
+                                "sentenceEngMl": "You are w\u003cu\u003eack\u003c/u\u003e.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X3\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 5544,
+                                "image": "https://i.ytimg.com/vi/DbWFfH0eW0I/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/29b02d5b2fe915fbe202bde52b87d00ad4f374c92a2f3de6764ada68d747de27.mp4",
+                                "sentence": "He talks way too much.",
+                                "sentenceEng": "He has a really big mouth.",
+                                "sentenceEngMl": "He has a really big \u003cu\u003emouth\u003c/u\u003e.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X4\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 8843,
+                        "playlistTitle": "Describing bad personality",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": true,
+                        "reqId": "e77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 18868,
+                                "image": "https://i.ytimg.com/vi/7Q0eUIiwQTE/hqdefault.jpg",
+                                "preview": "",
+                                "sentence": "How are you?",
+                                "sentenceEng": "How\u0027s it going?",
+                                "sentenceEngMl": "How\u0027s \u003cu\u003eit\u003c/u\u003e going?",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X1\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 124,
+                                "image": "https://static-mycake.pstatic.net/image/image1/1554888281301",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/3091f0f3af45bec473cd1491887818fc3b1d1f448c45f7b6896c2eb903361a7a.mp4",
+                                "sentence": "Say this to a friend to ask how he\u0027s doing",
+                                "sentenceEng": "How\u0027s it going?",
+                                "sentenceEngMl": "How\u0027s it \u003cu\u003egoing\u003c/u\u003e?",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X2\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 6225,
+                                "image": "https://i.ytimg.com/vi/6HwYJ4w79Uk/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/19a6bbd42dff118b25ac85d77fc3058ae4697e75745786c46e9c0fa808b3d059.mp4",
+                                "sentence": "What\u0027s your name?",
+                                "sentenceEng": "Can I get your name please?",
+                                "sentenceEngMl": "\u003cu\u003eCan\u003c/u\u003e I get your name please?",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X3\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": false,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 11247,
+                                "image": "https://img.youtube.com/vi/HyGYrtOrk8w/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/09085a631b128a6885fe1247f933256dc818e7272ca086fcb935fcce1582e188.mp4",
+                                "sentence": "how was everything?",
+                                "sentenceEng": "How did it go?",
+                                "sentenceEngMl": "How did it \u003cu\u003ego\u003c/u\u003e?",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X5\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 11267,
+                                "image": "https://i.ytimg.com/vi/i-80SGWfEjM/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/202e131bfbf2def26bd187797acf4db9104b90c6aeb19065c6d6dfd04cbe690f.mp4",
+                                "sentence": "What are you doing today?",
+                                "sentenceEng": "Any plans today?",
+                                "sentenceEngMl": "Any \u003cu\u003eplans\u003c/u\u003e today?",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X6\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 6432,
+                        "playlistTitle": "Cake\u0027s English Training: Expressions 1",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": true,
+                        "reqId": "e77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 19958,
+                                "image": "https://i.ytimg.com/vi/z9uLUJm6DdM/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/6545cedc27fda71399ccb625cf505f2ad3e11bf9c3764c708d9e1046be124d2d.mp4",
+                                "sentence": "I don\u0027t really like fruit pie",
+                                "sentenceEng": "I\u0027m not a fan of fruit pie.",
+                                "sentenceEngMl": "I\u0027m not a \u003cu\u003efan\u003c/u\u003e of fruit pie.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X0\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": true,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 19959,
+                                "image": "https://i.ytimg.com/vi/8rxGh4n6trs/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/70dd657beb6b37e496156e14d28f76c335d1a94a4d3277cfc8710ee8c4cd366f.mp4",
+                                "sentence": "I don\u0027t like horror stuff",
+                                "sentenceEng": "I\u0027m not big on horror stuff.",
+                                "sentenceEngMl": "I\u0027m not \u003cu\u003ebig\u003c/u\u003e on horror stuff.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X1\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 19965,
+                                "image": "https://i.ytimg.com/vi/NelIXCuuSZ0/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/61784cd158d4ec866e02110ee3784451dbdae6f62e3e935a75faa227d4c07355.mp4",
+                                "sentence": "I hate chicken!",
+                                "sentenceEng": "Chicken disgusts me now.",
+                                "sentenceEngMl": "Chicken \u003cu\u003edisgusts\u003c/u\u003e me now.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X2\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 19960,
+                                "image": "https://i.ytimg.com/vi/v9iTfaYmH5E/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/88534b93e4df4082f76349d90ef5fac5a7651b9a09fe170d87e0e53d4d992891.mp4",
+                                "sentence": "I can\u0027t do this anymore",
+                                "sentenceEng": "I can\u0027t stand this anymore.",
+                                "sentenceEngMl": "I can\u0027t \u003cu\u003estand\u003c/u\u003e this anymore.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X3\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 5372,
+                                "image": "https://i.ytimg.com/vi/zLq5AYm7yQc/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/723a538a91fdeaa74d215c169e87d542c9f332543d03c174ee8d6e9b25144855.mp4",
+                                "sentence": "I don\u0027t want to do this anymore",
+                                "sentenceEng": "I\u0027m sick of this.",
+                                "sentenceEngMl": "I\u0027m \u003cu\u003esick\u003c/u\u003e of this.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X4\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 6740,
+                        "playlistTitle": "Expressing feelings : Hatred",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": true,
+                        "reqId": "e77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 19524,
+                                "image": "https://img.youtube.com/vi/9iK4og57TfA/hqdefault.jpg",
+                                "preview": "",
+                                "sentence": "informal contraction of \"kind of\"",
+                                "sentenceEng": "She\u0027s kinda cute.",
+                                "sentenceEngMl": "She\u0027s \u003cu\u003ekinda\u003c/u\u003e cute.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X0\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 19531,
+                                "image": "https://img.youtube.com/vi/ej6dxNrh3Dc/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/f6ab73ab5c96685d16f2eb6c9f1a66498146e58b761d652597b8245630f41d47.mp4",
+                                "sentence": "Sort of",
+                                "sentenceEng": "Sorta.",
+                                "sentenceEngMl": "S\u003cu\u003eorta\u003c/u\u003e.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X1\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 19527,
+                                "image": "https://i.ytimg.com/vi/mHz4O3gFQ7s/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/5c18027b9ecb767108089dfdf77c4c422e278db8908fdbede71d0d08a81bdf7a.mp4",
+                                "sentence": "I\u0027ll just have a \"cup of\" coffee",
+                                "sentenceEng": "I\u0027ll just have a cuppa coffee.",
+                                "sentenceEngMl": "I\u0027ll just have a \u003cu\u003ecuppa\u003c/u\u003e coffee.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X2\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 6674,
+                        "playlistTitle": "\u0027~of\u0027 Informal Contractions",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": true,
+                        "reqId": "e77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "updatedPlaylist",
+            "data": {
+                "items": [
+                    {
+                        "sentences": [
+                            {
+                                "sentenceId": 2656,
+                                "image": "https://i.ytimg.com/vi/AckeLL-_DPE/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview1/ac057a1ef4090ffdccf6cf623296ac774c9a23c7261e303c2b3babfd27bcde26.mp4",
+                                "sentence": "That\u0027s it!",
+                                "sentenceEng": "There you go!",
+                                "sentenceEngMl": "\u003cu\u003eThere\u003c/u\u003e you go!",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X0\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": true,
+                                "membershipOnly": false,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 28765,
+                                "image": "https://img.youtube.com/vi/HnGsXk1NHBo/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview2/cc172975661eb50bd0d3277fb3e208dea238599f24cc57cfc56e1fe4e2f3b125.mp4",
+                                "sentence": "You\u0027re brilliant!",
+                                "sentenceEng": "You\u0027re a genius!",
+                                "sentenceEngMl": "You\u0027re a \u003cu\u003egenius\u003c/u\u003e!",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X1\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 28720,
+                                "image": "https://i.ytimg.com/vi/l_L7Z0mXZ0w/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview2/89aab0aa52b1088ae404ee9671aa27d04eeca7e21083379220f6b0190b9884bd.mp4",
+                                "sentence": "Seems great.",
+                                "sentenceEng": "Looking good.",
+                                "sentenceEngMl": "\u003cu\u003eLooking\u003c/u\u003e good.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X2\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 28794,
+                                "image": "https://i.ytimg.com/vi/RTPUm34vaEs/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview2/d8834b4d61b904e876a3642334ded24b071a2a81de616713124e557ade0890c6.mp4",
+                                "sentence": "You are doing great.",
+                                "sentenceEng": "Keep up the good work.",
+                                "sentenceEngMl": "Keep up the good \u003cu\u003ework\u003c/u\u003e.",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X3\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            },
+                            {
+                                "sentenceId": 28773,
+                                "image": "https://i.ytimg.com/vi/WVbL5WJdXLc/hqdefault.jpg",
+                                "preview": "https://vstatic-mycake.pstatic.net/video/preview2/e2e618c882133886438d60296b8cdcd4bb5fa3b4b4c35358e23e021ffa152fde.mp4",
+                                "sentence": "Good job!",
+                                "sentenceEng": "Nice going!",
+                                "sentenceEngMl": "Nice \u003cu\u003egoing\u003c/u\u003e!",
+                                "mtags3": "step\u003d0\u0026sort\u003d0\u0026position\u003d0X4\u0026reqId\u003de77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530",
+                                "viewed": false,
+                                "membershipOnly": true,
+                                "restrictedAfterFreeTrial": false,
+                                "restrictedNow": false
+                            }
+                        ],
+                        "membershipOnly": true,
+                        "playlistId": 8384,
+                        "playlistTitle": "English for Beginners : Compliments",
+                        "collectionQuiz": {
+                            "currentSet": 1,
+                            "maximumSet": 4,
+                            "isCleared": false,
+                            "isPreviousSet": false
+                        },
+                        "freeCoreQuiz": true,
+                        "reqId": "e77ea7b3-91b8-4bfa-ab2c-8a5d8c0f7530"
+                    }
+                ]
+            }
+        }
+    ]
+}
