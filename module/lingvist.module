@@ -1,5 +1,5 @@
 #!name=Lingvist
-#!desc=Enjoy Language Learning
+#!desc=Enjoy Language Learning, this crack does not take effect since lingvist has server side verification.
 
 [MITM]
 hostname = %APPEND% payment-api.lingvist.com, api.lingvist.com, api.adapty.io

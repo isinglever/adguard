@@ -1,0 +1,513 @@
+{
+    "result": "SUCCESS",
+    "data": [
+        {
+            "unitId": 16,
+            "unitStage": 1,
+            "unitTitle": "Everyday English Greetings",
+            "unitStatus": "INPROGRESS",
+            "restrictedAfterFreeTrial": false,
+            "restrictedNow": false,
+            "skippable": false,
+            "steps": [
+                {
+                    "stepId": 127,
+                    "stepTitle": "\"How\u0027s it going?\"",
+                    "activation": true,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 34977
+                    },
+                    "stepStatus": "COMPLETED"
+                },
+                {
+                    "stepId": 129,
+                    "stepTitle": "\"What\u0027s up?\"",
+                    "activation": true,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 34309
+                    },
+                    "stepStatus": "COMPLETED"
+                },
+                {
+                    "stepId": 130,
+                    "stepTitle": "Quiz",
+                    "activation": true,
+                    "type": "QUIZ",
+                    "option": {
+                        "currentQuizCount": 1,
+                        "maxQuizCount": 1
+                    },
+                    "stepStatus": "COMPLETED"
+                },
+                {
+                    "stepId": 131,
+                    "stepTitle": "Reward",
+                    "activation": true,
+                    "type": "REWARD",
+                    "stepStatus": "COMPLETED"
+                },
+                {
+                    "stepId": 29498,
+                    "stepTitle": "Speaking Practice",
+                    "activation": true,
+                    "type": "SPEAK",
+                    "option": {
+                        "progressPercent": 100,
+                        "lectureId": 72129
+                    },
+                    "stepStatus": "COMPLETED"
+                },
+                {
+                    "stepId": 29499,
+                    "stepTitle": "Speaking Practice",
+                    "activation": true,
+                    "type": "SPEAK",
+                    "option": {
+                        "progressPercent": 100,
+                        "lectureId": 72128
+                    },
+                    "stepStatus": "COMPLETED"
+                },
+                {
+                    "stepId": 133,
+                    "stepTitle": "\"Good to see you.\"",
+                    "activation": true,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 35015
+                    },
+                    "stepStatus": "COMPLETED"
+                },
+                {
+                    "stepId": 29500,
+                    "stepTitle": "Speaking Practice",
+                    "activation": true,
+                    "type": "SPEAK",
+                    "option": {
+                        "progressPercent": 100,
+                        "lectureId": 72127
+                    },
+                    "stepStatus": "COMPLETED"
+                },
+                {
+                    "stepId": 135,
+                    "stepTitle": "Review quiz",
+                    "activation": true,
+                    "type": "REVIEW",
+                    "option": {
+                        "currentQuizCount": 2,
+                        "maxQuizCount": 4,
+                        "pathReviewLevel": 3
+                    },
+                    "stepStatus": "INPROGRESS"
+                }
+            ]
+        },
+        {
+            "unitId": 17,
+            "unitStage": 2,
+            "unitTitle": "Responding to Greetings",
+            "unitStatus": "INPROGRESS",
+            "restrictedAfterFreeTrial": false,
+            "restrictedNow": false,
+            "skippable": false,
+            "steps": [
+                {
+                    "stepId": 142,
+                    "stepTitle": "Introduction",
+                    "activation": true,
+                    "type": "SPEAKING",
+                    "stepStatus": "COMPLETED"
+                },
+                {
+                    "stepId": 143,
+                    "stepTitle": "\"I\u0027m good.\"",
+                    "activation": true,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 34638
+                    },
+                    "stepStatus": "COMPLETED"
+                },
+                {
+                    "stepId": 144,
+                    "stepTitle": "\"Couldn\u0027t be better.\"",
+                    "activation": true,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 38924
+                    },
+                    "stepStatus": "COMPLETED"
+                },
+                {
+                    "stepId": 145,
+                    "stepTitle": "Speaking practice",
+                    "activation": true,
+                    "type": "SPEAKING",
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 146,
+                    "stepTitle": "Quiz",
+                    "activation": false,
+                    "type": "QUIZ",
+                    "option": {
+                        "currentQuizCount": 0,
+                        "maxQuizCount": 2
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 147,
+                    "stepTitle": "Speaking practice",
+                    "activation": false,
+                    "type": "SPEAKING",
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 148,
+                    "stepTitle": "\"Nothing much.\"",
+                    "activation": false,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 35142
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 149,
+                    "stepTitle": "Speaking practice",
+                    "activation": false,
+                    "type": "SPEAKING",
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 150,
+                    "stepTitle": "Review quiz",
+                    "activation": false,
+                    "type": "REVIEW",
+                    "option": {
+                        "currentQuizCount": 0,
+                        "maxQuizCount": 4,
+                        "pathReviewLevel": 1
+                    },
+                    "stepStatus": "NOT_STARTED"
+                }
+            ]
+        },
+        {
+            "unitId": 67,
+            "unitStage": 3,
+            "unitTitle": "Everyday English Goodbyes",
+            "unitStatus": "NOT_STARTED",
+            "restrictedAfterFreeTrial": false,
+            "restrictedNow": false,
+            "skippable": true,
+            "steps": [
+                {
+                    "stepId": 690,
+                    "stepTitle": "Introduction",
+                    "activation": false,
+                    "type": "SPEAKING",
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 691,
+                    "stepTitle": "\"Take care.\"",
+                    "activation": false,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 34520
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 692,
+                    "stepTitle": "\"Have a good one.\"",
+                    "activation": false,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 35077
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 27739,
+                    "stepTitle": "Listening quiz",
+                    "activation": false,
+                    "type": "LISTENING_QUIZ",
+                    "option": {
+                        "listeningQuizId": 62980,
+                        "sentenceId": 35077
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 693,
+                    "stepTitle": "Speaking practice",
+                    "activation": false,
+                    "type": "SPEAKING",
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 694,
+                    "stepTitle": "Quiz",
+                    "activation": false,
+                    "type": "QUIZ",
+                    "option": {
+                        "currentQuizCount": 0,
+                        "maxQuizCount": 2
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 695,
+                    "stepTitle": "\"See you soon!\"",
+                    "activation": false,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 35080
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 696,
+                    "stepTitle": "\"Catch you later.\"",
+                    "activation": false,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 35214
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 697,
+                    "stepTitle": "Speaking practice",
+                    "activation": false,
+                    "type": "SPEAKING",
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 698,
+                    "stepTitle": "Review quiz",
+                    "activation": false,
+                    "type": "REVIEW",
+                    "option": {
+                        "currentQuizCount": 0,
+                        "maxQuizCount": 4,
+                        "pathReviewLevel": 1
+                    },
+                    "stepStatus": "NOT_STARTED"
+                }
+            ]
+        },
+        {
+            "unitId": 68,
+            "unitStage": 4,
+            "unitTitle": "When You Are Happy",
+            "unitStatus": "NOT_STARTED",
+            "restrictedAfterFreeTrial": false,
+            "restrictedNow": false,
+            "skippable": false,
+            "steps": [
+                {
+                    "stepId": 705,
+                    "stepTitle": "Word practice",
+                    "activation": false,
+                    "type": "SPEAKING",
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 706,
+                    "stepTitle": "\"I\u0027m thrilled.\"",
+                    "activation": false,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 35085
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 708,
+                    "stepTitle": "Speaking practice",
+                    "activation": false,
+                    "type": "SPEAKING",
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 709,
+                    "stepTitle": "\"I couldn\u0027t be happier.\"",
+                    "activation": false,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 3408
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 710,
+                    "stepTitle": "Quiz",
+                    "activation": false,
+                    "type": "QUIZ",
+                    "option": {
+                        "currentQuizCount": 0,
+                        "maxQuizCount": 2
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 711,
+                    "stepTitle": "Speaking practice",
+                    "activation": false,
+                    "type": "SPEAKING",
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 712,
+                    "stepTitle": "\"I\u0027m over the moon.\"",
+                    "activation": false,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 35119
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 713,
+                    "stepTitle": "Review quiz",
+                    "activation": false,
+                    "type": "REVIEW",
+                    "option": {
+                        "currentQuizCount": 0,
+                        "maxQuizCount": 4,
+                        "pathReviewLevel": 1
+                    },
+                    "stepStatus": "NOT_STARTED"
+                }
+            ]
+        },
+        {
+            "unitId": 69,
+            "unitStage": 5,
+            "unitTitle": "When You Are Sad",
+            "unitStatus": "NOT_STARTED",
+            "restrictedAfterFreeTrial": true,
+            "restrictedNow": false,
+            "skippable": true,
+            "steps": [
+                {
+                    "stepId": 720,
+                    "stepTitle": "Word practice",
+                    "activation": false,
+                    "type": "SPEAKING",
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 721,
+                    "stepTitle": "\"I feel blue.\"",
+                    "activation": false,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 35122
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 722,
+                    "stepTitle": "\"I got upset.\"",
+                    "activation": false,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 32904
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 723,
+                    "stepTitle": "Quiz",
+                    "activation": false,
+                    "type": "QUIZ",
+                    "option": {
+                        "currentQuizCount": 0,
+                        "maxQuizCount": 2
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 724,
+                    "stepTitle": "\"I feel heartbroken.\"",
+                    "activation": false,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 35123
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 725,
+                    "stepTitle": "Word practice",
+                    "activation": false,
+                    "type": "SPEAKING",
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 726,
+                    "stepTitle": "\"I\u0027m devastated.\"",
+                    "activation": false,
+                    "type": "LECTURE",
+                    "option": {
+                        "sentenceId": 34521
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 28121,
+                    "stepTitle": "Listening quiz",
+                    "activation": false,
+                    "type": "LISTENING_QUIZ",
+                    "option": {
+                        "listeningQuizId": 61878,
+                        "sentenceId": 34521
+                    },
+                    "stepStatus": "NOT_STARTED"
+                },
+                {
+                    "stepId": 727,
+                    "stepTitle": "Review quiz",
+                    "activation": false,
+                    "type": "REVIEW",
+                    "option": {
+                        "currentQuizCount": 0,
+                        "maxQuizCount": 4,
+                        "pathReviewLevel": 1
+                    },
+                    "stepStatus": "NOT_STARTED"
+                }
+            ]
+        }
+    ],
+    "extra": {
+        "startPathColorIndex": 0,
+        "customFirstJakeImage": {
+            "disable": "https://static-mycake.pstatic.net/image/img_2205271325/1683086106655",
+            "inactive": "https://static-mycake.pstatic.net/image/img_2205271325/1683086103917",
+            "active": "https://static-mycake.pstatic.net/image/img_2403081421/1716964327299"
+        },
+        "pathCurriculumReady": true,
+        "lastUnitIndex": 1,
+        "pathCurriculum": {
+            "id": 5,
+            "title": "Common English Expressions for everyday conversation",
+            "level": "PRE_INTERMEDIATE",
+            "status": "INPROGRESS",
+            "isMembershipOnly": false
+        },
+        "lastLearningUnitIndex": 1,
+        "resettable": true,
+        "pathCurriculumUpdated": true,
+        "skippableUnitCount": 10,
+        "lastStepIndex": 6
+    }
+}
