@@ -57,10 +57,4 @@ try {
   return;
 }
 
-if (typeof $request !== 'undefined' && $request && typeof $request.path === 'string') {
-  var modifiedPath = $request.path.replace('&appVersion=5.5.0', '');
-  $done({ path: modifiedPath });
-  return;
-}
-
 $done({});
