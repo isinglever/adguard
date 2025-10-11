@@ -1,8 +1,8 @@
 #!name=Cake Crack
 #!desc=Enjoy!
 
-[RULE]
-URL-REGEX, ^https:\/\/api\.mycake\.me\/banner.*, REJECT-TINYGIF
+[URL Rewrite]
+^https:\/\/api\.mycake\.me\/banner.* - REJECT
 
 [MITM]
 hostname = %APPEND% api.mycake.me, api.cakeapp.me
