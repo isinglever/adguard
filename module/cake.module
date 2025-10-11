@@ -2,7 +2,7 @@
 #!desc=Enjoy!
 
 [RULE]
-URL-REGEX, ^https:\/\/api\.mycake\.me\/banner\?.*, REJECT-TINYGIF
+URL-REGEX, ^https:\/\/api\.mycake\.me\/banner.*, REJECT-TINYGIF
 
 [MITM]
 hostname = %APPEND% api.mycake.me, api.cakeapp.me
@@ -15,4 +15,4 @@ cake_sum_1 = type=http-response, pattern=^https:\/\/api\.mycake\.me\/main\/learn
 cake_sum_2 = type=http-response, pattern=^https:\/\/api\.mycake\.me\/user\/learning\/log\/v2$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_sum.js, timeout=60, script-update-interval=0
 cake_today = type=http-response, pattern=^https://api\.cakeapp\.me/gw/v2/main/today\?.*$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_today.js, timeout=60, script-update-interval=0
 cake_path = type=http-response, pattern=^https:\/\/api\.cakeapp\.me\/gw\/path\/main\?.*, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_path.js, timeout=60, script-update-interval=0
-cake_curr = type=http-response, pattern=^https:\/\/api\.cakeapp\.me\/gw\/curriculum\?.*, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_curr.js, timeout=60, script-update-interval=0
+cake_curr = type=http-response, pattern=^https:\/\/api\.cakeapp\.me\/gw\/curriculum(?:\/\d+)?\?.*, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_curr.js, timeout=60, script-update-interval=0
