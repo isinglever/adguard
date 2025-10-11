@@ -1,0 +1,228 @@
+{
+    "result": "SUCCESS",
+    "data": {
+        "instructor": {
+            "name": "Alex&Spencer",
+            "image": "https://static-mycake.pstatic.net/image/img_2309221549/1698746761437"
+        },
+        "title": "[NEW] English Conversation A or B",
+        "description": "In this course you'll learn two different A and B expressions used in 12 everyday situations!",
+        "bookmarked": false,
+        "progressRate": 0,
+        "reward": {
+            "exist": false,
+            "link": "",
+            "completed": false
+        },
+        "totalUnitCount": 12,
+        "updatedUnitCount": 12,
+        "bundled": false,
+        "image": "https://static-mycake.pstatic.net/image/img_2309221549/1698746769362",
+        "units": [
+            {
+                "id": 12394,
+                "stage": 1,
+                "status": "NOT_STARTED",
+                "stepProgress": [
+                    "NOT_STARTED",
+                    "NOT_STARTED",
+                    "NOT_STARTED"
+                ],
+                "title": "When you're paying at a restaurant",
+                "freeBadge": false,
+                "available": true,
+                "shouldUpdate": false,
+                "currentStar": 0,
+                "maxStar": 15,
+                "thumbnails": {}
+            },
+            {
+                "id": 12395,
+                "stage": 2,
+                "status": "NOT_STARTED",
+                "stepProgress": [
+                    "NOT_STARTED",
+                    "NOT_STARTED",
+                    "NOT_STARTED"
+                ],
+                "title": "Describing someone's first impression",
+                "freeBadge": false,
+                "available": true,
+                "shouldUpdate": false,
+                "currentStar": 0,
+                "maxStar": 15,
+                "thumbnails": {}
+            },
+            {
+                "id": 12396,
+                "stage": 3,
+                "status": "NOT_STARTED",
+                "stepProgress": [
+                    "NOT_STARTED",
+                    "NOT_STARTED",
+                    "NOT_STARTED"
+                ],
+                "title": "Asking a friend to do something for you",
+                "freeBadge": false,
+                "available": true,
+                "shouldUpdate": false,
+                "currentStar": 0,
+                "maxStar": 15,
+                "thumbnails": {}
+            },
+            {
+                "id": 12397,
+                "stage": 4,
+                "status": "NOT_STARTED",
+                "stepProgress": [
+                    "NOT_STARTED",
+                    "NOT_STARTED",
+                    "NOT_STARTED"
+                ],
+                "title": "When you decide what to eat",
+                "freeBadge": false,
+                "available": true,
+                "shouldUpdate": false,
+                "currentStar": 0,
+                "maxStar": 15,
+                "thumbnails": {}
+            },
+            {
+                "id": 12398,
+                "stage": 5,
+                "status": "NOT_STARTED",
+                "stepProgress": [
+                    "NOT_STARTED",
+                    "NOT_STARTED",
+                    "NOT_STARTED"
+                ],
+                "title": "When you have to go home",
+                "freeBadge": false,
+                "available": true,
+                "shouldUpdate": false,
+                "currentStar": 0,
+                "maxStar": 15,
+                "thumbnails": {}
+            },
+            {
+                "id": 12399,
+                "stage": 6,
+                "status": "NOT_STARTED",
+                "stepProgress": [
+                    "NOT_STARTED",
+                    "NOT_STARTED",
+                    "NOT_STARTED"
+                ],
+                "title": "When it’s time to get off work",
+                "freeBadge": false,
+                "available": true,
+                "shouldUpdate": false,
+                "currentStar": 0,
+                "maxStar": 15,
+                "thumbnails": {}
+            },
+            {
+                "id": 12400,
+                "stage": 7,
+                "status": "NOT_STARTED",
+                "stepProgress": [
+                    "NOT_STARTED",
+                    "NOT_STARTED",
+                    "NOT_STARTED"
+                ],
+                "title": "When people don't believe you",
+                "freeBadge": false,
+                "available": true,
+                "shouldUpdate": false,
+                "currentStar": 0,
+                "maxStar": 15,
+                "thumbnails": {}
+            },
+            {
+                "id": 12401,
+                "stage": 8,
+                "status": "NOT_STARTED",
+                "stepProgress": [
+                    "NOT_STARTED",
+                    "NOT_STARTED",
+                    "NOT_STARTED"
+                ],
+                "title": "After a busy day of running errands",
+                "freeBadge": false,
+                "available": true,
+                "shouldUpdate": false,
+                "currentStar": 0,
+                "maxStar": 15,
+                "thumbnails": {}
+            },
+            {
+                "id": 12402,
+                "stage": 9,
+                "status": "NOT_STARTED",
+                "stepProgress": [
+                    "NOT_STARTED",
+                    "NOT_STARTED",
+                    "NOT_STARTED"
+                ],
+                "title": "After watching a movie",
+                "freeBadge": false,
+                "available": true,
+                "shouldUpdate": false,
+                "currentStar": 0,
+                "maxStar": 15,
+                "thumbnails": {}
+            },
+            {
+                "id": 12403,
+                "stage": 10,
+                "status": "NOT_STARTED",
+                "stepProgress": [
+                    "NOT_STARTED",
+                    "NOT_STARTED",
+                    "NOT_STARTED"
+                ],
+                "title": "When your friend asks you to join ",
+                "freeBadge": false,
+                "available": true,
+                "shouldUpdate": false,
+                "currentStar": 0,
+                "maxStar": 15,
+                "thumbnails": {}
+            },
+            {
+                "id": 12404,
+                "stage": 11,
+                "status": "NOT_STARTED",
+                "stepProgress": [
+                    "NOT_STARTED",
+                    "NOT_STARTED",
+                    "NOT_STARTED"
+                ],
+                "title": "When something is funny",
+                "freeBadge": false,
+                "available": true,
+                "shouldUpdate": false,
+                "currentStar": 0,
+                "maxStar": 15,
+                "thumbnails": {}
+            },
+            {
+                "id": 12405,
+                "stage": 12,
+                "status": "NOT_STARTED",
+                "stepProgress": [
+                    "NOT_STARTED",
+                    "NOT_STARTED",
+                    "NOT_STARTED"
+                ],
+                "title": "When someone helps you",
+                "freeBadge": false,
+                "available": true,
+                "shouldUpdate": false,
+                "currentStar": 0,
+                "maxStar": 15,
+                "thumbnails": {}
+            }
+        ]
+    }
+}
