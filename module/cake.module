@@ -2,7 +2,7 @@
 #!desc=Enjoy!
 
 [URL Rewrite]
-^https:\/\/api\.mycake\.me\/banner.* - REJECT
+^https:\/\/api\.mycake\.me\/banner.* - reject
 
 [MITM]
 hostname = %APPEND% api.mycake.me, api.cakeapp.me
