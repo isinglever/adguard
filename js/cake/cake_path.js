@@ -37,6 +37,13 @@
           return;
         }
 
+        if (
+          Object.prototype.hasOwnProperty.call(value, 'restrictedNow') &&
+          value.restrictedNow !== false
+        ) {
+          value.restrictedNow = false;
+        }
+
         var keys = Object.keys(value);
         for (var j = 0; j < keys.length; j += 1) {
           pruneAds(value[keys[j]]);

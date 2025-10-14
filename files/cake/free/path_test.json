@@ -394,7 +394,7 @@
             "unitTitle": "When You Are Sad",
             "unitStatus": "NOT_STARTED",
             "restrictedAfterFreeTrial": true,
-            "restrictedNow": true,
+            "restrictedNow": false,
             "skippable": true,
             "steps": [
                 {
