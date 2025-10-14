@@ -1,0 +1,81 @@
+{
+  "features": {
+    "removeBannerAds": true,
+    "removeDiscoverAds": true
+  },
+  "index": 0,
+  "updateUrl": "https:\/\/subscription-management.paddle.com\/subscription\/18116649\/hash\/\/update",
+  "tier": "Plus",
+  "autoRenewing": false,
+  "giftDays": 0,
+  "type": 1,
+  "platform": 3,
+  "expiryDate": "2023-01-06T00:00:00Z",
+  "web": {
+    "yearly": 556537,
+    "trial": 0,
+    "webStatus": 5,
+    "monthly": 556536,
+    "plus": {
+      "monthly": 556536,
+      "trialDays": 0,
+      "yearly": 556537
+    },
+    "patron": {
+      "monthly": 829092,
+      "trialDays": 0,
+      "yearly": 829091
+    }
+  },
+  "subscriptions": [
+    {
+      "index": 0,
+      "podcasts": [
+      ],
+      "updateUrl": "https:\/\/subscription-management.paddle.com\/subscription\/18116649\/hash\/\/update",
+      "bundleUuid": "",
+      "tier": "",
+      "eligible": false,
+      "type": 1,
+      "autoRenewing": false,
+      "giftDays": 0,
+      "platform": 3,
+      "expiryDate": "2023-01-06T00:00:00Z",
+      "web": {
+        "yearly": 0,
+        "trial": 0,
+        "webStatus": 5,
+        "monthly": 0
+      },
+      "cancelUrl": "https:\/\/subscription-management.paddle.com\/subscription\/18116649\/hash\/\/cancel",
+      "plan": "583361",
+      "webStatus": 5,
+      "frequency": 1,
+      "paid": 0
+    },
+    {
+      "index": 1,
+      "podcasts": [
+      ],
+      "updateUrl": "",
+      "bundleUuid": "",
+      "tier": "",
+      "eligible": false,
+      "type": 1,
+      "autoRenewing": false,
+      "giftDays": 0,
+      "platform": 1,
+      "expiryDate": "2022-11-15T14:15:51Z",
+      "cancelUrl": "",
+      "plan": "com.pocketcasts.plus.monthly",
+      "webStatus": 0,
+      "frequency": 1,
+      "paid": 0
+    }
+  ],
+  "cancelUrl": "https:\/\/subscription-management.paddle.com\/subscription\/18116649\/hash\/\/cancel",
+  "webStatus": 5,
+  "createdAt": "2019-09-21T00:25:33Z",
+  "frequency": 1,
+  "paid": 0
+}
