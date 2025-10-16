@@ -1,6 +1,5 @@
 #!name=Ticktick pro
 #!desc=only for macOs
-#!system=mac
 
 [MITM]
 hostname = %APPEND% dida365.com
