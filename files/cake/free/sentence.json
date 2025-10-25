@@ -1,0 +1,88 @@
+{
+    "result": "SUCCESS",
+    "data": {
+        "userSentenceId": 1192979945,
+        "commentary": "",
+        "channel": {
+            "channelId": 5604,
+            "image": "https://static-mycake.pstatic.net/image/image1/1560321790201",
+            "title": "Little Fox Animation- Stories for English Learners",
+            "descriptionSingleline": "Maybe drama series are too hard for you! Learn English with fun bedtime stories!",
+            "descriptionMultilines": "Little Fox is acknowledged all over the world. Learn English with fun bedtime stories!",
+            "subscribed": false,
+            "subscriptionCount": 491840
+        },
+        "likeCount": 515,
+        "dislikeCount": 0,
+        "rate": "none",
+        "videoOriginal": false,
+        "bookmarked": false,
+        "liked": false,
+        "restrictedAfterFreeTrial": false,
+        "restrictedNow": false,
+        "puzzle": {
+            "heart": {
+                "count": 5,
+                "maximumCount": 5,
+                "regenerationTime": 18000,
+                "regenerationTimeRemaining": 0
+            },
+            "parts": [
+                {
+                    "id": 4435,
+                    "kind": "DEFAULT",
+                    "difficulty": 2,
+                    "bestTime": 0,
+                    "bestRanking": 0,
+                    "bestRankingFloat": 0
+                },
+                {
+                    "id": 4436,
+                    "kind": "MAIN",
+                    "difficulty": 2,
+                    "bestTime": 0,
+                    "bestRanking": 0,
+                    "bestRankingFloat": 0
+                }
+            ]
+        },
+        "keeps": [
+            {
+                "id": 121030,
+                "enabled": true,
+                "saved": false
+            },
+            {
+                "id": 121031,
+                "enabled": true,
+                "saved": false
+            },
+            {
+                "id": 121032,
+                "enabled": true,
+                "saved": false
+            },
+            {
+                "id": 121033,
+                "enabled": true,
+                "saved": false
+            },
+            {
+                "id": 121034,
+                "enabled": true,
+                "saved": false
+            },
+            {
+                "id": 121035,
+                "enabled": true,
+                "saved": false
+            },
+            {
+                "id": 121036,
+                "enabled": true,
+                "saved": false
+            }
+        ],
+        "membershipOnly": false
+    }
+}
