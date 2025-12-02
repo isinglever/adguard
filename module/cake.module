@@ -1,5 +1,6 @@
 #!name=Cake Crack
 #!desc=Enjoy!
+#!category=Self
 
 [URL Rewrite]
 ^https:\/\/api\.mycake\.me\/banner.* - reject
