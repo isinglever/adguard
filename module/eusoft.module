@@ -6,5 +6,5 @@
 hostname = %APPEND% api.esdict.cn
 
 [Script]
-user_info = type=http-response,pattern=^https:\/\/api\.esdict\.cn\/api\/v2\/auth\/UserInfo$,script-path=/Users/guojueliang/Documents/Software/Git_Projects/adguard/js/qingting/userinfo.js,script-update-interval=0,max-size=0,requires-body=0
-homepage = type=http-response,pattern=^https:\/\/api\.esdict\.cn\/api\/v5\/ting\/eicohomepage$,script-path=/Users/guojueliang/Documents/Software/Git_Projects/adguard/js/qingting/homepage.js,timeout=0,script-update-interval=0,requires-body=1,max-size=1048576
+user_info = type=http-response,pattern=^https:\/\/api\.esdict\.cn\/api\/v2\/auth\/UserInfo$,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/qingting/userinfo.js,script-update-interval=0,max-size=0,requires-body=0
+homepage = type=http-response,pattern=^https:\/\/api\.esdict\.cn\/api\/v5\/ting\/eicohomepage$,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/qingting/homepage.js,timeout=0,script-update-interval=0,requires-body=1,max-size=1048576

@@ -1,0 +1,9 @@
+#!name=PocketCast
+#!desc=PocketCast module
+#!category=Self
+
+[MITM]
+hostname = %APPEND% api.pocketcasts.com
+
+[Script]
+Pocket = type=http-response,pattern=^https:\/\/api\.pocketcasts\.com\/subscription\/status$,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/pocketcast/pocket_sub.js,timeout=0,script-update-interval=0,max-size=0
