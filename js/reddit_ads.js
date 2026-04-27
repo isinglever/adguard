@@ -6,7 +6,7 @@ const INVALID_NAME = "NoSuchOperation";
   try {
     if (!$request) return $done({});
 
-    const headers = Object.assign({}, $request.headers || {});
+    const headers = $request.headers || {};
     delete headers["x-reddit-translations"];
     delete headers["X-Reddit-Translations"];
     headers["x-reddit-translations"] = "enabled, seo, en";
@@ -16,7 +16,7 @@ const INVALID_NAME = "NoSuchOperation";
     const ct = (headers["Content-Type"] || headers["content-type"] || "").toLowerCase();
     const method = ($request.method || "GET").toUpperCase();
 
-    if (method !== "POST") return $done({ headers });
+    if (method !== "POST") return $done({ headers, body: $request.body });
 
     // 1) 纯 JSON 的情况（最常见）
     if (ct.includes("application/json")) {
@@ -35,7 +35,7 @@ const INVALID_NAME = "NoSuchOperation";
 
           return $done({ headers, body: JSON.stringify(j) });
         }
-        return $done({ headers });
+        return $done({ headers, body: $request.body });
       } catch (_) {
         // 继续尝试下面的兜底正则
       }
@@ -74,7 +74,7 @@ const INVALID_NAME = "NoSuchOperation";
     }
 
     // 不匹配则放行
-    $done({ headers });
+    $done({ headers, body: $request.body });
   } catch (e) {
     console.log("[opname_kill] " + (e && e.stack || e));
     $done({});
