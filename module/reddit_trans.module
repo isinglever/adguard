@@ -6,5 +6,5 @@
 hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com
 
 [Script]
-reddit_trans = type=http-request,pattern=^https?:\/\/gql\.reddit\.com,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/reddit_trans.js,timeout=60,script-update-interval=0
+reddit_trans = type=http-request,pattern=^https?:\/\/gql\.reddit\.com\/(?:\?.*)?$,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/reddit_trans.js,timeout=60,script-update-interval=0
 reddit_ads = type=http-request,pattern=^https?:\/\/gql-fed\.reddit\.com\/(?:\?.*)?$,requires-body=1,max-size=0,binary-body-mode=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/reddit_ads.js,timeout=60,script-update-interval=0
