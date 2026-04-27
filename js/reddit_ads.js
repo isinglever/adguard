@@ -1,16 +1,22 @@
 // reddit_opname_kill.js
-// 将 operationName=PdpCommentsAds 改为无效值
+// 注入翻译 header，并将 operationName=PdpCommentsAds 改为无效值
 const INVALID_NAME = "NoSuchOperation";
 
 (function () {
   try {
-    if (!$request || !$request.body) return $done({});
+    if (!$request) return $done({});
 
-    const headers = $request.headers || {};
+    const headers = Object.assign({}, $request.headers || {});
+    delete headers["x-reddit-translations"];
+    delete headers["X-Reddit-Translations"];
+    headers["x-reddit-translations"] = "enabled, seo, en";
+
+    if (!$request.body) return $done({ headers });
+
     const ct = (headers["Content-Type"] || headers["content-type"] || "").toLowerCase();
     const method = ($request.method || "GET").toUpperCase();
 
-    if (method !== "POST") return $done({});
+    if (method !== "POST") return $done({ headers });
 
     // 1) 纯 JSON 的情况（最常见）
     if (ct.includes("application/json")) {
@@ -27,9 +33,9 @@ const INVALID_NAME = "NoSuchOperation";
           //   j.extensions.persistedQuery.sha256Hash = "x";
           // }
 
-          return $done({ body: JSON.stringify(j) });
+          return $done({ headers, body: JSON.stringify(j) });
         }
-        return $done({});
+        return $done({ headers });
       } catch (_) {
         // 继续尝试下面的兜底正则
       }
@@ -51,7 +57,7 @@ const INVALID_NAME = "NoSuchOperation";
             // }
 
             params.set("operations", JSON.stringify(ops));
-            return $done({ body: params.toString() });
+            return $done({ headers, body: params.toString() });
           }
         }
       } catch (_) {}
@@ -64,11 +70,11 @@ const INVALID_NAME = "NoSuchOperation";
     const re = /("operationName"\s*:\s*")PdpCommentsAds(")/;
     if (re.test(bodyText)) {
       const newBody = bodyText.replace(re, `$1${INVALID_NAME}$2`);
-      return $done({ body: newBody });
+      return $done({ headers, body: newBody });
     }
 
     // 不匹配则放行
-    $done({});
+    $done({ headers });
   } catch (e) {
     console.log("[opname_kill] " + (e && e.stack || e));
     $done({});
