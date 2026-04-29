@@ -42,6 +42,8 @@ const mapping = {
   'MusicBox/': ['Premium','musicbox_2999_lifetime'],
   'Rats%20Project': ['PandaTracker_Premiumv2','monthly_subscription_discount_idv3'],
   'Grain/': ['gold','lifetimeMembership'],
+  'Ground%20News': ['vantage','com.groundnews.ios.yearly.vantage.us7199'],
+  'GroundNews': ['vantage','com.groundnews.ios.yearly.vantage.us7199'],
   'AudioPlayer': ['Pro'],
   'FoJiCam/': ['ProVersionLifeTime'],
   'pdfai_app/': ['premium'],
