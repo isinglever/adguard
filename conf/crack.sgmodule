@@ -16,6 +16,7 @@ URL-REGEX,^https:\/\/pool\.elsanow\.io\/feeds\/api\/feeds.+,REJECT-TINYGIF
 [Script]
 calm = type=http-response,pattern=^https:\/\/api\.calm\.com\/me(?:\?.*)?$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/calm.js
 calm_upsells = type=http-response,pattern=^https:\/\/api\.calm\.com\/upsells(?:\?.*)?$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/calm-upsells-clean.js
+calm_amplitude_flags = type=http-response,pattern=^https:\/\/api\.lab\.amplitude\.com\/sdk\/v2\/vardata(?:\?.*)?$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/calm-amplitude-flags-clean.js
 adguard = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.org\/api\/2\.0\/ios_validate_receipt.+, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/adguard.js
 elevate_account = type=http-response,pattern=^https:\/\/accounts\.elevateapp\.net\/api\/users\?user%5Bauthentication_token*, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/elevate.js
 elevate_sub = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/revenuecat.js
@@ -26,4 +27,4 @@ draft = type=http-response,pattern=^https:\/\/backend\.getdrafts\.com\/api\/v1\/
 
 #cake_path_6 = type=http-request, pattern=^https:\/\/api\.cakeapp\.me\/gw\/path\/main.+, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake_path.js, timeout=60, script-update-interval=0
 [MITM]
-hostname = %APPEND% api.calm.com, mobile-api.adguard.org, accounts.elevateapp.net, api.revenuecat.com, backend.getdrafts.com, api.pocketcasts.com, pool.elsanow.io
+hostname = %APPEND% api.calm.com, api.lab.amplitude.com, mobile-api.adguard.org, accounts.elevateapp.net, api.revenuecat.com, backend.getdrafts.com, api.pocketcasts.com, pool.elsanow.io
