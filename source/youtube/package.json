@@ -5,7 +5,7 @@
   "main": "main-response.ts",
   "type": "module",
   "scripts": {
-    "test": "npm run build && node test/guide.mjs",
+    "test": "npm run build && node test/guide.mjs && node test/browse.mjs && node test/module.mjs",
     "build": "node build.mjs",
     "deploy": "node build.mjs --deploy",
     "build:proto": "npx buf generate"

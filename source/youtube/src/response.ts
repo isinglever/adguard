@@ -25,7 +25,7 @@ export class BrowseMessage extends YouTubeMessage {
     this.iterate(this.message, 'richGridContents', (obj) => {
       for (let i = obj.richGridContents.length - 1; i >= 0; i--) {
         this.removeCommonAD(obj, i)
-        this.removeShorts(obj, i)
+        if (this.argument.blockShorts) this.removeShorts(obj, i)
       }
     })
     // this.addClientKey()
