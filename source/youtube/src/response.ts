@@ -321,6 +321,7 @@ export class GuideMessage extends YouTubeMessage {
   pure (): YouTubeMessage {
     const blackList = ['SPunlimited']
     if (this.argument.blockUpload) blackList.push('FEuploads')
+    if (this.argument.blockShorts) blackList.push('FEshorts')
     if (this.argument.blockImmersive) {
       blackList.push(
         'FEmusic_explore',

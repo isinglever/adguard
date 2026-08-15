@@ -107,24 +107,39 @@ async function runBundle (path, body, argument) {
   })
 }
 
-const bundles = [
-  '../../js/youtube/youtube.response.js',
-  './dist/youtube.response.preview.js'
-]
+const bundles = process.env.PREVIEW_ONLY
+  ? ['./dist/youtube.response.preview.js']
+  : [
+      '../../js/youtube/youtube.response.js',
+      './dist/youtube.response.preview.js'
+    ]
 
 for (const bundle of bundles) {
   const blocked = await runBundle(bundle, createFixture(), {
     blockUpload: true,
+    blockShorts: true,
     blockImmersive: true
   })
   assert.deepEqual(
     readBrowseIds(blocked),
-    ['FEshorts', 'FEhome', retainedId],
+    ['FEhome', retainedId],
+    bundle
+  )
+
+  const requested = await runBundle(bundle, createFixture(), {
+    blockUpload: true,
+    blockShorts: true,
+    blockImmersive: false
+  })
+  assert.deepEqual(
+    readBrowseIds(requested),
+    ['FEmusic_explore', 'FEmusic_immersive', 'FEhome', retainedId],
     bundle
   )
 
   const allowed = await runBundle(bundle, createFixture(), {
     blockUpload: false,
+    blockShorts: false,
     blockImmersive: false
   })
   assert.deepEqual(
@@ -134,4 +149,8 @@ for (const bundle of bundles) {
   )
 }
 
-console.log('Guide behavior matches for deployed and preview bundles.')
+console.log(
+  process.env.PREVIEW_ONLY
+    ? 'Guide behavior matches for the preview bundle.'
+    : 'Guide behavior matches for deployed and preview bundles.'
+)

@@ -13,6 +13,12 @@ Apache License 2.0 terms documented in `LICENSE`.
 The init-playback/UMP implementation remains experimental and is not enabled by
 `../../module/youtube.module`.
 
+## Guide navigation options
+
+- `blockUpload` removes the upload/create entry (`FEuploads`).
+- `blockShorts` removes the YouTube Shorts entry (`FEshorts`).
+- `blockImmersive` removes the YouTube Music Explore and Immersive entries.
+
 ## Install
 
 ```

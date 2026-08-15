@@ -38,6 +38,7 @@ export abstract class YouTubeMessage {
       lyricLang: 'zh-Hans',
       captionLang: 'zh-Hans',
       blockUpload: true,
+      blockShorts: true,
       blockImmersive: true,
       debug: false
     }
