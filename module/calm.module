@@ -6,7 +6,9 @@
 URL-REGEX,^https:\/\/api\.calm\.com\/device,REJECT-TINYGIF
 
 [MITM]
-hostname = %APPEND% api.calm.com
+hostname = %APPEND% api.calm.com, api.lab.amplitude.com
 
 [Script]
 account = type=http-response,pattern=^https:\/\/api\.calm\.com\/me$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/calm.js
+upsells = type=http-response,pattern=^https:\/\/api\.calm\.com\/upsells(?:\?.*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/calm-upsells-clean.js
+amplitude_flags = type=http-response,pattern=^https:\/\/api\.lab\.amplitude\.com\/sdk\/v2\/vardata(?:\?.*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/calm-amplitude-flags-clean.js
