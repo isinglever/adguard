@@ -41,7 +41,20 @@
       }
     }
 
-    function pruneMembershipBanner(value) {
+    function isMembershipTimeSaleMessage(value) {
+      return value &&
+        typeof value === 'object' &&
+        value.actionScreen === 'MembershipTimeSaleLayer';
+    }
+
+    function isMembershipPromotionItem(value) {
+      return value &&
+        typeof value === 'object' &&
+        (value.type === 'membershipTimeSaleHomeBanner' ||
+          (value.type === 'cakeMessage' && isMembershipTimeSaleMessage(value.data)));
+    }
+
+    function pruneMembershipPromotions(value) {
       if (!value || typeof value !== 'object') {
         return;
       }
@@ -49,10 +62,10 @@
       if (Array.isArray(value)) {
         for (var i = value.length - 1; i >= 0; i -= 1) {
           var item = value[i];
-          if (item && typeof item === 'object' && item.type === 'membershipTimeSaleHomeBanner') {
+          if (isMembershipPromotionItem(item)) {
             value.splice(i, 1);
           } else {
-            pruneMembershipBanner(item);
+            pruneMembershipPromotions(item);
           }
         }
         return;
@@ -60,12 +73,17 @@
 
       var keys = Object.keys(value);
       for (var k = 0; k < keys.length; k += 1) {
-        pruneMembershipBanner(value[keys[k]]);
+        var key = keys[k];
+        if (key === 'cakeMessage' && isMembershipTimeSaleMessage(value[key])) {
+          delete value[key];
+        } else {
+          pruneMembershipPromotions(value[key]);
+        }
       }
     }
 
     normalizeAccessFlags(obj);
-    pruneMembershipBanner(obj);
+    pruneMembershipPromotions(obj);
 
     $done({ body: JSON.stringify(obj) });
   } catch (e) {

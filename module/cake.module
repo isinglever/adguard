@@ -2,6 +2,10 @@
 #!desc=Enjoy!
 #!category=Self
 
+[Rule]
+DOMAIN,googleads.g.doubleclick.net,REJECT
+DOMAIN,static.doubleclick.net,REJECT
+
 [URL Rewrite]
 ^https:\/\/api\.mycake\.me\/banner.* - reject
 
@@ -10,6 +14,7 @@ hostname = %APPEND% api.mycake.me, api.cakeapp.me
 
 [Script]
 cake_start = type=http-response, pattern=^https:\/\/api\.mycake\.me\/app\/start$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_start.js, timeout=60, script-update-interval=0
+cake_push = type=http-response, pattern=^https:\/\/api\.mycake\.me\/user\/push\/count(?:\?.*)?$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_push.js, timeout=60, script-update-interval=0
 cake_sub_1 = type=http-response, pattern=^https:\/\/api.mycake.me\/v2\/main\/subscription\/channel.+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_sub.js, timeout=60, script-update-interval=0
 cake_sub_2 = type=http-response, pattern=^https:\/\/api\.cakeapp\.me\/gw\/subscription.+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_sub.js, timeout=60, script-update-interval=0
 cake_sum_1 = type=http-response, pattern=^https:\/\/api\.mycake\.me\/main\/learning\/summary.+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_sum.js, timeout=60, script-update-interval=0
