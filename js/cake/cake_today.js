@@ -44,13 +44,19 @@
     function isMembershipTimeSaleMessage(value) {
       return value &&
         typeof value === 'object' &&
-        value.actionScreen === 'MembershipTimeSaleLayer';
+        (value.actionScreen === 'MembershipTimeSaleLayer' ||
+          (typeof value.link === 'string' &&
+            value.link.indexOf('MembershipTimeSaleLayer') !== -1));
     }
 
     function isMembershipPromotionItem(value) {
       return value &&
         typeof value === 'object' &&
-        (value.type === 'membershipTimeSaleHomeBanner' ||
+        (value.type === 'AD' ||
+          value.type === 'membershipTimeSaleHomeBanner' ||
+          (typeof value.stepTitle === 'string' &&
+            value.stepTitle.trim().toUpperCase() === 'AD') ||
+          isMembershipTimeSaleMessage(value) ||
           (value.type === 'cakeMessage' && isMembershipTimeSaleMessage(value.data)));
     }
 
@@ -66,6 +72,14 @@
             value.splice(i, 1);
           } else {
             pruneMembershipPromotions(item);
+            if (
+              item &&
+              item.type === 'classBanner' &&
+              Array.isArray(item.data) &&
+              item.data.length === 0
+            ) {
+              value.splice(i, 1);
+            }
           }
         }
         return;
@@ -74,7 +88,11 @@
       var keys = Object.keys(value);
       for (var k = 0; k < keys.length; k += 1) {
         var key = keys[k];
-        if (key === 'cakeMessage' && isMembershipTimeSaleMessage(value[key])) {
+        if (
+          /^membershipTimeSale(?:Home)?Banner$/i.test(key) ||
+          (key === 'cakeMessage' && isMembershipTimeSaleMessage(value[key])) ||
+          isMembershipPromotionItem(value[key])
+        ) {
           delete value[key];
         } else {
           pruneMembershipPromotions(value[key]);

@@ -13,6 +13,25 @@
           return true;
         }
 
+        if (type === 'membershipTimeSaleHomeBanner') {
+          return true;
+        }
+
+        if (node.actionScreen === 'MembershipTimeSaleLayer') {
+          return true;
+        }
+
+        if (
+          typeof node.link === 'string' &&
+          node.link.indexOf('MembershipTimeSaleLayer') !== -1
+        ) {
+          return true;
+        }
+
+        if (type === 'cakeMessage' && isAdNode(node.data)) {
+          return true;
+        }
+
         if (typeof node.stepTitle === 'string' && node.stepTitle.trim().toUpperCase() === 'AD') {
           return true;
         }
@@ -32,6 +51,14 @@
               value.splice(i, 1);
             } else {
               pruneAds(item);
+              if (
+                item &&
+                item.type === 'classBanner' &&
+                Array.isArray(item.data) &&
+                item.data.length === 0
+              ) {
+                value.splice(i, 1);
+              }
             }
           }
           return;
@@ -46,7 +73,16 @@
 
         var keys = Object.keys(value);
         for (var j = 0; j < keys.length; j += 1) {
-          pruneAds(value[keys[j]]);
+          var key = keys[j];
+          if (
+            (/^membershipTimeSale(?:Home)?Banner$/i.test(key)) ||
+            (key === 'cakeMessage' && isAdNode(value[key])) ||
+            isAdNode(value[key])
+          ) {
+            delete value[key];
+          } else {
+            pruneAds(value[key]);
+          }
         }
       }
 
