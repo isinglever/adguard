@@ -221,11 +221,9 @@
     if (!result.changed || result.removed === 0) return $done({});
 
     console.log(`[LinkedIn Ads] Removed ${result.removed} promoted post(s)`);
-    const output = result.bytes.buffer.slice(
-      result.bytes.byteOffset,
-      result.bytes.byteOffset + result.bytes.byteLength
-    );
-    $done({ body: output });
+    // Surge binary-body-mode accepts a Uint8Array. Returning its underlying
+    // ArrayBuffer makes Surge fall back to the original response body.
+    $done({ body: result.bytes });
   } catch (error) {
     console.log(`[LinkedIn Ads] ${error && error.stack ? error.stack : error}`);
     $done({});
