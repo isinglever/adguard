@@ -103,7 +103,40 @@ function parseBody(runResult) {
   assert.equal(outputBookmark.subscription_limited, false);
   assert.equal(outputBookmark.questions.new_unit_sn, -1);
   assert.equal(output.course_state.queues.new, 0);
-  assert.equal(output.course_state.queues.repeats_waiting, 2);
+  assert.equal(output.course_state.queues.repeats_waiting, 100);
+  assert.equal(output.course_state.queues.repeats_below_horizon, 100);
+}
+
+{
+  const input = {
+    course_state: {
+      bookmark: JSON.stringify({
+        questions: { new_unit_sn: 42 },
+        subscription_limited: true,
+      }),
+      queues: {
+        new: 1,
+        repeats_below_horizon: 120,
+        repeats_waiting: 125,
+      },
+    },
+  };
+  const output = parseBody(
+    runScript("lingvist_course_request.js", {
+      $request: {
+        method: "POST",
+        body: JSON.stringify(input),
+      },
+    }),
+  );
+
+  assert.equal(output.course_state.queues.new, 0);
+  assert.equal(output.course_state.queues.repeats_below_horizon, 120);
+  assert.equal(output.course_state.queues.repeats_waiting, 125);
+  assert.equal(
+    JSON.parse(output.course_state.bookmark).questions.new_unit_sn,
+    42,
+  );
 }
 
 {
