@@ -3,7 +3,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const vm = require("node:vm");
 
-const script = fs.readFileSync(path.join(__dirname, "reddit_request.js"), "utf8");
+const script = fs.readFileSync(path.join(__dirname, "reddit_request_en.js"), "utf8");
 
 function run(overrides) {
   let result;
@@ -28,7 +28,7 @@ const commentsRequest = run({
 assert.equal(JSON.parse(commentsRequest.body).operationName, "NoSuchOperation");
 assert.equal(
   commentsRequest.headers["x-reddit-translations"],
-  "enabled, seo, zh-hans"
+  "enabled, seo, en"
 );
 
 const feedRequestBody = JSON.stringify({ operationName: "HomeFeedSdui" });
@@ -42,7 +42,7 @@ const feedRequest = run({
 assert.equal(feedRequest.body, feedRequestBody);
 assert.equal(
   feedRequest.headers["x-reddit-translations"],
-  "enabled, seo, zh-hans"
+  "enabled, seo, en"
 );
 
 const showOriginalBody = JSON.stringify({ operationName: "PostsContent" });
@@ -68,7 +68,7 @@ const translateRequest = run({
 });
 assert.equal(
   translateRequest.headers["x-reddit-translations"],
-  "enabled, seo, zh-hans"
+  "enabled, seo, en"
 );
 assert.equal(translateRequest.headers["X-Reddit-Translations"], undefined);
 
