@@ -5,12 +5,13 @@
 [Rule]
 DOMAIN,googleads.g.doubleclick.net,REJECT
 DOMAIN,static.doubleclick.net,REJECT
+DOMAIN,ad.doubleclick.net,REJECT
 
 [URL Rewrite]
 ^https:\/\/api\.mycake\.me\/banner.* - reject
 
 [MITM]
-hostname = %APPEND% api.mycake.me, api.cakeapp.me
+hostname = %APPEND% api.mycake.me, api.cakeapp.me, cake.day
 
 [Script]
 cake_start = type=http-response, pattern=^https:\/\/api\.mycake\.me\/app\/start$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_start.js, timeout=60, script-update-interval=0
@@ -22,6 +23,7 @@ cake_sum_2 = type=http-response, pattern=^https:\/\/api\.mycake\.me\/user\/learn
 cake_today = type=http-response, pattern=^https://api\.cakeapp\.me/gw/v2/main/today\?.*$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_today.js?v=20260822-2, timeout=60, script-update-interval=0
 cake_path = type=http-response, pattern=^https:\/\/api\.cakeapp\.me\/gw\/path\/main\?.*, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_path.js?v=20260822-2, timeout=60, script-update-interval=0
 cake_tabs = type=http-response, pattern=^https:\/\/api\.cakeapp\.me\/gw\/(?:levelUpQuiz\/main|class\/main|v2\/user\/review\/main|tutorbot\/main)(?:\?.*)?$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_tabs.js?v=20260822-2, timeout=60, script-update-interval=0
+cake_web = type=http-response, pattern=^https:\/\/cake\.day\/(?:api\/request(?:\?.*)?|(?:home|quiz|review|streak|password_change)(?:[\/?].*)?)$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_web.js?v=20260823-1, timeout=60, script-update-interval=0
 cake_curr = type=http-response, pattern=^https:\/\/api\.cakeapp\.me\/gw\/curriculum(?:\/\d+)?\?.*, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_curr.js, timeout=60, script-update-interval=0
 cake_sen = type=http-response, pattern=^https:\/\/api\.cakeapp\.me\/gw\/v2\/sentence\/\d+\/view\/contents\/extra\?.*, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_sen.js, timeout=60, script-update-interval=0
 cake_limit = type=http-response, pattern=^https:\/\/api\.cakeapp\.me\/gw\/levelUpQuiz\/game\/start\?.*, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/cake/cake_limit.js, timeout=60, script-update-interval=0
