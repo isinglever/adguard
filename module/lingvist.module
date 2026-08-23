@@ -1,11 +1,13 @@
 #!name=Lingvist
-#!desc=Enjoy Language Learning, this crack does not take effect since lingvist has server side verification.
+#!desc=Client-side Unlimited status and course unlock. New-card delivery may still be verified by Lingvist servers.
 #!category=Self
 
 [MITM]
 hostname = %APPEND% payment-api.lingvist.com, api.lingvist.com, api.adapty.io
 
 [Script]
-sync = type=http-response,pattern=^https?:\/\/api\.lingvist\.com\/\d+(?:\.\d+)?\/user\/sync(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/lingvist/lingvist_sync.js
-services = type=http-response,pattern=^https?:\/\/payment-api\.lingvist\.com\/\d+(?:\.\d+)?\/user\/services(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/lingvist/lingvist_services.js
-validate = type=http-response,pattern=^https?:\/\/api\.adapty\.io\/api\/v\d+\/sdk\/purchase\/app-store\/original-transaction-id\/validate\/?(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/lingvist/lingvist_validate.js
+sync = type=http-response,pattern=^https?:\/\/api\.lingvist\.com\/\d+(?:\.\d+)?\/user\/sync(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/lingvist/lingvist_sync.js?v=20260823-1,timeout=60,script-update-interval=0
+services = type=http-response,pattern=^https?:\/\/payment-api\.lingvist\.com\/\d+(?:\.\d+)?\/user\/services(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/lingvist/lingvist_services.js?v=20260823-1,timeout=60,script-update-interval=0
+course_request = type=http-request,pattern=^https?:\/\/api\.lingvist\.com\/\d+(?:\.\d+)?\/courses\/[0-9a-fA-F-]{36}(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/lingvist/lingvist_course_request.js?v=20260823-1,timeout=60,script-update-interval=0
+course_response = type=http-response,pattern=^https?:\/\/api\.lingvist\.com\/\d+(?:\.\d+)?\/courses(?:\/[0-9a-fA-F-]{36})?(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/lingvist/lingvist_course_response.js?v=20260823-1,timeout=60,script-update-interval=0
+validate = type=http-response,pattern=^https?:\/\/api\.adapty\.io\/api\/v\d+\/sdk\/purchase\/app-store\/original-transaction-id\/validate\/?(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/lingvist/lingvist_validate.js,timeout=60,script-update-interval=0
