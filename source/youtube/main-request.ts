@@ -33,8 +33,7 @@ function run (): void {
     return
   }
 
-  const previous = result.previousRegion ?? 'server default'
-  $.debug(`YouTube Music charts region: ${previous} -> ${targetRegion}`)
+  $.debug(`YouTube Music charts default region: server default -> ${targetRegion}`)
   $.done({ bodyBytes: result.body })
 }
 

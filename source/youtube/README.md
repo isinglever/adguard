@@ -21,9 +21,10 @@ The init-playback/UMP implementation remains experimental and is not enabled by
 
 ## YouTube Music charts region
 
-The request script forces `FEmusic_charts` requests to include an explicit
-country selector. `chartsRegion` defaults to `ZZ` (Global), accepts `US`, and
-can be disabled with `off`. Other `/browse` requests are left unchanged.
+When an initial `FEmusic_charts` request has no country selector, the request
+script adds one. `chartsRegion` defaults to `ZZ` (Global), accepts `US`, and can
+be disabled with `off`. Explicit country selections and other `/browse`
+requests are left unchanged.
 
 ## Install
 

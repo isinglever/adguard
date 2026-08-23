@@ -125,13 +125,37 @@ for (const bundle of bundles) {
   assert.equal(readRegion(global), 'ZZ', `${bundle}: inject Global`)
   assert.equal(global.length, implicit.length + 7, `${bundle}: append field 18`)
 
-  const nigeria = await runBundle(bundle, createFixture({ region: 'NG' }), {
-    chartsRegion: 'ZZ'
-  })
-  assert.equal(readRegion(nigeria), 'ZZ', `${bundle}: replace Nigeria`)
+  const nigeria = createFixture({ region: 'NG' })
+  assert.deepEqual(
+    await runBundle(bundle, nigeria, {
+      chartsRegion: 'ZZ'
+    }),
+    nigeria,
+    `${bundle}: preserve a manual Nigeria selection`
+  )
 
-  const usa = await runBundle(bundle, createFixture(), { chartsRegion: 'US' })
-  assert.equal(readRegion(usa), 'US', `${bundle}: inject United States`)
+  const selectedUs = createFixture({ region: 'US' })
+  assert.deepEqual(
+    await runBundle(bundle, selectedUs, {
+      chartsRegion: 'ZZ'
+    }),
+    selectedUs,
+    `${bundle}: preserve a manual United States selection`
+  )
+
+  const usa = await runBundle(bundle, createFixture(), {
+    chartsRegion: 'US'
+  })
+  assert.equal(readRegion(usa), 'US', `${bundle}: inject United States default`)
+
+  const selectedGlobal = createFixture({ region: 'ZZ' })
+  assert.deepEqual(
+    await runBundle(bundle, selectedGlobal, {
+      chartsRegion: 'ZZ'
+    }),
+    selectedGlobal,
+    `${bundle}: preserve a manual Global selection`
+  )
 
   const otherBrowse = createFixture({ browseId: 'FEhome', region: 'NG' })
   assert.deepEqual(

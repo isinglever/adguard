@@ -9,7 +9,6 @@ export interface ChartsRegionRewrite {
   body: Uint8Array
   matched: boolean
   changed: boolean
-  previousRegion?: string
 }
 
 function readVarint (data: Uint8Array, offset: number): Varint | undefined {
@@ -65,48 +64,6 @@ function skipField (
   return undefined
 }
 
-function findRegionCode (
-  data: Uint8Array,
-  start: number,
-  end: number
-): { start: number, value: string } | undefined {
-  let offset = start
-
-  while (offset < end) {
-    const tag = readVarint(data, offset)
-    if (!tag) return undefined
-
-    const fieldNumber = Math.floor(tag.value / 8)
-    const wireType = tag.value & 7
-    offset = tag.next
-
-    if (fieldNumber === 1 && wireType === 2) {
-      const length = readVarint(data, offset)
-      if (!length) return undefined
-
-      const valueStart = length.next
-      const valueEnd = valueStart + length.value
-      if (valueEnd > end) return undefined
-
-      if (length.value === 2) {
-        return {
-          start: valueStart,
-          value: String.fromCharCode(data[valueStart], data[valueStart + 1])
-        }
-      }
-
-      offset = valueEnd
-      continue
-    }
-
-    const next = skipField(data.subarray(0, end), offset, wireType)
-    if (next === undefined) return undefined
-    offset = next
-  }
-
-  return undefined
-}
-
 function encodeRegionField (region: string): Uint8Array {
   return new Uint8Array([
     0x92, 0x01, // field 18, length-delimited
@@ -122,7 +79,7 @@ export function rewriteChartsRegion (
 ): ChartsRegionRewrite {
   let offset = 0
   let isChartsRequest = false
-  const regionCodes: Array<{ start: number, value: string }> = []
+  let hasExplicitRegion = false
 
   while (offset < body.length) {
     const tag = readVarint(body, offset)
@@ -145,10 +102,7 @@ export function rewriteChartsRegion (
         isAsciiString(body, valueStart, valueEnd, CHARTS_BROWSE_ID)
       ) {
         isChartsRequest = true
-      } else if (fieldNumber === 18) {
-        const region = findRegionCode(body, valueStart, valueEnd)
-        if (region) regionCodes.push(region)
-      }
+      } else if (fieldNumber === 18) hasExplicitRegion = true
 
       offset = valueEnd
       continue
@@ -161,30 +115,9 @@ export function rewriteChartsRegion (
 
   if (!isChartsRequest) return { body, matched: false, changed: false }
 
-  if (regionCodes.length > 0) {
-    const changed = regionCodes.some(region => region.value !== targetRegion)
-    if (!changed) {
-      return {
-        body,
-        matched: true,
-        changed: false,
-        previousRegion: targetRegion
-      }
-    }
-
-    const output = body.slice()
-    for (const region of regionCodes) {
-      output[region.start] = targetRegion.charCodeAt(0)
-      output[region.start + 1] = targetRegion.charCodeAt(1)
-    }
-
-    return {
-      body: output,
-      matched: true,
-      changed: true,
-      previousRegion: regionCodes[regionCodes.length - 1].value
-    }
-  }
+  // Field 18 is sent after a user chooses a charts country. Preserve it so
+  // this setting controls only the initial default, not later manual choices.
+  if (hasExplicitRegion) return { body, matched: true, changed: false }
 
   const field = encodeRegionField(targetRegion)
   const output = new Uint8Array(body.length + field.length)
