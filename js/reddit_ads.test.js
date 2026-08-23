@@ -18,56 +18,6 @@ function run(overrides) {
   return result;
 }
 
-const feed = {
-  data: {
-    homeV3: {
-      elements: {
-        edges: [
-          { node: { id: "normal-cell", adPayload: null } },
-          { node: { id: "advertisement", adPayload: { __typename: "AdPayload" } } },
-          { node: { id: "normal-post" } }
-        ]
-      }
-    }
-  }
-};
-
-const responseResult = run({
-  $response: { body: JSON.stringify(feed) },
-  $request: { url: "https://gql-fed.reddit.com/" }
-});
-assert.deepEqual(
-  JSON.parse(responseResult.body).data.homeV3.elements.edges.map(function (edge) {
-    return edge.node.id;
-  }),
-  ["normal-cell", "normal-post"]
-);
-
-const unchangedResponse = run({
-  $response: { body: JSON.stringify({ data: { postInfoById: {} } }) }
-});
-assert.equal(Object.keys(unchangedResponse).length, 0);
-
-const experimentsResponse = run({
-  $response: {
-    body: JSON.stringify({
-      data: {
-        experimentVariants: [
-          {
-            name: "games_tab_without_badging",
-            experimentName: "ios_devvit_games_bottom_nav"
-          },
-          { name: "enabled", experimentName: "ios_games_feed_evo" }
-        ]
-      }
-    })
-  }
-});
-assert.deepEqual(
-  JSON.parse(experimentsResponse.body).data.experimentVariants,
-  [{ name: "enabled", experimentName: "ios_games_feed_evo" }]
-);
-
 const commentsRequest = run({
   $request: {
     method: "POST",

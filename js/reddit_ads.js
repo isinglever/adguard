@@ -1,85 +1,14 @@
-// Reddit 去广告：
-// 1. 请求阶段拦截独立的评论广告操作 PdpCommentsAds。
-// 2. 响应阶段移除 HomeFeedSdui 信息流中带 adPayload 的条目。
-// 3. 响应阶段移除启用底部 Games 标签的实验变体。
+// Reddit 请求处理：注入翻译 header，并拦截评论广告操作 PdpCommentsAds。
 const INVALID_OPERATION_NAME = "NoSuchOperation";
-const GAMES_TAB_EXPERIMENT = "ios_devvit_games_bottom_nav";
 
 (function () {
   try {
-    if (typeof $response !== "undefined" && $response) {
-      return handleResponse();
-    }
-
     return handleRequest();
   } catch (error) {
     console.log("[reddit_ads] " + (error && error.stack || error));
     $done({});
   }
 })();
-
-function handleResponse() {
-  if (!$response.body) return $done({});
-
-  let payload;
-  try {
-    payload = JSON.parse($response.body);
-  } catch (_) {
-    return $done({});
-  }
-
-  const removedAds = removeHomeFeedAds(payload);
-  const removedGamesExperiments = disableGamesTab(payload);
-
-  if (removedAds === 0 && removedGamesExperiments === 0) return $done({});
-
-  if (removedAds > 0) {
-    console.log("[reddit_ads] removed " + removedAds + " HomeFeedSdui ad(s)");
-  }
-  if (removedGamesExperiments > 0) {
-    console.log("[reddit_ads] disabled the Games bottom tab experiment");
-  }
-
-  $done({ body: JSON.stringify(payload) });
-}
-
-function removeHomeFeedAds(payload) {
-  const edges = payload
-    && payload.data
-    && payload.data.homeV3
-    && payload.data.homeV3.elements
-    && payload.data.homeV3.elements.edges;
-
-  if (!Array.isArray(edges)) return 0;
-
-  const filteredEdges = edges.filter(function (edge) {
-    const node = edge && edge.node;
-    return !(node && node.adPayload);
-  });
-
-  const removedCount = edges.length - filteredEdges.length;
-  if (removedCount === 0) return 0;
-
-  payload.data.homeV3.elements.edges = filteredEdges;
-  return removedCount;
-}
-
-function disableGamesTab(payload) {
-  const variants = payload
-    && payload.data
-    && payload.data.experimentVariants;
-
-  if (!Array.isArray(variants)) return 0;
-
-  const filteredVariants = variants.filter(function (variant) {
-    return !variant || variant.experimentName !== GAMES_TAB_EXPERIMENT;
-  });
-  const removedCount = variants.length - filteredVariants.length;
-  if (removedCount === 0) return 0;
-
-  payload.data.experimentVariants = filteredVariants;
-  return removedCount;
-}
 
 function handleRequest() {
   if (typeof $request === "undefined" || !$request) return $done({});
