@@ -48,6 +48,26 @@ const unchangedResponse = run({
 });
 assert.equal(Object.keys(unchangedResponse).length, 0);
 
+const experimentsResponse = run({
+  $response: {
+    body: JSON.stringify({
+      data: {
+        experimentVariants: [
+          {
+            name: "games_tab_without_badging",
+            experimentName: "ios_devvit_games_bottom_nav"
+          },
+          { name: "enabled", experimentName: "ios_games_feed_evo" }
+        ]
+      }
+    })
+  }
+});
+assert.deepEqual(
+  JSON.parse(experimentsResponse.body).data.experimentVariants,
+  [{ name: "enabled", experimentName: "ios_games_feed_evo" }]
+);
+
 const commentsRequest = run({
   $request: {
     method: "POST",
