@@ -26,6 +26,10 @@ script adds one. `chartsRegion` defaults to `ZZ` (Global), accepts `US`, and can
 be disabled with `off`. Explicit country selections and other `/browse`
 requests are left unchanged.
 
+For charts-only use, install `../../module/youtube-music-charts.module`. It does
+not install response scripts, intercept `googlevideo.com`, or modify playback
+metadata. Disable the broader `youtube.module` during isolation testing.
+
 ## Install
 
 ```

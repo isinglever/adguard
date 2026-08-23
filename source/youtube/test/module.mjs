@@ -2,6 +2,10 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 
 const moduleText = fs.readFileSync('../../module/youtube.module', 'utf8')
+const chartsModuleText = fs.readFileSync(
+  '../../module/youtube-music-charts.module',
+  'utf8'
+)
 
 const responseRule = moduleText
   .split('\n')
@@ -41,4 +45,21 @@ assert.equal(
   '^https?:\\/\\/[\\w-]+\\.googlevideo\\.com\\/initplayback.+&oad data-type=text data="" status-code=502'
 )
 
-console.log('YouTube module routes playback metadata through the response script.')
+const chartsRequestRule = chartsModuleText
+  .split('\n')
+  .find(line => line.startsWith('youtube.music.charts.request = '))
+
+assert.ok(chartsRequestRule, 'The charts-only request rule must exist.')
+assert.ok(chartsRequestRule.includes('type=http-request'))
+assert.ok(chartsRequestRule.includes('youtubei\\/v1\\/browse'))
+assert.ok(chartsRequestRule.includes('binary-body-mode=1'))
+assert.ok(chartsRequestRule.includes('youtube.request.js'))
+assert.ok(chartsModuleText.includes('charts_region:ZZ'))
+assert.ok(!chartsModuleText.includes('type=http-response'))
+assert.ok(!chartsModuleText.includes('[Map Local]'))
+assert.ok(!chartsModuleText.includes('googlevideo.com'))
+assert.ok(
+  chartsModuleText.includes('hostname = %APPEND% youtubei.googleapis.com')
+)
+
+console.log('YouTube modules separate charts requests from playback responses.')

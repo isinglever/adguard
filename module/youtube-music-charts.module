@@ -1,0 +1,11 @@
+#!name=YouTube Music Charts Region
+#!desc=仅设置 YouTube Music 排行榜的初始默认地区，不修改播放响应或媒体请求
+#!category=Self
+#!arguments=charts_region:ZZ,script_engine:auto,debug:false
+#!arguments-desc=- charts_region：[ZZ（全球）, US（美国）, off] \n- script_engine：[auto, jsc, webview] \n- debug：[true, false]\n\n手动选择其他排行榜地区后，脚本会保留该选择。
+
+[Script]
+youtube.music.charts.request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse(?:\?|$),requires-body=1,max-size=-1,binary-body-mode=1,engine={{{script_engine}}},script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/youtube/youtube.request.js,argument="{"chartsRegion":"{{{charts_region}}}","debug":{{{debug}}}}"
+
+[MITM]
+hostname = %APPEND% youtubei.googleapis.com
