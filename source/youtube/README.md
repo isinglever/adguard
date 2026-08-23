@@ -19,6 +19,15 @@ The init-playback/UMP implementation remains experimental and is not enabled by
 - `blockShorts` removes the YouTube Shorts entry (`FEshorts`).
 - `blockImmersive` removes the YouTube Music Explore and Immersive entries.
 
+## Playback safety and ad filtering
+
+- `blockAds` defaults to `false`. When disabled, ad placements and ad tracking
+  are preserved for Premium accounts.
+- `playbackEnhance` defaults to `false`. Player capability fields remain
+  untouched unless it is explicitly enabled.
+- The module no longer intercepts `googlevideo.com` or maps `initplayback`
+  requests locally, preserving the native system Now Playing path.
+
 ## YouTube Music charts region
 
 When an initial `FEmusic_charts` request has no country selector, the request

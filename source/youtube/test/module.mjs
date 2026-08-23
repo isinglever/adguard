@@ -22,6 +22,10 @@ assert.ok(requestRule.includes('youtubei\\/v1\\/browse'))
 assert.ok(requestRule.includes('binary-body-mode=1'))
 assert.ok(requestRule.includes('youtube.request.js'))
 assert.ok(moduleText.includes('排行榜默认地区:ZZ'))
+assert.ok(moduleText.includes('去广告:false'))
+assert.ok(moduleText.includes('播放能力增强:false'))
+assert.ok(responseRule.includes('"blockAds":{{{去广告}}}'))
+assert.ok(responseRule.includes('"playbackEnhance":{{{播放能力增强}}}'))
 
 for (const endpoint of [
   'browse',
@@ -36,14 +40,9 @@ for (const endpoint of [
   assert.ok(responseRule.includes(endpoint), `Missing endpoint: ${endpoint}`)
 }
 
-const mapLocalRule = moduleText
-  .split('\n')
-  .find(line => line.startsWith('^https?:'))
-
-assert.equal(
-  mapLocalRule,
-  '^https?:\\/\\/[\\w-]+\\.googlevideo\\.com\\/initplayback.+&oad data-type=text data="" status-code=502'
-)
+assert.ok(!moduleText.includes('[Map Local]'))
+assert.ok(!moduleText.includes('googlevideo.com'))
+assert.ok(moduleText.includes('hostname = %APPEND% youtubei.googleapis.com'))
 
 const chartsRequestRule = chartsModuleText
   .split('\n')

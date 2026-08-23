@@ -5,7 +5,7 @@ import { Next } from '../lib/protobuf/response/next_pb.js'
 import { Search } from '../lib/protobuf/response/search_pb.js'
 import { Shorts } from '../lib/protobuf/response/shorts_pb.js'
 import { Guide } from '../lib/protobuf/response/guide_pb.js'
-import { Player, BackgroundPlayer, TranslationLanguage, CaptionTrack } from '../lib/protobuf/response/player_pb.js'
+import { Player, BackgroundPlayer, BackgroundPlayerRender, TranslationLanguage, CaptionTrack } from '../lib/protobuf/response/player_pb.js'
 import { Setting, SubSetting, SettingItem } from '../lib/protobuf/response/setting_pb.js'
 import { Watch } from '../lib/protobuf/response/watch_pb.js'
 
@@ -24,7 +24,7 @@ export class BrowseMessage extends YouTubeMessage {
   async pure (): Promise<YouTubeMessage> {
     this.iterate(this.message, 'richGridContents', (obj) => {
       for (let i = obj.richGridContents.length - 1; i >= 0; i--) {
-        this.removeCommonAD(obj, i)
+        if (this.argument.blockAds) this.removeCommonAD(obj, i)
         if (this.argument.blockShorts) this.removeShorts(obj, i)
       }
     })
@@ -182,35 +182,50 @@ export class PlayerMessage extends YouTubeMessage {
   }
 
   pure (): YouTubeMessage {
-    // 去除广告
+    if (this.argument.blockAds) this.removeAds()
+    if (this.argument.playbackEnhance) this.addPlayAbility()
+    this.addTranslateCaption()
+    return this
+  }
+
+  removeAds (): void {
     if (this.message.adPlacements?.length) {
       this.message.adPlacements.length = 0
+      this.needProcess = true
     }
     if (this.message.adSlots?.length) {
       this.message.adSlots.length = 0
+      this.needProcess = true
     }
-    // 去除广告追踪
-    delete this.message?.playbackTracking?.pageadViewthroughconversion
-    // 增加 premium 特性
-    this.addPlayAbility()
-    this.addTranslateCaption()
-    this.needProcess = true
-    return this
+    if (this.message?.playbackTracking?.pageadViewthroughconversion) {
+      delete this.message.playbackTracking.pageadViewthroughconversion
+      this.needProcess = true
+    }
   }
 
   addPlayAbility (): void {
     // 开启画中画
     const miniPlayerRender = this.message?.playabilityStatus?.miniPlayer?.miniPlayerRender
-    if (typeof miniPlayerRender === 'object') {
+    if (typeof miniPlayerRender === 'object' && !miniPlayerRender.active) {
       miniPlayerRender.active = true
+      this.needProcess = true
     }
     // 开启后台播放
-    if (typeof this.message.playabilityStatus === 'object') {
-      this.message.playabilityStatus.backgroundPlayer = new BackgroundPlayer({
-        backgroundPlayerRender: {
-          active: true
-        }
+    const playabilityStatus = this.message.playabilityStatus
+    if (typeof playabilityStatus !== 'object') return
+
+    if (!playabilityStatus.backgroundPlayer) {
+      playabilityStatus.backgroundPlayer = new BackgroundPlayer({
+        backgroundPlayerRender: new BackgroundPlayerRender({ active: true })
       })
+      this.needProcess = true
+    } else if (!playabilityStatus.backgroundPlayer.backgroundPlayerRender) {
+      playabilityStatus.backgroundPlayer.backgroundPlayerRender =
+        new BackgroundPlayerRender({ active: true })
+      this.needProcess = true
+    } else if (!playabilityStatus.backgroundPlayer.backgroundPlayerRender.active) {
+      playabilityStatus.backgroundPlayer.backgroundPlayerRender.active = true
+      this.needProcess = true
     }
   }
 
@@ -221,6 +236,11 @@ export class PlayerMessage extends YouTubeMessage {
     this.iterate(this.message, 'captionTracks', (obj, stack) => {
       const captionTracks = obj.captionTracks
       const audioTracks = obj.audioTracks
+
+      if (!Array.isArray(captionTracks) || captionTracks.length === 0) {
+        stack.length = 0
+        return
+      }
 
       // 添加默认翻译语言
       if (Array.isArray(captionTracks)) {
@@ -283,6 +303,7 @@ export class PlayerMessage extends YouTubeMessage {
           languageCode: k,
           languageName: { runs: [{ text: v }] }
         }))
+      this.needProcess = true
       stack.length = 0
     })
   }
@@ -349,6 +370,8 @@ export class SettingMessage extends YouTubeMessage {
   }
 
   pure (): YouTubeMessage {
+    if (!this.argument.playbackEnhance) return this
+
     // 增加 PIP
     this.iterate(this.message, 'categoryId', (obj) => {
       if (obj.categoryId === 10005) {
@@ -441,13 +464,16 @@ export class WatchMessage extends YouTubeMessage {
     for (const msg of this.message.contents) {
       if (msg.player) {
         this.player.message = msg.player
+        this.player.needProcess = false
         await this.player.pure()
+        if (this.player.needProcess) this.needProcess = true
       }
       if (msg.next) {
         this.next.message = msg.next
+        this.next.needProcess = false
         await this.next.pure()
+        if (this.next.needProcess) this.needProcess = true
       }
-      this.needProcess = true
     }
     return this
   }

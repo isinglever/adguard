@@ -11,6 +11,7 @@ import {
   RichGridContent,
   RichGridRenderer,
   RichItemContent,
+  RichItemRenderer,
   RichSectionContent,
   RichSectionRenderer,
   VideoRendererContent,
@@ -61,6 +62,24 @@ function createBrowseContents () {
   })
 }
 
+function createAdFixture () {
+  return new Browse({
+    contents: new Contents({
+      richGridRenderer: new RichGridRenderer({
+        richGridContents: [
+          new RichGridContent({
+            richItemRenderer: new RichItemRenderer({
+              richItemContent: [
+                createVideoContent('inline_injection_entrypoint_layout.eml|fixture')
+              ]
+            })
+          })
+        ]
+      })
+    })
+  }).toBinary()
+}
+
 function createFixture (endpoint) {
   if (endpoint === 'next') {
     return new Next({
@@ -80,6 +99,12 @@ function readSectionCount (endpoint, body) {
     ? message.Contents.NextResults.Contents
     : message.contents
   return contents.richGridRenderer.richGridContents.length
+}
+
+function readAdItemCount (body) {
+  const browse = Browse.fromBinary(body)
+  return browse.contents.richGridRenderer.richGridContents[0]
+    .richItemRenderer.richItemContent.length
 }
 
 async function runBundle (path, endpoint, body, argument) {
@@ -166,6 +191,25 @@ for (const bundle of bundles) {
     })
     assert.equal(readSectionCount(endpoint, allowed), 2, `${bundle}: ${endpoint}`)
   }
+
+  const adFixture = createAdFixture()
+  const premium = await runBundle(bundle, 'browse', adFixture, {
+    blockAds: false,
+    blockShorts: false,
+    lyricLang: 'off'
+  })
+  assert.deepEqual(
+    premium,
+    adFixture,
+    `${bundle}: preserve browse response when ad filtering is disabled`
+  )
+
+  const filtered = await runBundle(bundle, 'browse', adFixture, {
+    blockAds: true,
+    blockShorts: false,
+    lyricLang: 'off'
+  })
+  assert.equal(readAdItemCount(filtered), 0, `${bundle}: browse ads`)
 }
 
 console.log(
