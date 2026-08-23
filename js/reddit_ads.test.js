@@ -3,7 +3,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const vm = require("node:vm");
 
-const script = fs.readFileSync(path.join(__dirname, "reddit_ads.js"), "utf8");
+const script = fs.readFileSync(path.join(__dirname, "reddit_request.js"), "utf8");
 
 function run(overrides) {
   let result;
@@ -26,7 +26,10 @@ const commentsRequest = run({
   }
 });
 assert.equal(JSON.parse(commentsRequest.body).operationName, "NoSuchOperation");
-assert.equal(commentsRequest.headers["x-reddit-translations"], "enabled, seo, en");
+assert.equal(
+  commentsRequest.headers["x-reddit-translations"],
+  "enabled, seo, zh-hans"
+);
 
 const feedRequestBody = JSON.stringify({ operationName: "HomeFeedSdui" });
 const feedRequest = run({
@@ -37,6 +40,36 @@ const feedRequest = run({
   }
 });
 assert.equal(feedRequest.body, feedRequestBody);
-assert.equal(feedRequest.headers["x-reddit-translations"], "enabled, seo, en");
+assert.equal(
+  feedRequest.headers["x-reddit-translations"],
+  "enabled, seo, zh-hans"
+);
 
-console.log("reddit_ads tests passed");
+const showOriginalBody = JSON.stringify({ operationName: "PostsContent" });
+const showOriginalRequest = run({
+  $request: {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: showOriginalBody
+  }
+});
+assert.equal(showOriginalRequest.body, showOriginalBody);
+assert.equal(showOriginalRequest.headers["x-reddit-translations"], undefined);
+
+const translateRequest = run({
+  $request: {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      "X-Reddit-Translations": "enabled, seo, en"
+    },
+    body: JSON.stringify({ operationName: "CommentsByIds" })
+  }
+});
+assert.equal(
+  translateRequest.headers["x-reddit-translations"],
+  "enabled, seo, zh-hans"
+);
+assert.equal(translateRequest.headers["X-Reddit-Translations"], undefined);
+
+console.log("reddit_request tests passed");

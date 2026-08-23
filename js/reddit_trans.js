@@ -5,6 +5,6 @@ delete headers['x-reddit-translations'];
 delete headers['X-Reddit-Translations'];
 
 // 注入自动翻译请求头
-headers['x-reddit-translations'] = 'enabled, seo, en';
+headers['x-reddit-translations'] = 'enabled, seo, zh-hans';
 
 $done({ headers });

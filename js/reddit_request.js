@@ -1,11 +1,13 @@
-// Reddit 请求处理：注入翻译 header，并拦截评论广告操作 PdpCommentsAds。
+// Reddit 请求处理：启用简体中文翻译，并拦截评论广告操作 PdpCommentsAds。
 const INVALID_OPERATION_NAME = "NoSuchOperation";
+const TRANSLATIONS_HEADER = "enabled, seo, zh-hans";
+const TRANSLATION_TOGGLE_OPERATIONS = ["PostsContent", "CommentsByIds"];
 
 (function () {
   try {
     return handleRequest();
   } catch (error) {
-    console.log("[reddit_ads] " + (error && error.stack || error));
+    console.log("[reddit_request] " + (error && error.stack || error));
     $done({});
   }
 })();
@@ -14,9 +16,25 @@ function handleRequest() {
   if (typeof $request === "undefined" || !$request) return $done({});
 
   const headers = Object.assign({}, $request.headers || {});
-  delete headers["x-reddit-translations"];
-  delete headers["X-Reddit-Translations"];
-  headers["x-reddit-translations"] = "enabled, seo, zh-hans";
+  let existingTranslationsHeader;
+  Object.keys(headers).forEach(function (name) {
+    if (name.toLowerCase() !== "x-reddit-translations") return;
+    existingTranslationsHeader = headers[name];
+    delete headers[name];
+  });
+
+  const operationName = getOperationName($request.body, headers);
+  const isTranslationToggle = TRANSLATION_TOGGLE_OPERATIONS.includes(operationName);
+  const explicitlyEnabled = typeof existingTranslationsHeader === "string"
+    && existingTranslationsHeader.toLowerCase().includes("enabled");
+
+  // PostsContent / CommentsByIds 同时用于 Translate 和 Show original。
+  // 有 enabled header 时翻译成简体中文；没有时保留原文请求，不强制注入。
+  if (!isTranslationToggle || explicitlyEnabled) {
+    headers["x-reddit-translations"] = TRANSLATIONS_HEADER;
+  } else if (existingTranslationsHeader !== undefined) {
+    headers["x-reddit-translations"] = existingTranslationsHeader;
+  }
 
   if (!$request.body) return $done({ headers: headers });
 
@@ -76,4 +94,22 @@ function invalidateCommentsAdOperation(payload) {
   if (!payload || payload.operationName !== "PdpCommentsAds") return false;
   payload.operationName = INVALID_OPERATION_NAME;
   return true;
+}
+
+function getOperationName(body, headers) {
+  if (!body) return "";
+
+  const contentType = (
+    headers["Content-Type"]
+    || headers["content-type"]
+    || ""
+  ).toLowerCase();
+  if (!contentType.includes("application/json")) return "";
+
+  try {
+    const payload = JSON.parse(body);
+    return payload && payload.operationName || "";
+  } catch (_) {
+    return "";
+  }
 }
