@@ -1,5 +1,5 @@
-#!name=Reddit 自动翻译
-#!desc=开启 Reddit App 英文翻译，支持 Show Original，移除首页及评论广告，并隐藏底部 Games 标签
+#!name=Reddit 英文翻译与去广告
+#!desc=开启 Reddit App 英文翻译，支持 Show Original，修复 subreddit 列表，移除广告并隐藏 Games 标签
 #!category=Self
 
 [MITM]

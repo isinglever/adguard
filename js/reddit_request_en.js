@@ -2,6 +2,7 @@
 const INVALID_OPERATION_NAME = "NoSuchOperation";
 const TRANSLATIONS_HEADER = "enabled, seo, en";
 const TRANSLATION_TOGGLE_OPERATIONS = ["PostsContent", "CommentsByIds"];
+const UNTRANSLATED_FEED_OPERATIONS = ["SubredditFeedSdui"];
 
 (function () {
   try {
@@ -25,12 +26,15 @@ function handleRequest() {
 
   const operationName = getOperationName($request.body, headers);
   const isTranslationToggle = TRANSLATION_TOGGLE_OPERATIONS.includes(operationName);
+  const isUntranslatedFeed = UNTRANSLATED_FEED_OPERATIONS.includes(operationName);
   const explicitlyEnabled = typeof existingTranslationsHeader === "string"
     && existingTranslationsHeader.toLowerCase().includes("enabled");
 
   // PostsContent / CommentsByIds 同时用于 Translate 和 Show original。
   // 有 enabled header 时翻译成英文；没有时保留原文请求，不强制注入。
-  if (!isTranslationToggle || explicitlyEnabled) {
+  if (isUntranslatedFeed) {
+    // Reddit 的 subreddit feed 不支持这个翻译 header，注入后会返回空/残缺列表。
+  } else if (!isTranslationToggle || explicitlyEnabled) {
     headers["x-reddit-translations"] = TRANSLATIONS_HEADER;
   } else if (existingTranslationsHeader !== undefined) {
     headers["x-reddit-translations"] = existingTranslationsHeader;

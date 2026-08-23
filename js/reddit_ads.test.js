@@ -3,7 +3,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const vm = require("node:vm");
 
-const script = fs.readFileSync(path.join(__dirname, "reddit_request_en.js"), "utf8");
+const script = fs.readFileSync(path.join(__dirname, "reddit_request_en_v2.js"), "utf8");
 
 function run(overrides) {
   let result;
@@ -71,5 +71,20 @@ assert.equal(
   "enabled, seo, en"
 );
 assert.equal(translateRequest.headers["X-Reddit-Translations"], undefined);
+
+const subredditFeedBody = JSON.stringify({ operationName: "SubredditFeedSdui" });
+const subredditFeedRequest = run({
+  $request: {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      "X-Reddit-Translations": "enabled, seo, en"
+    },
+    body: subredditFeedBody
+  }
+});
+assert.equal(subredditFeedRequest.body, subredditFeedBody);
+assert.equal(subredditFeedRequest.headers["x-reddit-translations"], undefined);
+assert.equal(subredditFeedRequest.headers["X-Reddit-Translations"], undefined);
 
 console.log("reddit_request tests passed");
