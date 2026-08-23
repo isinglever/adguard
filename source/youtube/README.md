@@ -19,6 +19,12 @@ The init-playback/UMP implementation remains experimental and is not enabled by
 - `blockShorts` removes the YouTube Shorts entry (`FEshorts`).
 - `blockImmersive` removes the YouTube Music Explore and Immersive entries.
 
+## YouTube Music charts region
+
+The request script forces `FEmusic_charts` requests to include an explicit
+country selector. `chartsRegion` defaults to `ZZ` (Global), accepts `US`, and
+can be disabled with `off`. Other `/browse` requests are left unchanged.
+
 ## Install
 
 ```

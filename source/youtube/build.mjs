@@ -6,7 +6,20 @@ const banner = '// Generated from source/youtube. Do not edit the bundle directl
 const responseOutput = deploy
   ? '../../js/youtube/youtube.response.js'
   : './dist/youtube.response.preview.js'
+const requestOutput = deploy
+  ? '../../js/youtube/youtube.request.js'
+  : './dist/youtube.request.preview.js'
 const umpOutput = './dist/youtube.ump.preview.js'
+
+esbuild.buildSync({
+  entryPoints: ['main-request.ts'],
+  bundle: true,
+  minify: !debug,
+  banner: { js: banner },
+  inject: ['./lib/text-polyfill.mjs'],
+  sourcemap: false,
+  outfile: requestOutput
+})
 
 esbuild.buildSync({
   entryPoints: ['main-response.ts'],

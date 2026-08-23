@@ -9,6 +9,16 @@ const responseRule = moduleText
 
 assert.ok(responseRule, 'The YouTube response rule must exist.')
 
+const requestRule = moduleText
+  .split('\n')
+  .find(line => line.startsWith('youtube.request = '))
+
+assert.ok(requestRule, 'The YouTube request rule must exist.')
+assert.ok(requestRule.includes('youtubei\\/v1\\/browse'))
+assert.ok(requestRule.includes('binary-body-mode=1'))
+assert.ok(requestRule.includes('youtube.request.js'))
+assert.ok(moduleText.includes('排行榜默认地区:ZZ'))
+
 for (const endpoint of [
   'browse',
   'next',
