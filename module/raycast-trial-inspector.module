@@ -1,0 +1,12 @@
+#!name=Raycast Trial Inspector
+#!desc=Log Raycast account/trial state without changing requests or responses.
+#!category=Diagnostics
+
+[MITM]
+hostname = %APPEND% backend.raycast.com, www.raycast.com
+
+[Script]
+raycast_current_user = type=http-response,pattern=^https:\/\/backend\.raycast\.com\/api\/v1\/me(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/raycast/raycast_trial_inspector.js?v=20260831-1,timeout=60,script-update-interval=0
+raycast_pro_trial = type=http-response,pattern=^https:\/\/backend\.raycast\.com\/api\/v1\/me\/pro_trial(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/raycast/raycast_trial_inspector.js?v=20260831-1,timeout=60,script-update-interval=0
+raycast_frontend_session = type=http-response,pattern=^https:\/\/www\.raycast\.com\/frontend_api\/session(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/raycast/raycast_trial_inspector.js?v=20260831-1,timeout=60,script-update-interval=0
+raycast_trial_continue = type=http-response,pattern=^https:\/\/www\.raycast\.com\/upgrade\/trial\/continue(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/raycast/raycast_trial_inspector.js?v=20260831-1,timeout=60,script-update-interval=0
