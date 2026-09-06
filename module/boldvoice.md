@@ -54,8 +54,10 @@ customer info are also unverified by this capture.
 ## Testing in Surge
 
 1. Load `module/boldvoice.module` with `js/boldvoice.js` available at its configured
-   script path. The checked-in module uses a GitHub URL; local edits require a
-   local script-path override until the files are published.
+   script path. The module pins all four rules to published script revision
+   `83423f37ce6f79ff2abf417a41ed61fbc12b81a5`, which includes the Super banner
+   experiment. Future script changes require publishing the script first and
+   updating this pin. Local edits require a local script-path override.
 2. Disable overlapping generic RevenueCat response rewrites for the test,
    including `module/revenuecat.module` or the rule in `conf/qx_crack.conf`.
 3. Enable MITM for the three hosts listed by the module and fully restart
@@ -76,3 +78,25 @@ profile 401, and all seven RevenueCat cache requests from the supplied archive.
 Those checks passed, including preservation of unrelated profile data. The
 existing Spark regression checks passed after the shared mapping addition.
 No live app session was exercised.
+
+## Follow-up capture: 16:44:20
+
+The module is running: request 3687837 (`GET /api/v1/profile`) and request
+3687845 (`PUT /api/v1/profile/subscription`) both have response-script execution
+notes and modified response bodies. However, both bodies still report
+`isProSubscriber: false` alongside `isSubscriber: true` and the 2099 expiry.
+That matches the first script revision, before the Super banner change. The
+archive does not identify whether the stale code came from Surge's cache, an
+upstream cache, or a local override.
+
+The published `83423f3` script was downloaded and compared with the local file.
+Replaying both captured responses through it changes only `isProSubscriber`
+from false to true. All four module script URLs now use that immutable revision
+instead of `main`, giving Surge a distinct URL to fetch. This addresses script
+delivery; the banner's behavior with the new flag is still unverified.
+
+Refresh or replace the existing module with the updated version, then restart
+BoldVoice. Confirm that the installed script paths contain `83423f37` and both
+backend response bodies have `isProSubscriber: true` before drawing conclusions
+about the banner. Surge documents remote script caching and its update interval
+in the [scripting overview](https://manual.nssurge.com/scripting/overview.html).
