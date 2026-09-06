@@ -1,0 +1,70 @@
+# BoldVoice capture and response experiment
+
+The 2026-09-06 16:21:56 Surge archive identifies BoldVoice 4.3.9 (build 5),
+bundle `com.wellocution.iosapp`. Its backend reports an expired trial. This
+change adds the observed entitlement/product pair to `js/revenue.js` and an
+app-specific script and Surge module for the additional backend responses.
+
+## Capture evidence
+
+| Requests | Observation | Consequence |
+| --- | --- | --- |
+| 3686801 | RevenueCat product entitlement mapping: 304, no body | Remove conditional cache headers to obtain a fresh mapping. |
+| 3686812, 3686833, 3686853, 3686868 | RevenueCat offerings: 304, no body | Refresh the response without changing the catalog. |
+| 3686821, 3686860 | RevenueCat subscriber: 304, no body | A response rewrite alone has no JSON to edit. |
+| 3686832, 3686862 | `GET /api/v1/profile?includeReferralRedemption=1`: fields inside `user` | Handle the nested profile object and query string. |
+| 3686837, 3686866 | `PUT /api/v1/profile/subscription`: fields at the response root | Handle the subscription refresh response too. |
+| 3686815 | Profile: 401, followed by successful token refresh and profile requests | Preserve authentication errors. |
+
+All seven RevenueCat calls use `api.rc-backup.com`. Their request headers still
+contain `x-revenuecat-etag`. No matching rewrite execution appears in their
+capture notes; this archive does not establish which module was enabled.
+
+The backend bodies are Brotli-compressed. After decoding, both response shapes
+contain entitlement `subscription`, product
+`com.wellocution.iosapp.subscription.yearone`, expiry `2025-04-29T05:42:44Z`,
+`isSubscriber: false`, `isProSubscriber: false`, `subStatus: "expired_trial"`,
+and an empty `subscriptionData.activeSubscriptions` object. The entitlement
+and product are confirmed by the backend copies, not a fresh RevenueCat body.
+No account identifiers, credentials, or raw capture bodies are stored here.
+
+## Behavior and limits
+
+`js/boldvoice.js` refreshes conditional requests, handles RevenueCat customer
+info and both backend response shapes, and keeps the standard subscription's
+expiry and product references consistent. Existing unrelated entitlements,
+profile fields, and purchase metadata are retained. Shared RevenueCat calls
+are scoped by the bundle ID, with a `BoldVoice/` user-agent fallback when the
+bundle header is absent. Invalid JSON, unexpected shapes, authentication
+errors, and bodyless 304 responses pass through.
+
+The backend value `subStatus: "active"` and the product-to-subscription contents
+of `activeSubscriptions` are assumptions: this capture contains no active
+example. Pro status and feature flags remain as received because the capture
+does not establish a Pro entitlement. The experiment changes local responses;
+it does not establish a server-side subscription or prove paid content access.
+RevenueCat response-signature behavior and the app's use of local cached
+customer info are also unverified by this capture.
+
+## Testing in Surge
+
+1. Load `module/boldvoice.module` with `js/boldvoice.js` available at its configured
+   script path. The checked-in module uses a GitHub URL; local edits require a
+   local script-path override until the files are published.
+2. Disable overlapping generic RevenueCat response rewrites for the test,
+   including `module/revenuecat.module` or the rule in `conf/qx_crack.conf`.
+3. Enable MITM for the three hosts listed by the module and fully restart
+   BoldVoice. Confirm that the BoldVoice request scripts run and the RevenueCat
+   subscriber request returns 200 JSON instead of 304.
+4. Check both profile and subscription refresh responses, then try a lesson.
+   A changed subscription screen alone does not verify content access.
+
+`node js/boldvoice.test.js` checks the two captured backend shapes using
+synthetic account data, RevenueCat routing, cache headers, field consistency,
+unrelated-field preservation, invalid responses, and module patterns.
+
+Local validation also replayed all four decoded backend success bodies, the
+profile 401, and all seven RevenueCat cache requests from the supplied archive.
+Those checks passed, including preservation of unrelated profile data. The
+existing Spark regression checks passed after the shared mapping addition.
+No live app session was exercised.

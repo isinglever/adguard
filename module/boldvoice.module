@@ -1,0 +1,12 @@
+#!name=BoldVoice
+#!desc=BoldVoice-specific subscription response experiment based on the 2026-09-06 capture. Disable overlapping RevenueCat rewrites when testing. Backend active status requires in-app verification.
+#!category=Self
+
+[Script]
+boldvoice_rc_request = type=http-request,pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^/?#]+(\/offerings)?\/?|receipts|product_entitlement_mapping)(\?[^#]*)?$,requires-body=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/boldvoice.js,script-update-interval=0
+boldvoice_rc_response = type=http-response,pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^/?#]+\/?|receipts)(\?[^#]*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/boldvoice.js,script-update-interval=0
+boldvoice_profile_request = type=http-request,pattern=^https:\/\/boldvoice-prod\.herokuapp\.com\/api\/v1\/profile(\/subscription)?\/?(\?[^#]*)?$,requires-body=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/boldvoice.js,script-update-interval=0
+boldvoice_profile_response = type=http-response,pattern=^https:\/\/boldvoice-prod\.herokuapp\.com\/api\/v1\/profile(\/subscription)?\/?(\?[^#]*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/boldvoice.js,script-update-interval=0
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com, api.rc-backup.com, boldvoice-prod.herokuapp.com

@@ -18,6 +18,7 @@ hostname=api.revenuecat.com, api.rc-backup.com
 
 // ========= 动态ID ========= //
 const mapping = {
+  'BoldVoice/': ['subscription', 'com.wellocution.iosapp.subscription.yearone'],
   'Subtracky': ['premium','premium_subtracky_lifetime'],
   'Accountit/': ['spenditPlus','DesignTech.SIA.Spendit.Plus.Lifetime'],
   'Haushaltsbuch': ['full_access','com.fabian.hasse.haushaltsbuch.upgrade.combined'],
