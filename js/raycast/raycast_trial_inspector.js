@@ -1,9 +1,9 @@
 /**
- * Pass-through Surge response inspector for Raycast account and trial routes.
+ * Surge response inspector for Raycast account and trial routes.
  *
- * The script deliberately does not modify subscription, entitlement, billing,
- * or trial data. It writes a small, non-identifying summary to the Surge script
- * log and returns the original response body unchanged.
+ * Default: log a summary and return the original body unchanged.
+ * argument=mock-status=1: mock account fields on the two account GET routes.
+ * Mock responses are labeled; this does not update the server-side account.
  */
 
 (function inspectRaycastTrialResponse() {
@@ -14,6 +14,9 @@
   const request = typeof $request !== "undefined" ? $request : {};
   const url = typeof request.url === "string" ? request.url : "unknown";
   const method = typeof request.method === "string" ? request.method : "unknown";
+  const mockStatus =
+    typeof $argument === "string" && $argument === "mock-status=1";
+  let outputBody = originalBody;
 
   function trialSummary(user) {
     const subscription =
@@ -51,6 +54,36 @@
 
   try {
     const parsed = JSON.parse(originalBody || "{}");
+    const accountRoute =
+      /^https:\/\/backend\.raycast\.com\/api\/v1\/me(?:[?#].*)?$/.test(url);
+    const sessionRoute =
+      /^https:\/\/www\.raycast\.com\/frontend_api\/session(?:[?#].*)?$/.test(url);
+    const user = sessionRoute ? parsed?.user : accountRoute ? parsed : null;
+    if (
+      mockStatus && method === "GET" &&
+      user && typeof user === "object" && !Array.isArray(user) &&
+      user.subscription && typeof user.subscription === "object" &&
+      !Array.isArray(user.subscription)
+    ) {
+      summary.before = trialSummary(user);
+      Object.assign(user.subscription, {
+        status: "trialing",
+        running: true,
+        trial_days_left: 7,
+        trial_period_days: 7,
+        awaiting_opt_in: false,
+      });
+      Object.assign(user, {
+        stripe_subscription_status: "trialing",
+        has_running_subscription: true,
+        has_pro_features: true,
+        has_active_subscription: true,
+        can_apply_for_free_trial: true,
+      });
+      parsed._raycast_inspector_test = "MOCK STATUS — client response only";
+      outputBody = JSON.stringify(parsed);
+      summary.mock_applied = true;
+    }
 
     if (parsed && typeof parsed.user === "object" && parsed.user) {
       summary.kind = "frontend-session";
@@ -84,5 +117,5 @@
   }
 
   console.log(`[raycast-trial-inspector] ${JSON.stringify(summary)}`);
-  $done({ body: originalBody });
+  $done({ body: outputBody });
 })();

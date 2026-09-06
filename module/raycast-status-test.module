@@ -1,0 +1,10 @@
+#!name=Raycast Status Rewrite Test
+#!desc=Temporary mock account responses. Disable Raycast Trial Inspector while testing; disable this module afterward. Does not change the server account.
+#!category=Diagnostics
+
+[MITM]
+hostname = %APPEND% backend.raycast.com, www.raycast.com
+
+[Script]
+raycast_status_test_me = type=http-response,pattern=^https:\/\/backend\.raycast\.com\/api\/v1\/me(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/raycast/raycast_trial_inspector.js?v=20260906-1,argument=mock-status=1,script-update-interval=0,debug=true,timeout=60
+raycast_status_test_session = type=http-response,pattern=^https:\/\/www\.raycast\.com\/frontend_api\/session(?:[?#].*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/raycast/raycast_trial_inspector.js?v=20260906-1,argument=mock-status=1,script-update-interval=0,debug=true,timeout=60
