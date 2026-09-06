@@ -78,6 +78,9 @@
       // The capture contains only expired_trial and an empty activeSubscriptions.
       // "active" and this product-keyed map are assumptions for in-app testing.
       user.isSubscriber = true;
+      // Local Super upsell experiment; the banner's condition is not verified.
+      // This does not establish a RevenueCat Pro entitlement or server access.
+      user.isProSubscriber = true;
       user.subStatus = "active";
       user.subProduct = product;
       user.subscription_renews_or_expires_date = expires;

@@ -40,8 +40,13 @@ errors, and bodyless 304 responses pass through.
 
 The backend value `subStatus: "active"` and the product-to-subscription contents
 of `activeSubscriptions` are assumptions: this capture contains no active
-example. Pro status and feature flags remain as received because the capture
-does not establish a Pro entitlement. The experiment changes local responses;
+example. Following the screenshot showing the AI Chat "Upgrade to Super"
+banner, both backend response shapes now set `isProSubscriber: true` as a local
+upsell suppression experiment. The original capture has that flag set to false;
+the screenshot and compiled app asset do not confirm the banner's exact display
+condition. This also changes the Pro status seen by other client screens.
+No Pro RevenueCat entitlement or product is added, and feature flags remain as
+received. The experiment changes local responses;
 it does not establish a server-side subscription or prove paid content access.
 RevenueCat response-signature behavior and the app's use of local cached
 customer info are also unverified by this capture.
@@ -56,8 +61,11 @@ customer info are also unverified by this capture.
 3. Enable MITM for the three hosts listed by the module and fully restart
    BoldVoice. Confirm that the BoldVoice request scripts run and the RevenueCat
    subscriber request returns 200 JSON instead of 304.
-4. Check both profile and subscription refresh responses, then try a lesson.
-   A changed subscription screen alone does not verify content access.
+4. Check both profile and subscription refresh responses for
+   `isProSubscriber: true`, then reopen AI Chat and check the Super banner.
+   Try a lesson and an AI conversation separately: hiding an upsell or changing
+   a subscription screen does not verify content access. If the banner remains,
+   capture the AI Chat loading requests to identify its actual display condition.
 
 `node js/boldvoice.test.js` checks the two captured backend shapes using
 synthetic account data, RevenueCat routing, cache headers, field consistency,

@@ -72,7 +72,7 @@ for (const [url, method, fixture, nested] of [
   const u = nested ? result.user : result;
   checkSubscriber(u.subscriptionData);
   assert.equal(u.isSubscriber, true);
-  assert.equal(u.isProSubscriber, false);
+  assert.equal(u.isProSubscriber, true);
   assert.equal(u.subStatus, "active");
   assert.equal(u.subProduct, product);
   assert.equal(u.subscription_renews_or_expires_date, u.subscriptionData.entitlements.subscription.expires_date);
