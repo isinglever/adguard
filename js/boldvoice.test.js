@@ -129,7 +129,7 @@ assert.ok(mapped.subscriptions[product]);
 const moduleText = fs.readFileSync(path.join(__dirname, "../module/boldvoice.module"), "utf8");
 const rules = Object.fromEntries(moduleText.split("\n").filter(line => line.startsWith("boldvoice_")).map(line => [line.split(" = ")[0], new RegExp(line.match(/pattern=(.*?),requires-body=/)[1])]));
 for (const [name, pattern] of Object.entries(rules)) {
-  const url = name.includes("profile") ? profileURL : rcURL;
+  const url = name.includes("banner") ? "https://production-server-mbem.onrender.com/api/v1/generative/scenarios/page" : name.includes("profile") ? profileURL : rcURL;
   for (const suffix of ["", "/", "?includeReferralRedemption=1"]) assert.ok(pattern.test(url + suffix));
   assert.ok(!pattern.test(url + "/attributes"));
   assert.ok(!pattern.test(url.replace(new URL(url).hostname, "example.com")));
@@ -138,4 +138,6 @@ assert.ok(rules.boldvoice_rc_request.test(rcURL + "/offerings"));
 assert.ok(rules.boldvoice_rc_request.test("https://api.rc-backup.com/v1/product_entitlement_mapping"));
 assert.ok(!rules.boldvoice_rc_response.test(rcURL + "/offerings"));
 assert.ok(rules.boldvoice_profile_response.test(profileURL + "/subscription"));
+assert.ok(rules.boldvoice_banner_request.test("https://production-server-mbem.onrender.com/api/v1/generative/scenarios/page?level=all"));
+assert.ok(!rules.boldvoice_banner_response.test("https://production-server-mbem.onrender.com/api/v1/profile/subscription"));
 console.log("BoldVoice: backend shapes, subscription consistency, isolation, cache headers, malformed responses, shared mapping, and module patterns passed.");

@@ -54,9 +54,10 @@ customer info are also unverified by this capture.
 ## Testing in Surge
 
 1. Load `module/boldvoice.module` with `js/boldvoice.js` available at its configured
-   script path. The module pins all four rules to published script revision
+   script path. The module pins the four subscription rules to published script revision
    `83423f37ce6f79ff2abf417a41ed61fbc12b81a5`, which includes the Super banner
-   experiment. Future script changes require publishing the script first and
+   experiment, and the two scenario banner rules to revision `6f44453`.
+   Future script changes require publishing the script first and
    updating this pin. Local edits require a local script-path override.
 2. Disable overlapping generic RevenueCat response rewrites for the test,
    including `module/revenuecat.module` or the rule in `conf/qx_crack.conf`.
@@ -64,10 +65,12 @@ customer info are also unverified by this capture.
    BoldVoice. Confirm that the BoldVoice request scripts run and the RevenueCat
    subscriber request returns 200 JSON instead of 304.
 4. Check both profile and subscription refresh responses for
-   `isProSubscriber: true`, then reopen AI Chat and check the Super banner.
+   `isProSubscriber: true`, then reopen AI Chat. The scenario page request must
+   return 200 JSON and show `boldvoice_banner_response` in its script notes.
+   A diagnostic line reports `[BoldVoice banner v1] removed N upgrade row(s)`.
    Try a lesson and an AI conversation separately: hiding an upsell or changing
    a subscription screen does not verify content access. If the banner remains,
-   capture the AI Chat loading requests to identify its actual display condition.
+   capture the AI Chat loading requests, including the scenario page responses.
 
 `node js/boldvoice.test.js` checks the two captured backend shapes using
 synthetic account data, RevenueCat routing, cache headers, field consistency,
@@ -100,3 +103,45 @@ BoldVoice. Confirm that the installed script paths contain `83423f37` and both
 backend response bodies have `isProSubscriber: true` before drawing conclusions
 about the banner. Surge documents remote script caching and its update interval
 in the [scripting overview](https://manual.nssurge.com/scripting/overview.html).
+
+## Follow-up capture: 16:50:26 — scenario banner
+
+Requests 3688142 and 3688149 now contain `isProSubscriber: true`, confirming
+delivery of the previous update. The user still sees the upgrade banner, so the
+boolean change alone is insufficient.
+
+AI Chat uses another backend: `production-server-mbem.onrender.com`. Requests
+3688158, 3688178, 3688179, and 3688180 fetch
+`GET /api/v1/generative/scenarios/page` and all return 304 without bodies.
+These requests were outside the earlier module's scope. A separate existing
+Map Local rule also supplies that host's subscription response from
+`File/boldvoice/bold.json` (request 3688171); it is not a clean server response
+and must not be used as evidence for real subscription field values. This
+banner change does not edit that Map Local rule.
+
+The app bundle from the initial capture (asset request 3686817, Hermes v96)
+was inspected locally with [hermes-dec](https://github.com/P1sec/hermes-dec).
+The relevant control flow is:
+
+- `ScenariosList` (#63874) maps each page's `items` into list sections (#63887).
+- Its row renderer (#63893, offsets 0x14–0x1d and 0xbc–0x113) handles
+  `id === "locked"` by rendering a sale/upgrade component. That branch chooses
+  the component using whether `subStatus` is `never_subscribed`; it does not
+  use the separate Pro boolean to suppress the row.
+- The page-fetch actions accept `{level, items, ...}` for a single level or
+  `{pages: [{level, items, ...}], allLevels: [...]}` for all levels.
+- The catalog reducer also excludes `id === "locked"` when collecting actual
+  scenarios (#13239–13240), while preserving the page items used for display.
+
+`js/boldvoice_banner.js` targets only this GET endpoint. It removes conditional
+cache headers and filters that exact sentinel from each page's `items`. It
+preserves real scenarios (including locked lessons), order, scores, count,
+numCompleted, pagination, and unrelated fields. No additional entitlement or
+subscription-field changes are needed for this filter. Response debug logging
+contains only a version label and the number of removed rows.
+
+`node js/boldvoice_banner.test.js` validates both API shapes, exact sentinel
+matching, data preservation, cache headers, routing, malformed responses, and
+bodyless/error passthrough. These shapes are supported by the inspected client
+code; the new capture's 304s do not provide fresh scenario JSON to replay.
+The final visual result still needs checking after the updated module is loaded.
