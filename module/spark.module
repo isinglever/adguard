@@ -1,0 +1,9 @@
+#!name=Spark Subscription Test
+#!desc=Spark-specific RevenueCat response experiment. Disable overlapping RevenueCat rewrites while testing. Entitlement name requires in-app verification.
+
+[Script]
+spark_request = type=http-request,pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^/?#]+\/?|receipts)(\?[^#]*)?$,requires-body=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/spark.js,script-update-interval=0
+spark_response = type=http-response,pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^/?#]+\/?|receipts)(\?[^#]*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/spark.js,script-update-interval=0
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com, api.rc-backup.com
