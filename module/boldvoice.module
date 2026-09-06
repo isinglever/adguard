@@ -1,14 +1,12 @@
 #!name=BoldVoice
-#!desc=Scenario banner filter 6f44453; subscription script 83423f3. Removes AI Chat upgrade rows and tests local subscription responses. Disable overlapping RevenueCat rewrites when testing.
+#!desc=BoldVoice backend and scenario banner rules only. Use with RevenueCat Router for RevenueCat handling. Scenario filter 6f44453; backend script 83423f3.
 #!category=Self
 
 [Script]
-boldvoice_rc_request = type=http-request,pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^/?#]+(\/offerings)?\/?|receipts|product_entitlement_mapping)(\?[^#]*)?$,requires-body=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/83423f37ce6f79ff2abf417a41ed61fbc12b81a5/js/boldvoice.js,script-update-interval=0
-boldvoice_rc_response = type=http-response,pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^/?#]+\/?|receipts)(\?[^#]*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/83423f37ce6f79ff2abf417a41ed61fbc12b81a5/js/boldvoice.js,script-update-interval=0
 boldvoice_profile_request = type=http-request,pattern=^https:\/\/boldvoice-prod\.herokuapp\.com\/api\/v1\/profile(\/subscription)?\/?(\?[^#]*)?$,requires-body=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/83423f37ce6f79ff2abf417a41ed61fbc12b81a5/js/boldvoice.js,script-update-interval=0
 boldvoice_profile_response = type=http-response,pattern=^https:\/\/boldvoice-prod\.herokuapp\.com\/api\/v1\/profile(\/subscription)?\/?(\?[^#]*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/83423f37ce6f79ff2abf417a41ed61fbc12b81a5/js/boldvoice.js,script-update-interval=0
 boldvoice_banner_request = type=http-request,pattern=^https:\/\/production-server-mbem\.onrender\.com\/api\/v1\/generative\/scenarios\/page\/?(\?[^#]*)?$,requires-body=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/6f4445334be3702315d24b56a1f970b54e8fa876/js/boldvoice_banner.js,script-update-interval=0
 boldvoice_banner_response = type=http-response,pattern=^https:\/\/production-server-mbem\.onrender\.com\/api\/v1\/generative\/scenarios\/page\/?(\?[^#]*)?$,requires-body=1,max-size=0,debug=true,script-path=https://raw.githubusercontent.com/isinglever/adguard/6f4445334be3702315d24b56a1f970b54e8fa876/js/boldvoice_banner.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% api.revenuecat.com, api.rc-backup.com, boldvoice-prod.herokuapp.com, production-server-mbem.onrender.com
+hostname = %APPEND% boldvoice-prod.herokuapp.com, production-server-mbem.onrender.com

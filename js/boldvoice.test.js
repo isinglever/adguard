@@ -134,9 +134,8 @@ for (const [name, pattern] of Object.entries(rules)) {
   assert.ok(!pattern.test(url + "/attributes"));
   assert.ok(!pattern.test(url.replace(new URL(url).hostname, "example.com")));
 }
-assert.ok(rules.boldvoice_rc_request.test(rcURL + "/offerings"));
-assert.ok(rules.boldvoice_rc_request.test("https://api.rc-backup.com/v1/product_entitlement_mapping"));
-assert.ok(!rules.boldvoice_rc_response.test(rcURL + "/offerings"));
+assert.equal(Object.keys(rules).length, 4, "backend and banner rules only");
+for (const pattern of Object.values(rules)) assert.ok(!pattern.test(rcURL), "RevenueCat belongs to the shared router");
 assert.ok(rules.boldvoice_profile_response.test(profileURL + "/subscription"));
 assert.ok(rules.boldvoice_banner_request.test("https://production-server-mbem.onrender.com/api/v1/generative/scenarios/page?level=all"));
 assert.ok(!rules.boldvoice_banner_response.test("https://production-server-mbem.onrender.com/api/v1/profile/subscription"));

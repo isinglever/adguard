@@ -1,10 +1,10 @@
-#!name=RevenueCat Crack
-#!desc=Rewrite RevenueCat requests and responses to unlock entitlements.
+#!name=RevenueCat Router
+#!desc=Single RevenueCat owner for BoldVoice, Spark, Elevate, and the legacy app mappings. Disable other RevenueCat scripts, including the standalone Spark module. Use with the backend-only BoldVoice module.
 #!category=Self
 
 [Script]
-revenuecat_header = type=http-request, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts|subscribers).*, requires-body=0, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/revenueHeader.js, timeout=60, script-update-interval=0
-revenuecat_body = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/revenue.js, timeout=60, script-update-interval=0
+revenuecat_router_request = type=http-request,pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^/?#]+(\/(offerings|attributes))?\/?|receipts|product_entitlement_mapping)(\?[^#]*)?$,requires-body=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/ad4222016e2566ad1c76d66e28abc8d620b57008/js/revenuecat_router.js,script-update-interval=86400
+revenuecat_router_response = type=http-response,pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^/?#]+\/?|receipts)(\?[^#]*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/ad4222016e2566ad1c76d66e28abc8d620b57008/js/revenuecat_router.js,script-update-interval=86400
 
 [MITM]
 hostname = %APPEND% api.revenuecat.com, api.rc-backup.com

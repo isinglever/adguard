@@ -5,6 +5,12 @@ bundle `com.wellocution.iosapp`. Its backend reports an expired trial. This
 change adds the observed entitlement/product pair to `js/revenue.js` and an
 app-specific script and Surge module for the additional backend responses.
 
+**Current setup:** enable the updated `revenuecat.module` (RevenueCat Router)
+alongside `boldvoice.module`. BoldVoice's module now owns only the backend and
+scenario endpoints; its RevenueCat handler runs inside the shared router.
+Replace older BoldVoice module versions that still contain `boldvoice_rc_*`
+rules. See [the router migration guide](revenuecat.md).
+
 ## Capture evidence
 
 | Requests | Observation | Consequence |
@@ -53,16 +59,16 @@ customer info are also unverified by this capture.
 
 ## Testing in Surge
 
-1. Load `module/boldvoice.module` with `js/boldvoice.js` available at its configured
-   script path. The module pins the four subscription rules to published script revision
+1. Load the updated `module/boldvoice.module` and `module/revenuecat.module`.
+   The BoldVoice module pins its two backend rules to published script revision
    `83423f37ce6f79ff2abf417a41ed61fbc12b81a5`, which includes the Super banner
    experiment, and the two scenario banner rules to revision `6f44453`.
    Future script changes require publishing the script first and
    updating this pin. Local edits require a local script-path override.
-2. Disable overlapping generic RevenueCat response rewrites for the test,
-   including `module/revenuecat.module` or the rule in `conf/qx_crack.conf`.
-3. Enable MITM for the three hosts listed by the module and fully restart
-   BoldVoice. Confirm that the BoldVoice request scripts run and the RevenueCat
+2. Keep the shared RevenueCat Router enabled. Disable other RevenueCat scripts,
+   including the standalone Spark module and older generic/app-specific rules.
+3. Enable MITM for the hosts listed by both modules and fully restart
+   BoldVoice. Confirm that the backend scripts and the shared router run and the RevenueCat
    subscriber request returns 200 JSON instead of 304.
 4. Check both profile and subscription refresh responses for
    `isProSubscriber: true`, then reopen AI Chat. The scenario page request must
@@ -82,7 +88,7 @@ Those checks passed, including preservation of unrelated profile data. The
 existing Spark regression checks passed after the shared mapping addition.
 No live app session was exercised.
 
-## Follow-up capture: 16:44:20
+## Historical follow-up capture: 16:44:20
 
 The module is running: request 3687837 (`GET /api/v1/profile`) and request
 3687845 (`PUT /api/v1/profile/subscription`) both have response-script execution

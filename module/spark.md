@@ -4,6 +4,11 @@ The supplied 2026-09-06 Surge archive identifies Spark 1.42.0 (575), bundle
 `com.mindcompany.spark`. This module applies an Elevate-style local response
 rewrite to Spark's RevenueCat customer-info response.
 
+For normal use, enable `module/revenuecat.module` (RevenueCat Router), which
+includes this Spark handler, and disable `module/spark.module`. This allows
+Spark to coexist with BoldVoice and the other supported apps without competing
+RevenueCat rules. See [the router migration guide](revenuecat.md).
+
 ## Capture findings
 
 - Request 33023 (`api.spark.mindcompany.com/api/v1/users`) contains profile data,
@@ -19,7 +24,7 @@ rewrite to Spark's RevenueCat customer-info response.
 - Request 33031 reports one remaining `chili_free_plays` token. Its relationship
   to paid access is unverified; this module does not change the token counter.
 
-## Local testing
+## Standalone local testing (alternative to the shared router)
 
 1. Copy `js/spark.js` into Surge's local script directory. Import a local copy
    of `module/spark.module`, replacing both remote `script-path` values with

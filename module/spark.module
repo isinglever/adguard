@@ -1,5 +1,5 @@
-#!name=Spark Subscription Test
-#!desc=Spark-specific RevenueCat response experiment. Disable overlapping RevenueCat rewrites while testing. Entitlement name requires in-app verification.
+#!name=Spark Subscription Test (Standalone)
+#!desc=Legacy standalone alternative. Disable this module when using RevenueCat Router, which already includes the Spark handler. Entitlement name requires in-app verification.
 
 [Script]
 spark_request = type=http-request,pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^/?#]+\/?|receipts)(\?[^#]*)?$,requires-body=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/spark.js,script-update-interval=0
