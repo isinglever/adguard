@@ -1,0 +1,10 @@
+#!name=Globo Elite Test
+#!desc=Local response experiment for Globo app-config entitlement and profile badge. Does not alter Apple verification or server-side access.
+#!category=Self
+
+[Script]
+globo_elite_config = type=http-response,pattern=^https:\/\/api\.getglobo\.app\/api\/app-config(\?[^#]*)?$,requires-body=1,max-size=0,script-path=__GLOBO_SCRIPT_URL__,script-update-interval=86400
+globo_elite_profile = type=http-response,pattern=^https:\/\/api\.getglobo\.app\/api\/users\/[0-9]+\/profile\/full(\?[^#]*)?$,requires-body=1,max-size=0,script-path=__GLOBO_SCRIPT_URL__,script-update-interval=86400
+
+[MITM]
+hostname = %APPEND% api.getglobo.app
