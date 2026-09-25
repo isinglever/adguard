@@ -3,8 +3,8 @@
 #!category=Self
 
 [Script]
-revenuecat_router_request = type=http-request,pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^/?#]+(\/(offerings|attributes))?\/?|receipts|product_entitlement_mapping)(\?[^#]*)?$,requires-body=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/ad4222016e2566ad1c76d66e28abc8d620b57008/js/revenuecat_router.js,script-update-interval=86400
-revenuecat_router_response = type=http-response,pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^/?#]+\/?|receipts)(\?[^#]*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/ad4222016e2566ad1c76d66e28abc8d620b57008/js/revenuecat_router.js,script-update-interval=86400
+revenuecat_router_request = type=http-request,pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^/?#]+(\/(offerings|attributes))?\/?|receipts|product_entitlement_mapping)(\?[^#]*)?$,requires-body=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/6df6298d99a745357ad33ad8fb93253a6c37a4ba/js/revenuecat_router.js,script-update-interval=86400
+revenuecat_router_response = type=http-response,pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^/?#]+\/?|receipts)(\?[^#]*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/6df6298d99a745357ad33ad8fb93253a6c37a4ba/js/revenuecat_router.js,script-update-interval=86400
 
 [MITM]
 hostname = %APPEND% api.revenuecat.com, api.rc-backup.com
