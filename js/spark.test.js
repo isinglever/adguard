@@ -26,18 +26,39 @@ function run({ request = {}, body = JSON.stringify(fixture), status = 200, reque
   return results[0];
 }
 const result = JSON.parse(run().body);
-const entitlement = result.subscriber.entitlements.premium;
+const entitlement = result.subscriber.entitlements.pro;
 const subscription = result.subscriber.subscriptions[entitlement.product_identifier];
 assert.equal(entitlement.product_identifier, "ios_subscription_annual_intro_7d_39.99_2026.03.10");
 assert.ok(Date.parse(entitlement.expires_date) > Date.parse(fixture.request_date));
 assert.equal(subscription.expires_date, entitlement.expires_date);
+assert.equal(subscription.purchase_date, entitlement.purchase_date);
 assert.equal(subscription.period_type, "normal");
 assert.equal(subscription.store, "app_store");
+assert.equal(result.subscriber.entitlements.premium, undefined);
 assert.equal(result.subscriber.original_app_user_id, "test-user");
 assert.deepEqual(result.subscriber.non_subscriptions, fixture.subscriber.non_subscriptions);
 assert.deepEqual(result.subscriber.entitlements.unrelated, fixture.subscriber.entitlements.unrelated);
 assert.deepEqual(result.subscriber.subscriptions.other, fixture.subscriber.subscriptions.other);
 assert.deepEqual(JSON.parse(run({ body: JSON.stringify(result) }).body), result);
+const trial = JSON.parse(JSON.stringify(fixture));
+trial.subscriber.entitlements.pro = {
+  product_identifier: "ios_subscription_annual_intro_7d_39.99_2026.03.10",
+  purchase_date: "2026-09-25T21:18:46Z",
+  expires_date: "2026-10-02T21:18:46Z"
+};
+trial.subscriber.subscriptions[trial.subscriber.entitlements.pro.product_identifier] = {
+  purchase_date: "2026-09-25T21:18:46Z",
+  original_purchase_date: "2026-09-25T21:18:46Z",
+  expires_date: "2026-10-02T21:18:46Z",
+  store_transaction_id: "synthetic-transaction",
+  price: { amount: 0, currency: "TRY" }
+};
+const trialResult = JSON.parse(run({ body: JSON.stringify(trial) }).body).subscriber;
+assert.equal(trialResult.entitlements.pro.expires_date, trialResult.subscriptions[entitlement.product_identifier].expires_date);
+assert.equal(trialResult.entitlements.pro.purchase_date, "2026-09-25T21:18:46Z");
+assert.equal(trialResult.subscriptions[entitlement.product_identifier].store_transaction_id, "synthetic-transaction");
+assert.deepEqual(trialResult.subscriptions[entitlement.product_identifier].price, { amount: 0, currency: "TRY" });
+assert.equal(trialResult.entitlements.premium, undefined);
 for (const request of [
   { headers: {} },
   { headers: { "User-Agent": "Elevate/1" } },

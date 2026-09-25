@@ -50,7 +50,7 @@ for (const headers of [
 for (const headers of [
   { "X-Client-Bundle-Id": "com.mindcompany.spark" },
   { "x-client-bundle-id": "com.mindcompany.spark", "User-Agent": "BoldVoice/5" }
-]) assert.equal(JSON.parse(run({ request: { headers } }).body).subscriber.entitlements.premium.product_identifier, "ios_subscription_annual_intro_7d_39.99_2026.03.10");
+]) assert.equal(JSON.parse(run({ request: { headers } }).body).subscriber.entitlements.pro.product_identifier, "ios_subscription_annual_intro_7d_39.99_2026.03.10");
 assert.equal(JSON.parse(run({ request: { headers: { "uSeR-aGeNt": "HTTPBot/1" } } }).body).subscriber.entitlements.pro.product_identifier, "com.ddgksf2013.premium.yearly");
 for (const headers of [
   {}, { "User-Agent": "UnregisteredApplication/1" }, { "User-Agent": "SparkMail/1" },

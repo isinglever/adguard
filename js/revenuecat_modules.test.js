@@ -57,7 +57,7 @@ for (const enabled of [[...shared, ...boldvoice], [...boldvoice, ...shared]]) {
   const rule = enabled.find(rule => rule.type === "http-response" && rule.pattern.test(url));
   for (const [ua, entitlement, product] of [
     ["BoldVoice/5", "subscription", "com.wellocution.iosapp.subscription.yearone"],
-    ["Spark/575", "premium", "ios_subscription_annual_intro_7d_39.99_2026.03.10"],
+    ["Spark/600", "pro", "ios_subscription_annual_intro_7d_39.99_2026.03.10"],
     ["Elevate/1", "pro", "com.elevateapp.elevate.lifetime_subscription"]
   ]) {
     const result = execute(rule, url, { "User-Agent": ua }, { subscriber: { entitlements: {}, subscriptions: {} } });

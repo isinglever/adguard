@@ -1,8 +1,8 @@
 # Spark subscription experiment
 
-The supplied 2026-09-06 Surge archive identifies Spark 1.42.0 (575), bundle
+The 2026-09-25 Surge captures identify Spark 1.45.0 (600), bundle
 `com.mindcompany.spark`. This module applies an Elevate-style local response
-rewrite to Spark's RevenueCat customer-info response.
+rewrite to Spark's RevenueCat customer-info and receipt responses.
 
 For normal use, enable `module/revenuecat.module` (RevenueCat Router), which
 includes this Spark handler, and disable `module/spark.module`. This allows
@@ -11,18 +11,18 @@ RevenueCat rules. See [the router migration guide](revenuecat.md).
 
 ## Capture findings
 
-- Request 33023 (`api.spark.mindcompany.com/api/v1/users`) contains profile data,
-  with none of the subscription fields used by `js/elevate.js`.
-- Request 33021 contains the current offering `secondary_7dtrial_socialproof`,
-  including `ios_subscription_annual_intro_7d_39.99_2026.03.10`.
-  Surge marks this response modified, so these are captured values rather than
-  independently verified upstream data.
-- Request 33033 is also marked modified and contains the generic
-  `com.ddgksf2013.premium.yearly` product. It cannot establish Spark's original
-  subscription state or entitlement name. The `premium` name is an assumption
-  inherited from this repository's existing Spark mapping in `js/revenue.js`.
-- Request 33031 reports one remaining `chili_free_plays` token. Its relationship
-  to paid access is unverified; this module does not change the token counter.
+- The 23:14 capture shows that the previous script added `premium` to the
+  customer-info response, but Spark still showed a paywall for `locked_game`.
+- The 23:18 capture contains an Apple trial transaction for
+  `ios_subscription_annual_intro_7d_39.99_2026.03.10`. The receipt response
+  contains a `pro` entitlement expiring on 2026-10-02. The old script added
+  `premium` and changed the subscription dates, but left `pro` unchanged.
+  Spark then logged `pro purchased`, confirming that `pro` is the relevant
+  entitlement. The revised script updates `pro` and the matching subscription
+  consistently while preserving unrelated subscriber fields.
+- Spark's `streaks`, `user_puzzle_stats`, `user_knowledge_categories`, and
+  `chili_free_plays` responses contain user state but no separate subscription
+  entitlement. This module does not change those endpoints.
 
 ## Standalone local testing (alternative to the shared router)
 
@@ -35,9 +35,10 @@ RevenueCat rules. See [the router migration guide](revenuecat.md).
    `conf/qx_crack.conf`, if applicable. The capture already shows such a rewrite.
 3. Enable the Spark module with HTTPS decryption working for its two listed
    hosts. Reopen Spark and capture a fresh customer-info request.
-4. Confirm that `subscriber.entitlements.premium.product_identifier` matches
+4. Confirm that `subscriber.entitlements.pro.product_identifier` matches
    the captured annual product, with a matching subscription expiration in
-   2099. Then test the previously locked content in the app.
+   2099. Test previously locked content in-app. An active Apple trial can confirm
+   the app reads `pro`, but cannot by itself prove the rewrite grants access.
 
 The script checks Spark's bundle header, falling back to its exact `Spark/`
 user-agent prefix only when the bundle header is absent. It preserves other
@@ -48,9 +49,10 @@ customer-info/receipt endpoints.
 Local tests: `node js/spark.test.js`.
 
 This is a client response experiment, not a server-side subscription grant.
-In-app behavior has not been verified. If it still fails, obtain a capture with
-all RevenueCat rewrites disabled to investigate the actual entitlement key,
-cache behavior, and any server-side content checks. RevenueCat documents
+The corrected `pro` rewrite has not been verified in-app without an active
+Apple trial. If it still fails, obtain a capture with all RevenueCat rewrites
+disabled to investigate cache behavior and any server-side content checks.
+RevenueCat documents
 [entitlement identifiers](https://www.revenuecat.com/docs/customers/customer-info),
 [persistent caching](https://www.revenuecat.com/docs/test-and-launch/debugging/caching),
 and [response signature verification](https://www.revenuecat.com/docs/customers/trusted-entitlements);
