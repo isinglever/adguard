@@ -20,8 +20,28 @@ function run({ url = configUrl, method = "GET", requestHeaders = headers, body =
 
 const config = JSON.parse(run().body);
 assert.deepEqual(config.entitlement, { plan: "elite", expiresUtc: "2099-12-01T00:00:00Z" });
-assert.deepEqual(config.ads, { enabled: true });
+assert.deepEqual(config.ads, { enabled: false });
 assert.deepEqual(JSON.parse(run({ body: config }).body), config);
+const capturedConfig = {
+  paywall: { enabled: true, productIds: ["globo_elite_annual", "globo_elite_monthly"] },
+  entitlement: { plan: "elite", expiresUtc: "2099-12-01T00:00:00Z" },
+  ads: { enabled: true, interstitialAdUnitId: "ca-app-pub-2189633677436941/6343235380" },
+  purchaseAccountToken: "00000000-0000-4000-8000-000000000001"
+};
+assert.deepEqual(JSON.parse(run({ body: capturedConfig }).body), {
+  ...capturedConfig,
+  ads: { ...capturedConfig.ads, enabled: false }
+});
+assert.deepEqual(JSON.parse(run({ url: configUrl + "?locale=en", body: capturedConfig }).body).ads,
+  { ...capturedConfig.ads, enabled: false });
+assert.deepEqual(JSON.parse(run({ body: { ads: capturedConfig.ads } }).body), {
+  ads: { ...capturedConfig.ads, enabled: false }
+});
+for (const ads of [null, [], "invalid"]) {
+  assert.deepEqual(JSON.parse(run({ body: { entitlement: {}, ads } }).body), {
+    entitlement: config.entitlement, ads
+  });
+}
 const profile = JSON.parse(run({ url: profileUrl, body: { id: 120531, name: "Test", level: { number: 6 } } }).body);
 assert.equal(profile.badge, "elite");
 assert.equal(profile.name, "Test");
@@ -50,5 +70,6 @@ for (const rule of rules) {
   const pattern = new RegExp(rule.match(/pattern=(.*?),requires-body=/)[1]);
   assert.ok(pattern.test(rule.startsWith("globo_elite_config") ? configUrl : profileUrl));
   assert.ok(!pattern.test("https://api.getglobo.app/api/billing/apple/verify"));
+  assert.ok(rule.includes("script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/globo.js,"));
 }
-console.log("Globo: Elite fields, response preservation, app isolation, and module patterns passed.");
+console.log("Globo: ad disabling, Elite fields, response preservation, app isolation, and module patterns passed.");

@@ -1,10 +1,10 @@
-#!name=Globo Elite Test
-#!desc=Local response experiment for Globo app-config entitlement and profile badge. Does not alter Apple verification or server-side access.
+#!name=Globo Elite Test + No Ads
+#!desc=Disables app-config ads and applies local Elite entitlement and profile badge responses. Does not alter Apple verification or server-side access.
 #!category=Self
 
 [Script]
-globo_elite_config = type=http-response,pattern=^https:\/\/api\.getglobo\.app\/api\/app-config(\?[^#]*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/5f559c18541aab461b2a0bc393260a8102531e18/js/globo.js,script-update-interval=86400
-globo_elite_profile = type=http-response,pattern=^https:\/\/api\.getglobo\.app\/api\/users\/[0-9]+\/profile\/full(\?[^#]*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/5f559c18541aab461b2a0bc393260a8102531e18/js/globo.js,script-update-interval=86400
+globo_elite_config = type=http-response,pattern=^https:\/\/api\.getglobo\.app\/api\/app-config(\?[^#]*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/globo.js,script-update-interval=86400
+globo_elite_profile = type=http-response,pattern=^https:\/\/api\.getglobo\.app\/api\/users\/[0-9]+\/profile\/full(\?[^#]*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/main/js/globo.js,script-update-interval=86400
 
 [MITM]
 hostname = %APPEND% api.getglobo.app

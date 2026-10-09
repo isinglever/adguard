@@ -1,5 +1,6 @@
 // Globo 2.3.1: local Elite response experiment for Surge.
 // The captured Apple verification populated app-config.entitlement and profile.badge.
+// Disable ads in app-config while preserving the other configuration fields.
 (function () {
   var request = typeof $request === "object" ? $request : {};
   var headers = request.headers || {};
@@ -22,9 +23,14 @@
     var body = JSON.parse($response.body);
     if (!body || typeof body !== "object" || Array.isArray(body)) return $done({});
     if (isConfig) {
-      if (!body.entitlement || typeof body.entitlement !== "object" || Array.isArray(body.entitlement)) return $done({});
-      body.entitlement.plan = "elite";
-      body.entitlement.expiresUtc = "2099-12-01T00:00:00Z";
+      var hasEntitlement = body.entitlement && typeof body.entitlement === "object" && !Array.isArray(body.entitlement);
+      var hasAds = body.ads && typeof body.ads === "object" && !Array.isArray(body.ads);
+      if (!hasEntitlement && !hasAds) return $done({});
+      if (hasEntitlement) {
+        body.entitlement.plan = "elite";
+        body.entitlement.expiresUtc = "2099-12-01T00:00:00Z";
+      }
+      if (hasAds) body.ads.enabled = false;
     } else {
       if (typeof body.id !== "number") return $done({});
       body.badge = "elite";
