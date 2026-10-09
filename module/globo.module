@@ -1,10 +1,15 @@
 #!name=Globo Elite Test
-#!desc=Local response experiment for Globo app-config entitlement and profile badge. Does not alter Apple verification or server-side access.
+#!desc=Local response experiment for Globo app-config entitlement and profile badge, plus startup subscription prompt suppression. Startup rule requires Surge iOS 5.9.1+ or Mac 5.5.1+ with Rewrite and MITM enabled.
 #!category=Self
 
 [Script]
 globo_elite_config = type=http-response,pattern=^https:\/\/api\.getglobo\.app\/api\/app-config(\?[^#]*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/5f559c18541aab461b2a0bc393260a8102531e18/js/globo.js,script-update-interval=86400
 globo_elite_profile = type=http-response,pattern=^https:\/\/api\.getglobo\.app\/api\/users\/[0-9]+\/profile\/full(\?[^#]*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/isinglever/adguard/5f559c18541aab461b2a0bc393260a8102531e18/js/globo.js,script-update-interval=86400
+
+[Map Local]
+# The 2026-10-09 capture returned only app_launch_paywall in this startup flow.
+# An empty flow also hides any future non-paywall pages served by this endpoint.
+^https://api\.getglobo\.app/api/screen-flow/app_launch(?:\?[^#]*)?$ data-type=text data="[]" status-code=200 header="Content-Type:application/json; charset=utf-8"
 
 [MITM]
 hostname = %APPEND% api.getglobo.app
